@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 23 18:14:57 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>737 seconds (737470 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel()'><b>v12stagingforhotel</b><br>Test class: v12Staging.V12StagingForFlight_Hotel<br>Parameters: Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, Domestic, del, Delhi,India - Indira Gandhi Intl (DEL), maa, Chennai, India - Chennai (MAA), 10,Nov 2022, 15,Nov 2022, 2, 2,1, 1,2, 7,8, 1,0, 1,0, Yes, Indian, INR, Economy, No, Yes, 13,Nov 2022, 18,Nov 2022, Yes, All, Hotel, RoomRate, Yes, Yes, All, Vistara, shubham.natkar@quadlabs.com, Ms,Ms,Mr, Laxmi Khanal,Sakshi Singh,Shubham Natkar, 8447422233, 15 May 1992,20 Jun 1994,25 Jul 1998, Room1,Room1,Room2, 780KL00323,897123333MU,89712333GH10, India (IN),Indonesia (ID),India (IN), 23 Mar 2030,30 Jun 2028,19 Jun 2028, Indian,Indian,Indian, Miss,Mstr,Mstr, Devi Shukla,Abhisha Kanal,Shubham Sanu, 25 Apr 2015,13 May 2015,13 May 2014, Room1,Room2,Room2, 78LH43232L,8978ABY8798,8978979IQL3, India (IN),Indonesia (ID),India (IN), 23 Feb 2026,17 Mar 2028,17 Mar 2025, Indian,Indian,Indian, Miss,Mstr, Dev Jain,Abhi Sharma, 25 Apr 2021,13 May 2021, Adult1,Adult2, 78554AL2323,8978H79879O, India (IN),Indonesia (ID), 23 Feb 2030,17 Mar 2031, Indian,Indian, Master Card, 5123456789012346, Shubham Natkar, Apr,2025, 123, Mr, Shubham Natkar, Gurgaon, India (IN), del,Delhi</td>
+<td></td>
+<td>335</td>
+<td>v12Staging.V12StagingForFlight_Hotel@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel()'><b>v12stagingforhotel</b><br>Test class: v12Staging.V12StagingForFlight_Hotel<br>Parameters: Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, International, del, Delhi,India - Indira Gandhi Intl (DEL), dxb, Dubai,United Arab Emirates - Dubai (DXB), 10,Nov 2022, 15,Nov 2022, 2, 2,1, 1,2, 7,8, 1,0, 1,0, Yes, Indian, INR, Economy, No, Yes, 13,Nov 2022, 18,Nov 2022, Yes, All, Hotel, RoomRate, Yes, Yes, All, Vistara, shubham.natkar@quadlabs.com, Ms,Ms,Mr, Laxmi Khanal,Sakshi Singh,Shubham Natkar, 8447422233, 15 May 1992,20 Jun 1994,25 Jul 1998, Room1,Room1,Room2, 780KL00323,897123333MU,89712333GH9, India (IN),Indonesia (ID),India (IN), 23 Mar 2030,30 Jun 2028,19 Jun 2028, Indian,Indian,Indian, Miss,Mstr,Mstr, Devi Shukla,Abhisha Kanal,Shubham Sanu, 25 Apr 2015,13 May 2015,13 May 2014, Room1,Room2,Room2, 78LH43232L,8978ABY8798,8978979IQL2, India (IN),Indonesia (ID),India (IN), 23 Feb 2026,17 Mar 2028,17 Mar 2025, Indian,Indian,Indian, Miss,Mstr, Dev Jain,Abhi Sharma, 25 Apr 2021,13 May 2021, Adult1,Adult2, 78554AL2323,8978H79879O, India (IN),Indonesia (ID), 23 Feb 2030,17 Mar 2031, Indian,Indian, Master Card, 5123456789012346, Shubham Natkar, Apr,2025, 123, Mr, Shubham Natkar, Gurgaon, India (IN), del,Delhi</td>
+<td></td>
+<td>400</td>
+<td>v12Staging.V12StagingForFlight_Hotel@37654521</td></tr>
+</table><p>
+</body>
+</html>

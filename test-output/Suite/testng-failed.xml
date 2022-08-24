@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="v12Staging.V12StagingForHotel">
+        <methods>
+          <include name="v12stagingforhotel" invocation-numbers="0"/>
+          <include name="afterMetod"/>
+        </methods>
+      </class> <!-- v12Staging.V12StagingForHotel -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
