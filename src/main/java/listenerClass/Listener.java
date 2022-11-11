@@ -13,26 +13,16 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 import Base.TestBase;
 import utilities.QaBrowser;
 import utilities.QaExtentReport;
+import utilities.QaRobot;
 
 public class Listener extends TestBase implements ITestListener
 {
-	public static void ScreenshotMethod(String text) throws IOException 
-	{
-		Date date = new Date();
-		DateFormat d = new SimpleDateFormat("MM-dd-yy & HH-mm-ss");
-		String NewDate = d.format(date);
-		
-		TakesScreenshot ts = (TakesScreenshot)QaBrowser.driver;
-		File Source = ts.getScreenshotAs(OutputType.FILE);
-		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+text+".jpg");
-		FileUtils.copyFile(Source, Dest);
-	}
-	
 	public void onTestStart(ITestResult result) 
 	{	
 //		test = report.createTest("");
@@ -42,11 +32,11 @@ public class Listener extends TestBase implements ITestListener
 
 		try {
 
-			if (result.getStatus() == ITestResult.SUCCESS) {
-
-				Listener.ScreenshotMethod("Test Case Pass");
-//				String screenShotPath = Logger.takeScreenshot(QaBrowser.driver, "D:\\Automation\\projectb2c1\\Screenshot\\Test Case Pass.png");
+			if (result.getStatus() == ITestResult.SUCCESS)
+			{
+				QaRobot.ScreenshotMethod("Successful Test","<b><i>Screenshot for Successful Test</i></b>");
 				QaExtentReport.test.log(Status.PASS, "<b><i>Successful Test</i></b>");
+				test.pass(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("Successful Test")).build());
 			}
 		} 
 		catch (IOException e) 
@@ -57,15 +47,24 @@ public class Listener extends TestBase implements ITestListener
 
 	public void onTestFailure(ITestResult result) {
 		try {
-			if (result.getStatus() == ITestResult.FAILURE) {
+			if (result.getStatus() == ITestResult.FAILURE)
+			{
 				result.getThrowable().printStackTrace();
 				//System.out.println(result.getThrowable());
 				QaExtentReport.test.log(Status.FAIL, result.getThrowable());
-				Listener.ScreenshotMethod("Test Case Pass");
-//				String fail = Logger.takeScreenshot(QaBrowser.driver, "D:\\Automation\\projectb2c1\\Screenshot\\Test Case fail.png");
-				QaExtentReport.test.log(Status.FAIL, "<b><i>Fail Test</i></b>");		
+				String text = "Fail Test";
+				Date date = new Date();
+				DateFormat d = new SimpleDateFormat("dd-MM-yy & HH-mm-ss");
+				String NewDate = d.format(date);
+				
+				TakesScreenshot ts = (TakesScreenshot)QaBrowser.driver;
+				File Source = ts.getScreenshotAs(OutputType.FILE);
+				File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+" "+text+".jpg");
+				FileUtils.copyFile(Source, Dest);
+				QaExtentReport.test.log(Status.FAIL, "<b><i>Screenshot for Fail Test</i></b>");
+				QaExtentReport.test.log(Status.FAIL, "<b><i>Fail Test</i></b>");
+				test.fail(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("Fail Test")).build());
 			}
-
 		} 
 		catch (Exception e) 
 		{
@@ -76,9 +75,9 @@ public class Listener extends TestBase implements ITestListener
 	public void onTestSkipped(ITestResult result) {
 		try {
 			if (result.getStatus() == ITestResult.SKIP) {
-				Listener.ScreenshotMethod("Test Case Pass");
-//				String skip = Logger.takeScreenshot(QaBrowser.driver, "D:\\Automation\\projectb2c1\\Screenshot\\Test Case Skip.png");
+				QaRobot.ScreenshotMethod("SKIP Test","<b><i>Screenshot for SKIP Test</i></b>");
 				QaExtentReport.test.log(Status.SKIP, result.getThrowable());
+				test.skip(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("SKIP Test")).build());
 				System.out.println("********* Skipped *********");
 			}
 		} 

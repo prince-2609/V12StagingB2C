@@ -1,5 +1,6 @@
 package v12Staging;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -46,31 +47,69 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_dobAdt"+i+"']")).click();
 			Thread.sleep(5000);
 			String DateSelection[] = AdultDate.split(",");
-			String DateS[]= DateSelection[i - 1].split(" ");
+			String DateS[]= DateSelection[i - 1].split("-");
 			String Date = DateS[0];
 			String Month = DateS[1];
 			String Year = DateS[2];
 			
-			String text1 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
-			QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select year for adult</i></b>");
-			Thread.sleep(2000);
-			String text = "/html/body/div[3]/div/div[2]/div/div/select[1]";
-			QaRobot.selectTextByLocator1(text, Month,"<b><i>Select month for adult</i></b>");
-			Thread.sleep(2000);
-
+			String currentMonthNumber = "0";
+			 if (Month.equalsIgnoreCase("Jan")) {
+	               currentMonthNumber = "01";
+	           } else if (Month.equalsIgnoreCase("Feb")) {
+	               currentMonthNumber = "02";
+	           } else if (Month.equalsIgnoreCase("Mar")) {
+	               currentMonthNumber = "03";
+	           } else if (Month.equalsIgnoreCase("Apr")) {
+	               currentMonthNumber = "04";
+	           } else if (Month.equalsIgnoreCase("May")) {
+	               currentMonthNumber = "05";
+	           } else if (Month.equalsIgnoreCase("Jun")) {
+	               currentMonthNumber = "06";
+	           } else if (Month.equalsIgnoreCase("Jul")) {
+	               currentMonthNumber = "07";
+	           } else if (Month.equalsIgnoreCase("Aug")) {
+	               currentMonthNumber = "08";
+	           } else if (Month.equalsIgnoreCase("Sep")) {
+	        	   currentMonthNumber = "09";
+	           } else if (Month.equalsIgnoreCase("Oct")) {
+	               currentMonthNumber = "10";
+	           } else if (Month.equalsIgnoreCase("Nov")) {
+	               currentMonthNumber = "11";
+	           } else if (Month.equalsIgnoreCase("Dec")) {
+	               currentMonthNumber = "12";
+	           }
+			 
+			LocalDate date = LocalDate.of(Integer.parseInt(Year), Integer.parseInt(currentMonthNumber), Integer.parseInt(Date));
+			LocalDate today = LocalDate.now();
+			
+			if (date.isBefore(today.minusYears(12))) 
+			{
+				String text1 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
+				QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select year for adult</i></b>"+" - "+Year);
+				Thread.sleep(2000);
+			
+				String text = "/html/body/div[3]/div/div[2]/div/div/select[1]";
+				QaRobot.selectTextByLocator1(text, Month,"<b><i>Select month for adult</i></b>"+" - "+Month);
+				Thread.sleep(2000);
 			
 			List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
-			
-			for(WebElement ele : allDates)
-			{
-				String dt = ele.getText();
-				
-				if(dt.equalsIgnoreCase(Date))
+	
+				for(WebElement ele : allDates)
 				{
-					ele.click();
-					Thread.sleep(2000);
-					break;
+					String dt = ele.getText();
+					
+					if(dt.equalsIgnoreCase(Date))
+					{
+						ele.click();
+						Thread.sleep(2000);
+						break;
+					}
 				}
+			}
+			else
+			{
+				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Date+"-"+Month+"-"+Year);
+				throw new B2cExceptionClass("Invalid Adult Date Selection"+" : "+Date+"-"+Month+"-"+Year);
 			}
 			
 			// Fill PhoneNumber
@@ -94,16 +133,16 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_ex_dateAdt"+ i +"']")).click();
 			Thread.sleep(5000);
 			String DateSelection1[] = AdultExpiryDate.split(",");
-			String DateS1[]= DateSelection1[i - 1].split(" ");
+			String DateS1[]= DateSelection1[i - 1].split("-");
 			String Date1 = DateS1[0];
 			String Month1 = DateS1[1];
 			String Year1 = DateS1[2];
 			
 			String text3 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
-			QaRobot.selectTextByLocator1(text3, Year1,"<b><i>Select year for adult</i></b>");
+			QaRobot.selectTextByLocator1(text3, Year1,"<b><i>Select Passport year for adult</i></b>");
 			Thread.sleep(2000);
 			String text2 = "/html/body/div[3]/div/div[2]/div/div/select[1]";
-			QaRobot.selectTextByLocator1(text2, Month1,"<b><i>Select month for adult</i></b>");
+			QaRobot.selectTextByLocator1(text2, Month1,"<b><i>Select Passport month for adult</i></b>");
 			Thread.sleep(2000);
 			
 			List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
@@ -131,6 +170,7 @@ public class B2cCheckoutPage
 		Thread.sleep(2000);
 		
 		QaRobot.ScreenshotMethod("AdultDetails","<b><i>Screenshot for Adult Details</i></b>");
+		QaExtentReport.extentScreenshot("Adult Details");
 	}
 	
 	public static void GuestChildCheckoutForFlight(String child,String ChildTitle,String ChildName,String ChildPassportNumber,String ChildPassportcountry,
@@ -163,18 +203,18 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_ex_dateChd"+i+"']")).click();
 			Thread.sleep(5000);
 			String DateSelection[] = ChildPassportDate.split(",");
-			String DateS[]= DateSelection[i - 1].split(" ");
+			String DateS[]= DateSelection[i - 1].split("-");
 			String Date = DateS[0];
 			String Month = DateS[1];
 			String Year = DateS[2];
 			
 			String text1 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
-			QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select year for child</i></b>");
+			QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select Passport year for child</i></b>");
 			Thread.sleep(2000);
+				
 			String text = "/html/body/div[3]/div/div[2]/div/div/select[1]";
-			QaRobot.selectTextByLocator1(text, Month,"<b><i>Select title for child</i></b>");
+			QaRobot.selectTextByLocator1(text, Month,"<b><i>Select Passport month for child</i></b>");
 			Thread.sleep(2000);
-
 			
 			List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
 			
@@ -205,30 +245,68 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_dobChd"+ i +"']")).click();
 			Thread.sleep(5000);
 			String DateSelection1[] = ChildDOBdate.split(",");
-			String DateS1[]= DateSelection1[i - 1].split(" ");
+			String DateS1[]= DateSelection1[i - 1].split("-");
 			String Date1 = DateS1[0];
 			String Month1 = DateS1[1];
 			String Year1 = DateS1[2];
 			
-			String text3 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
-			QaRobot.selectTextByLocator1(text3, Year1,"<b><i>Select year for child</i></b>");
-			Thread.sleep(2000);
-			String text2 = "/html/body/div[3]/div/div[2]/div/div/select[1]";
-			QaRobot.selectTextByLocator1(text2, Month1,"<b><i>Select month for child</i></b>");
-			Thread.sleep(2000);
+			String currentMonthNumber = "0";
+			 if (Month1.equalsIgnoreCase("Jan")) {
+	               currentMonthNumber = "01";
+	           } else if (Month1.equalsIgnoreCase("Feb")) {
+	               currentMonthNumber = "02";
+	           } else if (Month1.equalsIgnoreCase("Mar")) {
+	               currentMonthNumber = "03";
+	           } else if (Month1.equalsIgnoreCase("Apr")) {
+	               currentMonthNumber = "04";
+	           } else if (Month1.equalsIgnoreCase("May")) {
+	               currentMonthNumber = "05";
+	           } else if (Month1.equalsIgnoreCase("Jun")) {
+	               currentMonthNumber = "06";
+	           } else if (Month1.equalsIgnoreCase("Jul")) {
+	               currentMonthNumber = "07";
+	           } else if (Month1.equalsIgnoreCase("Aug")) {
+	               currentMonthNumber = "08";
+	           } else if (Month1.equalsIgnoreCase("Sep")) {
+	        	   currentMonthNumber = "09";
+	           } else if (Month1.equalsIgnoreCase("Oct")) {
+	               currentMonthNumber = "10";
+	           } else if (Month1.equalsIgnoreCase("Nov")) {
+	               currentMonthNumber = "11";
+	           } else if (Month1.equalsIgnoreCase("Dec")) {
+	               currentMonthNumber = "12";
+	           }
+			 
+			LocalDate date = LocalDate.of(Integer.parseInt(Year1), Integer.parseInt(currentMonthNumber), Integer.parseInt(Date1));
+			LocalDate today = LocalDate.now();
 			
-			List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
-			
-			for(WebElement ele1 : allDates1)
+			if (date.isBefore(today.minusYears(2))&& date.isAfter(today.minusYears(12))) 
 			{
-				String dt1 = ele1.getText();
+				String text3 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
+				QaRobot.selectTextByLocator1(text3, Year1,"<b><i>Select year for child</i></b>"+" - "+Year1);
+				Thread.sleep(2000);
+				String text2 = "/html/body/div[3]/div/div[2]/div/div/select[1]";
+				QaRobot.selectTextByLocator1(text2, Month1,"<b><i>Select month for child</i></b>"+" - "+Month1);
+				Thread.sleep(2000);
 				
-				if(dt1.equalsIgnoreCase(Date1))
+				List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
+				
+				for(WebElement ele1 : allDates1)
 				{
-					ele1.click();
-					Thread.sleep(2000);
-					break;
+					String dt1 = ele1.getText();
+					
+					if(dt1.equalsIgnoreCase(Date1))
+					{
+						ele1.click();
+						Thread.sleep(2000);
+						break;
+					}
 				}
+			}
+			else
+			{
+				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Date1+"-"+Month1+"-"+Year1);
+				throw new B2cExceptionClass("Invalid Child Date Selection"+" : "+Date1+"-"+Month1+"-"+Year1);
 			}
 			// fill nationality
 			String childnationalityElement = "//select[@id='ddl_nationalityChd"+i+"']";
@@ -236,7 +314,9 @@ public class B2cCheckoutPage
 			QaRobot.selectTextByLocator1(childnationalityElement, childnat[i - 1], "<b><i>Select Nationality For child</i></b>");
 			Thread.sleep(2000);
 		}
+		
 		QaRobot.ScreenshotMethod("ChildDetails","<b><i>Screenshot for Child Details</i></b>");
+		QaExtentReport.extentScreenshot("Child Details");
 	}
 	
 	public static void GuestInfantCheckoutForFlight(String infant,String InfantTitle,String InfantName,String InfantDOBdate,String InfantTravellingwith,String InfantPassportNumber,String InfantPassportcountry,
@@ -266,32 +346,70 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_dobInf"+i+"']")).click();
 			Thread.sleep(5000);
 			String DateSelection[] = InfantDOBdate.split(",");
-			String DateS[]= DateSelection[i - 1].split(" ");
+			String DateS[]= DateSelection[i - 1].split("-");
 			String Date = DateS[0];
 			String Month = DateS[1];
 			String Year = DateS[2];
 			
-			String text1 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
-			QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select year for infant</i></b>");
-			Thread.sleep(2000);
-			String text = "/html/body/div[3]/div/div[2]/div/div/select[1]";
-			QaRobot.selectTextByLocator1(text, Month,"<b><i>Select month for infant</i></b>");
-			Thread.sleep(2000);
-
-			
-			List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
-			
-			for(WebElement ele : allDates)
-			{
-				String dt = ele.getText();
+			String currentMonthNumber = "0";
+			 if (Month.equalsIgnoreCase("Jan")) {
+	               currentMonthNumber = "01";
+	           } else if (Month.equalsIgnoreCase("Feb")) {
+	               currentMonthNumber = "02";
+	           } else if (Month.equalsIgnoreCase("Mar")) {
+	               currentMonthNumber = "03";
+	           } else if (Month.equalsIgnoreCase("Apr")) {
+	               currentMonthNumber = "04";
+	           } else if (Month.equalsIgnoreCase("May")) {
+	               currentMonthNumber = "05";
+	           } else if (Month.equalsIgnoreCase("Jun")) {
+	               currentMonthNumber = "06";
+	           } else if (Month.equalsIgnoreCase("Jul")) {
+	               currentMonthNumber = "07";
+	           } else if (Month.equalsIgnoreCase("Aug")) {
+	               currentMonthNumber = "08";
+	           } else if (Month.equalsIgnoreCase("Sep")) {
+	        	   currentMonthNumber = "09";
+	           } else if (Month.equalsIgnoreCase("Oct")) {
+	               currentMonthNumber = "10";
+	           } else if (Month.equalsIgnoreCase("Nov")) {
+	               currentMonthNumber = "11";
+	           } else if (Month.equalsIgnoreCase("Dec")) {
+	               currentMonthNumber = "12";
+	           }
+			 
+			 	LocalDate date = LocalDate.of(Integer.parseInt(Year), Integer.parseInt(currentMonthNumber), Integer.parseInt(Date));
+				LocalDate today = LocalDate.now();
 				
-				if(dt.equalsIgnoreCase(Date))
+				if (date.isAfter(today.minusYears(2))) 
 				{
-					ele.click();
+					String text1 = "/html/body/div[3]/div/div[2]/div/div/select[2]";
+					QaRobot.selectTextByLocator1(text1, Year,"<b><i>Select year for infant</i></b>"+" - "+Year);
 					Thread.sleep(2000);
-					break;
+				
+					String text = "/html/body/div[3]/div/div[2]/div/div/select[1]";
+					QaRobot.selectTextByLocator1(text, Month,"<b><i>Select month for infant</i></b>"+" - "+Month);
+					Thread.sleep(2000);
+					
+					List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div/table/tbody/tr/td"));
+					
+					for(WebElement ele : allDates)
+					{
+						String dt = ele.getText();
+						
+						if(dt.equalsIgnoreCase(Date))
+						{
+							ele.click();
+							Thread.sleep(2000);
+							break;
+						}
+					}
 				}
-			}
+			 	else
+				{
+			 		QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Date+"-"+Month+"-"+Year);
+					throw new B2cExceptionClass("Invalid Infant Date Selection"+" : "+Date+"-"+Month+"-"+Year);
+				}
 		
 			String infantTravellingWith = "//select[@id='ddl_travell_with" + i + "']";
 			String[] infantTw = InfantTravellingwith.split(",");
@@ -311,7 +429,7 @@ public class B2cCheckoutPage
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txt_ex_dateInf"+ i +"']")).click();
 			Thread.sleep(5000);
 			String DateSelection1[] = InfantPassportDate.split(",");
-			String DateS1[]= DateSelection1[i - 1].split(" ");
+			String DateS1[]= DateSelection1[i - 1].split("-");
 			String Date1 = DateS1[0];
 			String Month1 = DateS1[1];
 			String Year1 = DateS1[2];
@@ -342,7 +460,9 @@ public class B2cCheckoutPage
 			QaRobot.selectTextByLocator1(infuntnationalityElement, infuntnat[i - 1], "<b><i>Selected Nationality For infant</i></b>");
 			Thread.sleep(2000);
 		}
+		
 		QaRobot.ScreenshotMethod("InfantDetails","<b><i>Screenshot for Infant Details</i></b>");
+		QaExtentReport.extentScreenshot("Infant Details");
 	}
 	
 	public static void GuestAdultCheckoutForHotel(String Emailid,String Adult,String AdultTitle, String AdultName,String Phone) throws Exception 
@@ -378,9 +498,10 @@ public class B2cCheckoutPage
 		QaExtentReport.test.log(Status.INFO,"<b><i>Write PhoneNumber</i></b>");
 		
 		QaRobot.ScreenshotMethod("AdultDetails","<b><i>Screenshot for Adult Details</i></b>");
+		QaExtentReport.extentScreenshot("Adult Details");
 	}
 	
-	public static void GuestChildCheckoutForHotel(String Child, String ChildTitle, String ChildName,String ChildDOBdate) throws Exception 
+	public static void GuestChildCheckoutForHotel(String CheckInDate,String Child,String ChildAge, String ChildTitle, String ChildName,String ChildDOBdate) throws Exception 
 	{
 		String[] chd = Child.split(",");
 		int chdTotal = 0;
@@ -406,21 +527,106 @@ public class B2cCheckoutPage
 			QaRobot.PassValueByLocator(childLNameElement, Lcname, "<b><i>Write Last Name For Child</i></b>");
 			
 			String DateSelection[] = ChildDOBdate.split(",");
-			String DateS[]= DateSelection[i - 1].split(" ");
+			String DateS[]= DateSelection[i - 1].split("-");
 			String Dcname = DateS[0];
 			String Mcname = DateS[1];
 			String Ycname = DateS[2];
 			
-			String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlDay')])[" + i + "]";
-			QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
+			String currentMonthNumber = "0";
+			 if (Mcname.equalsIgnoreCase("Jan")) {
+	               currentMonthNumber = "01";
+	           } else if (Mcname.equalsIgnoreCase("Feb")) {
+	               currentMonthNumber = "02";
+	           } else if (Mcname.equalsIgnoreCase("Mar")) {
+	               currentMonthNumber = "03";
+	           } else if (Mcname.equalsIgnoreCase("Apr")) {
+	               currentMonthNumber = "04";
+	           } else if (Mcname.equalsIgnoreCase("May")) {
+	               currentMonthNumber = "05";
+	           } else if (Mcname.equalsIgnoreCase("Jun")) {
+	               currentMonthNumber = "06";
+	           } else if (Mcname.equalsIgnoreCase("Jul")) {
+	               currentMonthNumber = "07";
+	           } else if (Mcname.equalsIgnoreCase("Aug")) {
+	               currentMonthNumber = "08";
+	           } else if (Mcname.equalsIgnoreCase("Sep")) {
+	        	   currentMonthNumber = "09";
+	           } else if (Mcname.equalsIgnoreCase("Oct")) {
+	               currentMonthNumber = "10";
+	           } else if (Mcname.equalsIgnoreCase("Nov")) {
+	               currentMonthNumber = "11";
+	           } else if (Mcname.equalsIgnoreCase("Dec")) {
+	               currentMonthNumber = "12";
+	           }
+			 
+			 String[] cAge = ChildAge.split(",");
+			 String age1 = cAge[i-1];
+			 int ag1 = Integer.parseInt(age1);
+			 int ag2 = Integer.parseInt(age1)+1;
+			
+			LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+			String DateSelection1[]= CheckInDate.split("-");
+			String year = DateSelection1[2];
+			String month = DateSelection1[1];
+			String expDate = DateSelection1[0];
+			
+			String currentMonthNumber1 = "0";
+				if (month.equalsIgnoreCase("Jan")) {
+	               currentMonthNumber1 = "01";
+	           } else if (month.equalsIgnoreCase("Feb")) {
+	               currentMonthNumber1 = "02";
+	           } else if (month.equalsIgnoreCase("Mar")) {
+	               currentMonthNumber1 = "03";
+	           } else if (month.equalsIgnoreCase("Apr")) {
+	               currentMonthNumber1 = "04";
+	           } else if (month.equalsIgnoreCase("May")) {
+	               currentMonthNumber1 = "05";
+	           } else if (month.equalsIgnoreCase("Jun")) {
+	               currentMonthNumber1 = "06";
+	           } else if (month.equalsIgnoreCase("Jul")) {
+	               currentMonthNumber1 = "07";
+	           } else if (month.equalsIgnoreCase("Aug")) {
+	               currentMonthNumber1 = "08";
+	           } else if (month.equalsIgnoreCase("Sep")) {
+	        	   currentMonthNumber1 = "09";
+	           } else if (month.equalsIgnoreCase("Oct")) {
+	               currentMonthNumber1 = "10";
+	           } else if (month.equalsIgnoreCase("Nov")) {
+	               currentMonthNumber1 = "11";
+	           } else if (month.equalsIgnoreCase("Dec")) {
+	               currentMonthNumber1 = "12";
+	           }
+				
+			LocalDate bDate = LocalDate.of(Integer.parseInt(year), Integer.parseInt(currentMonthNumber1), Integer.parseInt(expDate));
+			
+			if (date.isAfter(bDate.minusYears(17))) 
+			{
+				if (date.isAfter(bDate.minusYears(ag2))&&date.isBefore(bDate.minusYears(ag1))) 
+				{
+					String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
 
-			String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlMonth')])[" + i + "]";
-			QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
+					String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
 
-			String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlYear')])[" + i + "]";
-			QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+					String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_DobChd_H_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
+			}
+			else
+			{
+				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+				throw new B2cExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+			}
+			
 		}
 		QaRobot.ScreenshotMethod("ChildDetails","<b><i>Screenshot for Child Details</i></b>");
+		QaExtentReport.extentScreenshot("Check Out Page");
 	}
 	
 	public static void GuestBillingDetailsCheckoutForHotel(String BillingTitle, String BillingUserName, String BillingAddress,String BillingCountry,String BillingCity) throws Exception 
@@ -457,11 +663,12 @@ public class B2cCheckoutPage
 		QaRobot.ClickOnElement("Terms_conditions");
 		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on chkExpediaTerms</i></b>");
 		
+		QaRobot.ScreenshotMethod("BillingDetails","<b><i>Screenshot for Billing Details</i></b>");
+		QaExtentReport.extentScreenshot("Billing Details");
+		
 		QaRobot.ClickOnElement("Confirm");
 		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Confirm</i></b>");
-		Thread.sleep(15000);
-		
-		QaRobot.ScreenshotMethod("BillingDetails","<b><i>Screenshot for Billing Details</i></b>");
+		Thread.sleep(20000);
 	}
 	
 	public static void GuestAdultCheckoutForFlight_Hotel(String Adult,String Trip,String Emailid,String AdultTitle,String AdultName, String Phone,String AdultDOBdate,
@@ -493,19 +700,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(adultLNameElement, Laname, "<b><i>Write Last Name For Adult</i></b>");
 				
 				String DateSelection[] = AdultDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String adultdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(adultdayElement,Dcname, "<b><i>Select Day For Adult</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isBefore(today.minusYears(12))) 
+				{
+					String adultdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(adultdayElement,Dcname, "<b><i>Select Day For Adult</i></b>");
 
-				String adultmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(adultmonthElement,Mcname, "<b><i>Select Month For Adult</i></b>");
+					String adultmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(adultmonthElement,Mcname, "<b><i>Select Month For Adult</i></b>");
 
-				String adultyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(adultyearElement,Ycname,"<b><i>Select Year of Adult</i></b>");
+					String adultyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(adultyearElement,Ycname,"<b><i>Select Year of Adult</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String adultRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Adt')])[" + i + "]";
 				String[] adultRoom = AdultRoomSelection.split(",");
@@ -529,19 +774,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(adultLNameElement, Laname, "<b><i>Write Last Name For Adult</i></b>");
 				
 				String DateSelection[] = AdultDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String adultdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(adultdayElement,Dcname, "<b><i>Select Day For Adult</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isBefore(today.minusYears(12))) 
+				{
+					String adultdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(adultdayElement,Dcname, "<b><i>Select Day For Adult</i></b>");
 
-				String adultmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(adultmonthElement,Mcname, "<b><i>Select Month For Adult</i></b>");
+					String adultmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(adultmonthElement,Mcname, "<b><i>Select Month For Adult</i></b>");
 
-				String adultyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(adultyearElement,Ycname,"<b><i>Select Year of Adult</i></b>");
+					String adultyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateAdt_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(adultyearElement,Ycname,"<b><i>Select Year of Adult</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String adultRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Adt')])[" + i + "]";
 				String[] adultRoom = AdultRoomSelection.split(",");
@@ -558,7 +841,7 @@ public class B2cCheckoutPage
 				Thread.sleep(2000);
 				
 				String DateSelection1[] = AdultExpiryDate.split(",");
-				String DateS1[]= DateSelection1[i - 1].split(" ");
+				String DateS1[]= DateSelection1[i - 1].split("-");
 				String Dcname1 = DateS1[0];
 				String Mcname1 = DateS1[1];
 				String Ycname1 = DateS1[2];
@@ -586,6 +869,7 @@ public class B2cCheckoutPage
 		QaExtentReport.test.log(Status.INFO,"<b><i>Write Email</i></b>");
 		
 		QaRobot.ScreenshotMethod("AdultDetails","<b><i>Screenshot for Adult Details</i></b>");
+		QaExtentReport.extentScreenshot("Adult Details");
 	}
 	
 	public static void GuestChildCheckoutFlight_Hotel(String Child,String Trip, String ChildTitle, String ChildName,String ChildDOBdate,String ChildRoomSelection,
@@ -617,19 +901,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(childLNameElement, Lcname, "<b><i>Write Last Name For Child</i></b>");
 				
 				String DateSelection[] = ChildDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isBefore(today.minusYears(2))&& date.isAfter(today.minusYears(12))) 
+				{
+					String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
 
-				String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
+					String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
 
-				String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+					String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String childRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Chd')])[" + i + "]";
 				String[] adultRoom = ChildRoomSelection.split(",");
@@ -653,19 +975,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(childLNameElement, Lcname, "<b><i>Write Last Name For Child</i></b>");
 				
 				String DateSelection[] = ChildDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isBefore(today.minusYears(2))&& date.isAfter(today.minusYears(12))) 
+				{
+					String childdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(childdayElement,Dcname, "<b><i>Select Day For Child</i></b>");
 
-				String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
+					String childmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(childmonthElement,Mcname, "<b><i>Select Month For Child</i></b>");
 
-				String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+					String childyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateChd_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(childyearElement,Ycname,"<b><i>Select Year of Child</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String childRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Chd')])[" + i + "]";
 				String[] adultRoom = ChildRoomSelection.split(",");
@@ -682,7 +1042,7 @@ public class B2cCheckoutPage
 				Thread.sleep(2000);
 				
 				String DateSelection1[] = ChildPassportDate.split(",");
-				String DateS1[]= DateSelection1[i - 1].split(" ");
+				String DateS1[]= DateSelection1[i - 1].split("-");
 				String Dcname1 = DateS1[0];
 				String Mcname1 = DateS1[1];
 				String Ycname1 = DateS1[2];
@@ -702,7 +1062,9 @@ public class B2cCheckoutPage
 				Thread.sleep(2000);
 			}
 		}
+		
 		QaRobot.ScreenshotMethod("ChildDetails","<b><i>Screenshot for Child Details</i></b>");
+		QaExtentReport.extentScreenshot("Child Details");
 	}
 	
 	public static void GuestInfantCheckoutFlight_Hotel(String Infant,String Trip,String InfantTitle,String InfantName,String InfantDOBdate,String InfantTravellingwith,
@@ -734,19 +1096,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(infantLNameElement, Lcname, "<b><i>Write Last Name For Infant</i></b>");
 				
 				String DateSelection[] = InfantDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String infantdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(infantdayElement,Dcname, "<b><i>Select Day For Infant</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isAfter(today.minusYears(2))) 
+				{
+					String infantdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(infantdayElement,Dcname, "<b><i>Select Day For Infant</i></b>");
 
-				String infantmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(infantmonthElement,Mcname, "<b><i>Select Month For Infant</i></b>");
+					String infantmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(infantmonthElement,Mcname, "<b><i>Select Month For Infant</i></b>");
 
-				String infantyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(infantyearElement,Ycname,"<b><i>Select Year of Infant</i></b>");
+					String infantyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(infantyearElement,Ycname,"<b><i>Select Year of Infant</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String infantTravellingWith = "(//select[contains(@id,'ctl00_contentMain_ddl_travell_with')])[" + i + "]";
 				String[] infantTW = InfantTravellingwith.split(",");
@@ -770,19 +1170,57 @@ public class B2cCheckoutPage
 				QaRobot.PassValueByLocator(infantLNameElement, Lcname, "<b><i>Write Last Name For Infant</i></b>");
 				
 				String DateSelection[] = InfantDOBdate.split(",");
-				String DateS[]= DateSelection[i - 1].split(" ");
+				String DateS[]= DateSelection[i - 1].split("-");
 				String Dcname = DateS[0];
 				String Mcname = DateS[1];
 				String Ycname = DateS[2];
 				
-				String infantdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlDay')])[" + i + "]";
-				QaRobot.selectTextByLocator(infantdayElement,Dcname, "<b><i>Select Day For Infant</i></b>");
+				String currentMonthNumber = "0";
+				 if (Mcname.equalsIgnoreCase("Jan")) {
+		               currentMonthNumber = "01";
+		           } else if (Mcname.equalsIgnoreCase("Feb")) {
+		               currentMonthNumber = "02";
+		           } else if (Mcname.equalsIgnoreCase("Mar")) {
+		               currentMonthNumber = "03";
+		           } else if (Mcname.equalsIgnoreCase("Apr")) {
+		               currentMonthNumber = "04";
+		           } else if (Mcname.equalsIgnoreCase("May")) {
+		               currentMonthNumber = "05";
+		           } else if (Mcname.equalsIgnoreCase("Jun")) {
+		               currentMonthNumber = "06";
+		           } else if (Mcname.equalsIgnoreCase("Jul")) {
+		               currentMonthNumber = "07";
+		           } else if (Mcname.equalsIgnoreCase("Aug")) {
+		               currentMonthNumber = "08";
+		           } else if (Mcname.equalsIgnoreCase("Sep")) {
+		        	   currentMonthNumber = "09";
+		           } else if (Mcname.equalsIgnoreCase("Oct")) {
+		               currentMonthNumber = "10";
+		           } else if (Mcname.equalsIgnoreCase("Nov")) {
+		               currentMonthNumber = "11";
+		           } else if (Mcname.equalsIgnoreCase("Dec")) {
+		               currentMonthNumber = "12";
+		           }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Ycname), Integer.parseInt(currentMonthNumber), Integer.parseInt(Dcname));
+				LocalDate today = LocalDate.now();
+				
+				if (date.isAfter(today.minusYears(2))) 
+				{
+					String infantdayElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlDay')])[" + i + "]";
+					QaRobot.selectTextByLocator(infantdayElement,Dcname, "<b><i>Select Day For Infant</i></b>");
 
-				String infantmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlMonth')])[" + i + "]";
-				QaRobot.selectTextByLocator(infantmonthElement,Mcname, "<b><i>Select Month For Infant</i></b>");
+					String infantmonthElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlMonth')])[" + i + "]";
+					QaRobot.selectTextByLocator(infantmonthElement,Mcname, "<b><i>Select Month For Infant</i></b>");
 
-				String infantyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlYear')])[" + i + "]";
-				QaRobot.selectValueByLocator(infantyearElement,Ycname,"<b><i>Select Year of Infant</i></b>");
+					String infantyearElement = "(//select[contains(@id,'ctl00_contentMain_txt_birthDateInf_ddlYear')])[" + i + "]";
+					QaRobot.selectValueByLocator(infantyearElement,Ycname,"<b><i>Select Year of Infant</i></b>");
+				}
+				else
+				{
+					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new B2cExceptionClass("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				}
 				
 				String infantTravellingWith = "(//select[contains(@id,'ctl00_contentMain_ddl_travell_with')])[" + i + "]";
 				String[] infantTW = InfantTravellingwith.split(",");
@@ -799,7 +1237,7 @@ public class B2cCheckoutPage
 				Thread.sleep(2000);
 				
 				String DateSelection1[] = InfantPassportDate.split(",");
-				String DateS1[]= DateSelection1[i - 1].split(" ");
+				String DateS1[]= DateSelection1[i - 1].split("-");
 				String Dcname1 = DateS1[0];
 				String Mcname1 = DateS1[1];
 				String Ycname1 = DateS1[2];
@@ -820,6 +1258,7 @@ public class B2cCheckoutPage
 			}
 		}
 		QaRobot.ScreenshotMethod("InfantDetails","<b><i>Screenshot for Infant Details</i></b>");
+		QaExtentReport.extentScreenshot("Infant Details");
 	}
 	
 	public static void GuestDetailsCheckoutFlight_Hotel() throws Exception 
@@ -828,8 +1267,8 @@ public class B2cCheckoutPage
 		JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
 		js1.executeScript("arguments[0].click()", OMoreDetails);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("More Details");
 		QaRobot.ScreenshotMethod("MoreDetails","<b><i>Screenshot for More Details</i></b>");
 		
 		String ParentWindow = QaBrowser.driver.getWindowHandle();
@@ -851,8 +1290,8 @@ public class B2cCheckoutPage
 		JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver;
 		js3.executeScript("arguments[0].click()", ORuleBaggage);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Rule Baggage</i></b>");
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("Rule Baggage");
 		QaRobot.ScreenshotMethod("RuleBaggage","<b><i>Screenshot for Rule Baggage</i></b>");
 		
 		String ParentWindow1 = QaBrowser.driver.getWindowHandle();
@@ -874,8 +1313,8 @@ public class B2cCheckoutPage
 		JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
 		js5.executeScript("arguments[0].click()", IMoreDetails);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("More Details");
 		QaRobot.ScreenshotMethod("MoreDetails","<b><i>Screenshot for More Details</i></b>");
 		
 		String ParentWindow2 = QaBrowser.driver.getWindowHandle();
@@ -897,8 +1336,8 @@ public class B2cCheckoutPage
 		JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
 		js7.executeScript("arguments[0].click()", IRuleBaggage);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Rule Baggage</i></b>");
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("Rule Baggage");
 		QaRobot.ScreenshotMethod("RuleBaggage","<b><i>Screenshot for Rule Baggage</i></b>");
 		
 		String ParentWindow3 = QaBrowser.driver.getWindowHandle();
@@ -920,8 +1359,8 @@ public class B2cCheckoutPage
 		JavascriptExecutor js9 = (JavascriptExecutor) QaBrowser.driver;
 		js9.executeScript("arguments[0].click()", HMoreDetails);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
-		Thread.sleep(3000);
-		
+		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("More Details");
 		QaRobot.ScreenshotMethod("MoreDetails","<b><i>Screenshot for More Details</i></b>");
 		
 		String ParentWindow4 = QaBrowser.driver.getWindowHandle();
@@ -976,8 +1415,9 @@ public class B2cCheckoutPage
 		
 		QaRobot.ClickOnElement("Confirm");
 		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Confirm</i></b>");
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		
 		QaRobot.ScreenshotMethod("BillingDetails","<b><i>Screenshot for Billing Details</i></b>");
+		QaExtentReport.extentScreenshot("Billing Details");
 	}
 }

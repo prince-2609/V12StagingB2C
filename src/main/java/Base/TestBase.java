@@ -100,7 +100,6 @@ public class TestBase extends QaExtentReport {
 	public static List<WebElement> listofautosuggestion(By suggestiontxt, String txt, String city_name, By d)throws InterruptedException 
 	{
 		QaBrowser.driver.findElement(d).sendKeys(txt);
-		QaBrowser.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		ArrayList<WebElement> autosuggestions = (ArrayList<WebElement>) QaBrowser.driver.findElements(suggestiontxt);
 		// System.out.println(autosuggestions.toString());
 		for (WebElement autosuggestion : autosuggestions) 
@@ -114,7 +113,7 @@ public class TestBase extends QaExtentReport {
 			} 
 			else 
 			{
-				System.out.println("not equal");
+//				System.out.println("not equal");
 			}
 		}
 
@@ -125,9 +124,7 @@ public class TestBase extends QaExtentReport {
 	{
 		QaBrowser.driver.findElement(a).click();
 		QaBrowser.driver.findElement(a).clear();
-		QaBrowser.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		ArrayList<WebElement> autosuggs = (ArrayList<WebElement>) QaBrowser.driver.findElements(sugtxt);
-		
 		for (WebElement autosun : autosuggs) 
 		{
 			if (autosun.getText().equalsIgnoreCase(CategoryName)) 
@@ -202,9 +199,8 @@ public class TestBase extends QaExtentReport {
 	{
 		QaBrowser.driver.findElement(d4).clear();
 		QaBrowser.driver.findElement(d4).sendKeys(txt4);
-		QaBrowser.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		ArrayList<WebElement> autosuggestions = (ArrayList<WebElement>) QaBrowser.driver.findElements(suggestiontxt4);
-		// System.out.println(autosuggestions.toString());
+//		 System.out.println(autosuggestions.toString());
 		for (WebElement autosuggestion : autosuggestions) 
 		{
 //			System.out.println(autosuggestion.getText());
@@ -216,7 +212,32 @@ public class TestBase extends QaExtentReport {
 			} 
 			else 
 			{
-				System.out.println("not equal");
+//				System.out.println("not equal");
+			}
+		}
+
+		return autosuggestions;
+	}
+	
+	public static List<WebElement> listofautosuggestion5(By suggestiontxt5, String txt5, String city_name5, By d5)throws InterruptedException 
+	{
+		QaBrowser.driver.findElement(d5).clear();
+		QaBrowser.driver.findElement(d5).sendKeys(txt5);
+		ArrayList<WebElement> autosuggestions = (ArrayList<WebElement>) QaBrowser.driver.findElements(suggestiontxt5);
+//		 System.out.println(autosuggestions.toString());
+		for (WebElement autosuggestion : autosuggestions) 
+		{
+//			System.out.println(autosuggestion.getText());
+			if (autosuggestion.getText().equalsIgnoreCase(city_name5)) 
+			{
+//				System.out.println("equal");
+				autosuggestion.click();
+				autosuggestion.click();
+				break;
+			} 
+			else 
+			{
+//				System.out.println("not equal");
 			}
 		}
 

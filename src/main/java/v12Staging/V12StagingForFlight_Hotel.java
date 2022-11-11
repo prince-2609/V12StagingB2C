@@ -18,27 +18,33 @@ public class V12StagingForFlight_Hotel
 	@DataProvider
 	public Object[][] getexceldata() throws Exception 
 	{
-		return QaDataProvider.getTestdata("v12StagingFlight+Hotel","Sheet1");
+		return QaDataProvider.getTestdata("v12StagingFlight+Hotel","TestCases");
 	}
 	
 	@Test(dataProvider = "getexceldata")
 
-	public static void v12stagingforhotel(String UserType,String Source,String URL,String Username,String Password,String Trip,String OriginCityCode,
-			String OriginLocation,String DestinationCityCode,String DestinationLocation,String DepartureDate,String ReturnDate,String Rooms,
-			String Adult,String Child,String ChildAge,String Infant,String InfantAge,String MoreOptions,String Nationality,String Currency,
-			String Class,String ShowDirectFlight,String MyHotelDiffenrentDate,String ChangeCheckIn,String ChangeCheckOut,String ApplyFilter,
-			String StarRating,String PropertyType,String RateType,String ChooseAnotherFlight,String FlightFilter,String FareType,String AirLine,
-			String Emailid,String AdultTitle,String AdultName, String Phone,String AdultDOBdate,String AdultRoomSelection,String AdultPassportNumber,
-			String AdultPassportcountry,String AdultExpiryDate,String AdultNationality,String ChildTitle, String ChildName,String ChildDOBdate,String ChildRoomSelection,
-			String ChildPassportNumber,String ChildPassportcountry,String ChildPassportDate,String ChildNationality,String InfantTitle,String InfantName,
-			String InfantDOBdate,String InfantTravellingwith,String InfantPassportNumber,String InfantPassportcountry,String InfantPassportDate,String InfantNationality,
-			String Cardtype,String CardNumber,String CardName,String CardDate,String CVV,String BillingTitle, String BillingUserName, String BillingAddress,
-			String BillingCountry,String BillingCity) throws Exception 
+	public static void v12stagingforhotel(String TestCaseId,String TestCaseType,String TestScenario,String UserType,String Source,String URL,
+			String Username,String Password,String Trip,String OriginCityCode,String OriginLocation,String DestinationCityCode,String DestinationLocation,
+			String DepartureDate,String ReturnDate,String Rooms,String Adult,String Child,String ChildAge,String Infant,String InfantAge,
+			String MoreOptions,String Nationality,String Currency,String Class,String ShowDirectFlight,String MyHotelDiffenrentDate,
+			String ChangeCheckIn,String ChangeCheckOut,String ModifySearch,String ChangeTripLocation,String MarketTypeM,String OriginCityCodeM,
+			String OriginLocationM,String DestinationCityCodeM,String DestinationLocationM,String ChangeTripDate,String DepartureDateM,
+			String ReturnDateM,String ChangeRooms,String RoomsM,String AdultM,String ChildM,String ChildAgeM,String InfantM,String InfantAgeM,
+			String MyHotelDiffenrentDateM,String ChangeCheckInM,String ChangeCheckOutM,String ChangeCurrency,String CurrencyM,
+			String ChangeClass,String ClassM,String ChangeAirline,String PANumberM,String PreferredAirlineSelectM,String ShowDirectFlightM,
+			String ApplyFilter,String StarRating,String PropertyType,String RateType,String ChooseAnotherFlight,String FlightFilter,String FareType,
+			String AirLine,String Emailid,String AdultTitle,String AdultName, String Phone,String AdultDOBdate,String AdultRoomSelection,
+			String AdultPassportNumber,String AdultPassportcountry,String AdultExpiryDate,String AdultNationality,String ChildTitle,
+			String ChildName,String ChildDOBdate,String ChildRoomSelection,String ChildPassportNumber,String ChildPassportcountry,String ChildPassportDate,
+			String ChildNationality,String InfantTitle,String InfantName,String InfantDOBdate,String InfantTravellingwith,String InfantPassportNumber,
+			String InfantPassportcountry,String InfantPassportDate,String InfantNationality,String Cardtype,String CardNumber,String CardName,
+			String CardDate,String CVV,String BillingTitle, String BillingUserName, String BillingAddress,String BillingCountry,
+			String BillingCity) throws Exception 
 	{
 		TestBase.Companycode(Source,URL); 
 		QaRobot.impliwait(30);
 		
-		QaExtentReport.test = QaExtentReport.report.createTest("Test on Booking For Flight + Hotel");
+		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId);
 	
 		if (UserType.equalsIgnoreCase("LogIn"))
 		{
@@ -60,7 +66,11 @@ public class V12StagingForFlight_Hotel
 			B2cTripType.flight_HotelTrip(Trip,OriginCityCode,OriginLocation,DestinationCityCode,DestinationLocation,DepartureDate,ReturnDate,Rooms,Adult,Child,
 					ChildAge,Infant,InfantAge,MoreOptions,Nationality,Currency,Class,ShowDirectFlight,MyHotelDiffenrentDate,ChangeCheckIn,ChangeCheckOut);
 			
-			B2cResultPage.ResultPageForFlight_Hotel(ApplyFilter,StarRating,PropertyType,RateType,ChooseAnotherFlight,FlightFilter,FareType,AirLine);
+			B2cResultPage.ResultPageForFlight_Hotel(ModifySearch,ChangeTripLocation,MarketTypeM,OriginCityCodeM,OriginLocationM,DestinationCityCodeM,
+					DestinationLocationM,ChangeTripDate,DepartureDateM,ReturnDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,InfantM,
+					InfantAgeM,MyHotelDiffenrentDateM,ChangeCheckInM,ChangeCheckOutM,ChangeCurrency,CurrencyM,ChangeClass,ClassM,ChangeAirline,
+					PANumberM,PreferredAirlineSelectM,ShowDirectFlightM,ApplyFilter,StarRating,PropertyType,RateType,ChooseAnotherFlight,
+					FlightFilter,FareType,AirLine);
 		}
 		
 		else if (UserType.equalsIgnoreCase("Guest"))
@@ -71,7 +81,11 @@ public class V12StagingForFlight_Hotel
 			B2cTripType.flight_HotelTrip(Trip,OriginCityCode,OriginLocation,DestinationCityCode,DestinationLocation,DepartureDate,ReturnDate,Rooms,Adult,Child,
 					ChildAge,Infant,InfantAge,MoreOptions,Nationality,Currency,Class,ShowDirectFlight,MyHotelDiffenrentDate,ChangeCheckIn,ChangeCheckOut);
 			
-			B2cResultPage.ResultPageForFlight_Hotel(ApplyFilter,StarRating,PropertyType,RateType,ChooseAnotherFlight,FlightFilter,FareType,AirLine);
+			B2cResultPage.ResultPageForFlight_Hotel(ModifySearch,ChangeTripLocation,MarketTypeM,OriginCityCodeM,OriginLocationM,DestinationCityCodeM,
+					DestinationLocationM,ChangeTripDate,DepartureDateM,ReturnDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,InfantM,
+					InfantAgeM,MyHotelDiffenrentDateM,ChangeCheckInM,ChangeCheckOutM,ChangeCurrency,CurrencyM,ChangeClass,ClassM,ChangeAirline,
+					PANumberM,PreferredAirlineSelectM,ShowDirectFlightM,ApplyFilter,StarRating,PropertyType,RateType,ChooseAnotherFlight,
+					FlightFilter,FareType,AirLine);
 		
 			B2cCheckoutPage.GuestDetailsCheckoutFlight_Hotel();
 			

@@ -10,26 +10,25 @@ import utilities.QaRobot;
 
 public class B2cPaymentPage 
 {
-	public static void cardPayment(String CardType,String CreditCardNumber,String CardHolderName,String CardExpiryDate,String CVV,String BillingState,String CardCity) throws Exception
+	public static void cardPayment(String CardType,String CreditCardNumber,String CardHolderName,String CardExpiryDate,String CVV,String BillingAddress,String BillingState,String CardCity) throws Exception
 	{
 		if (CardType.equalsIgnoreCase("MasterCard"))
 		{
 			QaRobot.ClickOnElement("MasterCard");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on MasterCard</i></b>");
 			
-			cardDetailsForFlight(CreditCardNumber,CardHolderName,CardExpiryDate,CVV,BillingState,CardCity);
+			cardDetailsForFlight(CreditCardNumber,CardHolderName,CardExpiryDate,CVV,BillingAddress,BillingState,CardCity);
 		}
 		else if (CardType.equalsIgnoreCase("VisaCard"))
 		{
 			QaRobot.ClickOnElement("VisaCard");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on VisaCard</i></b>");
 			
-			cardDetailsForFlight(CreditCardNumber,CardHolderName,CardExpiryDate,CVV,BillingState,CardCity);
+			cardDetailsForFlight(CreditCardNumber,CardHolderName,CardExpiryDate,CVV,BillingAddress,BillingState,CardCity);
 		}
-		QaRobot.ScreenshotMethod("cardPayment","<b><i>Screenshot for Card Payment</i></b>");
 	}
 		
-		public static void cardDetailsForFlight(String CreditCardNumber,String CardHolderName,String CardExpiryDate,String CVV,String BillingState,String CardCity) throws Exception
+		public static void cardDetailsForFlight(String CreditCardNumber,String CardHolderName,String CardExpiryDate,String CVV,String BillingAddress,String BillingState,String CardCity) throws Exception
 		{
 			QaRobot.PassValue("CreditCardNumber",CreditCardNumber);
 			QaExtentReport.test.log(Status.INFO,"<b><i>Write Credit Card Number</i></b>");
@@ -49,6 +48,9 @@ public class B2cPaymentPage
 			QaRobot.PassValue("CardCVVNumber",CVV);
 			QaExtentReport.test.log(Status.INFO,"<b><i>Write CVV Number</i></b>");
 			
+			QaRobot.PassValue("BillingAddressF",BillingAddress);
+			QaExtentReport.test.log(Status.INFO,"<b><i>Write Billing Address</i></b>");
+			
 			String billingState = "(//select[@id='ddlBillingState'])[1]";
 			QaRobot.selectTextByLocator1(billingState,BillingState, "<b><i>Selected Billing State</i></b>");
 			
@@ -56,6 +58,9 @@ public class B2cPaymentPage
 			String cityCode = cardCity[0];
 			String cityLocation = cardCity[1];
 			TestBase.listofautosuggestion4(By.xpath("//div[@id='divCityCC']/p"), cityCode, cityLocation,By.xpath("(//input[@id='txtBillingCity'])[1]"));
+
+			QaRobot.ScreenshotMethod("cardPayment","<b><i>Screenshot for Card Payment</i></b>");
+			QaExtentReport.extentScreenshot("Card Payment");
 			
 			QaRobot.ClickOnElement("CreditPayNow");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Credit Pay Now</i></b>");

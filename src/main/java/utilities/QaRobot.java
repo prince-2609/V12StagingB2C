@@ -67,12 +67,12 @@ public class QaRobot extends QaExtentReport
 	public static void ScreenshotMethod(String text,String text1) throws IOException 
 	{
 		Date date = new Date();
-		DateFormat d = new SimpleDateFormat("MM-dd-yy & HH-mm-ss");
+		DateFormat d = new SimpleDateFormat("dd-MM-yy & HH-mm-ss");
 		String NewDate = d.format(date);
 		
 		TakesScreenshot ts = (TakesScreenshot)QaBrowser.driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
-		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+text+".jpg");
+		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+" "+text+".jpg");
 		FileUtils.copyFile(Source, Dest);
 		QaExtentReport.test.log(Status.INFO, text1);
 	}
@@ -306,9 +306,8 @@ public class QaRobot extends QaExtentReport
 	
 	}
 
-	public static void ClickOnElement(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+
+	
 
 }

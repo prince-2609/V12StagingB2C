@@ -16,20 +16,23 @@ public class V12StagingForHotel
 	@DataProvider
 	public Object[][] getexceldata() throws Exception 
 	{
-		return QaDataProvider.getTestdata("v12StagingHotel","Sheet1");
+		return QaDataProvider.getTestdata("v12StagingHotel","TestCases");
 	}
 	
 	@Test(dataProvider = "getexceldata")
 
-	public static void v12stagingforhotel( String Usertype, String Source, String URL,String UserName,String Password,String CityCode,String CityTitle, 
+	public static void v12stagingforhotel(String TestCaseId,String TestCaseType,String TestScenario,String Usertype, String Source, String URL,String UserName,String Password,String CityCode,String CityTitle, 
 			String CheckInDate,String CheckOutDate,String Rooms,String Adult,String Child,String ChildAge,String Nationality,String MoreOptions,String Currency,String StarRating,
-			String Emailid,String AdultTitle,String AdultName,String Phone,String ChildTitle, String ChildName,String ChildDOBdate,String Cardtype,String CardNumber,
-			String CardName,String CardDate,String CVV,String BillingTitle,String BillingUserName,String BillingAddress,String BillingCountry,String BillingCity) throws Exception 
+			String ModifySearch,String ChangeTripLocation,String CityCodeM,String CityTitleM,String ChangeTripDate,String CheckInDateM,
+			String CheckOutDateM,String ChangeRooms,String RoomsM,String AdultM,String ChildM,String ChildAgeM,String ChangeCurrency,
+			String CurrencyM,String ChangeStarRating,String StarRatingM,String Emailid,String AdultTitle,String AdultName,String Phone,
+			String ChildTitle, String ChildName,String ChildDOBdate,String Cardtype,String CardNumber,String CardName,String CardDate,
+			String CVV,String BillingTitle,String BillingUserName,String BillingAddress,String BillingCountry,String BillingCity) throws Exception 
 	{
 		TestBase.Companycode(Source,URL); 
 		QaRobot.impliwait(30);
 		
-		QaExtentReport.test = QaExtentReport.report.createTest("Test on Booking For Hotel");
+		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId);
 		
 		if(Usertype.equalsIgnoreCase("Login"))
 		{
@@ -41,6 +44,7 @@ public class V12StagingForHotel
 			
 			QaRobot.PassValue("Password",Password);
 			QaExtentReport.test.log(Status.INFO, "<b><i>Write Password</i></b>");
+			QaExtentReport.extentScreenshot("Sigh In Page");
 			
 			QaRobot.ClickOnElement("Submit");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on submit</i></b>");
@@ -50,7 +54,8 @@ public class V12StagingForHotel
 			
 			B2cTripType.hotelTrip(CityCode,CityTitle,CheckInDate,CheckOutDate,Rooms,Adult,Child,ChildAge,Nationality,MoreOptions,Currency,StarRating);
 			
-			B2cResultPage.ResultPageForHotel(Rooms);
+			B2cResultPage.ResultPageForHotel(Rooms,ModifySearch,ChangeTripLocation,CityCodeM,CityTitleM,ChangeTripDate,CheckInDateM,
+					CheckOutDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,ChangeCurrency,CurrencyM,ChangeStarRating,StarRatingM);
 		}
 		
 		else if (Usertype.equalsIgnoreCase("Guest"))
@@ -60,11 +65,12 @@ public class V12StagingForHotel
 			
 			B2cTripType.hotelTrip(CityCode,CityTitle,CheckInDate,CheckOutDate,Rooms,Adult,Child,ChildAge,Nationality,MoreOptions,Currency,StarRating);
 			
-			B2cResultPage.ResultPageForHotel(Rooms);
+			B2cResultPage.ResultPageForHotel(Rooms,ModifySearch,ChangeTripLocation,CityCodeM,CityTitleM,ChangeTripDate,CheckInDateM,
+					CheckOutDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,ChangeCurrency,CurrencyM,ChangeStarRating,StarRatingM);
 			
 			B2cCheckoutPage.GuestAdultCheckoutForHotel(Emailid,Adult,AdultTitle,AdultName,Phone);
 			
-			B2cCheckoutPage.GuestChildCheckoutForHotel(Child,ChildTitle,ChildName,ChildDOBdate);
+			B2cCheckoutPage.GuestChildCheckoutForHotel(CheckInDate,Child,ChildAge,ChildTitle,ChildName,ChildDOBdate);
 			
 			B2cPaymentPage.cardPaymentForHotel(Cardtype,CardNumber,CardName,CardDate,CVV);
 			

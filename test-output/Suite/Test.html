@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/13/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 23 18:14:57 IST 2022</td>
+<td>Started on:</td><td>Fri Sep 16 17:08:29 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>737 seconds (737470 ms)</td>
+<tr><td>Total time:</td><td>955 seconds (955380 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,23 +67,633 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel()'><b>v12stagingforhotel</b><br>Test class: v12Staging.V12StagingForFlight_Hotel<br>Parameters: Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, Domestic, del, Delhi,India - Indira Gandhi Intl (DEL), maa, Chennai, India - Chennai (MAA), 10,Nov 2022, 15,Nov 2022, 2, 2,1, 1,2, 7,8, 1,0, 1,0, Yes, Indian, INR, Economy, No, Yes, 13,Nov 2022, 18,Nov 2022, Yes, All, Hotel, RoomRate, Yes, Yes, All, Vistara, shubham.natkar@quadlabs.com, Ms,Ms,Mr, Laxmi Khanal,Sakshi Singh,Shubham Natkar, 8447422233, 15 May 1992,20 Jun 1994,25 Jul 1998, Room1,Room1,Room2, 780KL00323,897123333MU,89712333GH10, India (IN),Indonesia (ID),India (IN), 23 Mar 2030,30 Jun 2028,19 Jun 2028, Indian,Indian,Indian, Miss,Mstr,Mstr, Devi Shukla,Abhisha Kanal,Shubham Sanu, 25 Apr 2015,13 May 2015,13 May 2014, Room1,Room2,Room2, 78LH43232L,8978ABY8798,8978979IQL3, India (IN),Indonesia (ID),India (IN), 23 Feb 2026,17 Mar 2028,17 Mar 2025, Indian,Indian,Indian, Miss,Mstr, Dev Jain,Abhi Sharma, 25 Apr 2021,13 May 2021, Adult1,Adult2, 78554AL2323,8978H79879O, India (IN),Indonesia (ID), 23 Feb 2030,17 Mar 2031, Indian,Indian, Master Card, 5123456789012346, Shubham Natkar, Apr,2025, 123, Mr, Shubham Natkar, Gurgaon, India (IN), del,Delhi</td>
-<td></td>
-<td>335</td>
-<td>v12Staging.V12StagingForFlight_Hotel@37654521</td></tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 14, Negative, Verify City code, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, dex, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 8-Sep-2022, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 8-Sep-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1617784108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1617784108'><pre>v12Staging.B2cExceptionClass: Invalid date provided 8-Sep-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
 <tr>
-<td title='v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel()'><b>v12stagingforhotel</b><br>Test class: v12Staging.V12StagingForFlight_Hotel<br>Parameters: Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, International, del, Delhi,India - Indira Gandhi Intl (DEL), dxb, Dubai,United Arab Emirates - Dubai (DXB), 10,Nov 2022, 15,Nov 2022, 2, 2,1, 1,2, 7,8, 1,0, 1,0, Yes, Indian, INR, Economy, No, Yes, 13,Nov 2022, 18,Nov 2022, Yes, All, Hotel, RoomRate, Yes, Yes, All, Vistara, shubham.natkar@quadlabs.com, Ms,Ms,Mr, Laxmi Khanal,Sakshi Singh,Shubham Natkar, 8447422233, 15 May 1992,20 Jun 1994,25 Jul 1998, Room1,Room1,Room2, 780KL00323,897123333MU,89712333GH9, India (IN),Indonesia (ID),India (IN), 23 Mar 2030,30 Jun 2028,19 Jun 2028, Indian,Indian,Indian, Miss,Mstr,Mstr, Devi Shukla,Abhisha Kanal,Shubham Sanu, 25 Apr 2015,13 May 2015,13 May 2014, Room1,Room2,Room2, 78LH43232L,8978ABY8798,8978979IQL2, India (IN),Indonesia (ID),India (IN), 23 Feb 2026,17 Mar 2028,17 Mar 2025, Indian,Indian,Indian, Miss,Mstr, Dev Jain,Abhi Sharma, 25 Apr 2021,13 May 2021, Adult1,Adult2, 78554AL2323,8978H79879O, India (IN),Indonesia (ID), 23 Feb 2030,17 Mar 2031, Indian,Indian, Master Card, 5123456789012346, Shubham Natkar, Apr,2025, 123, Mr, Shubham Natkar, Gurgaon, India (IN), del,Delhi</td>
-<td></td>
-<td>400</td>
-<td>v12Staging.V12StagingForFlight_Hotel@37654521</td></tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 15, Negative, Verify City Name, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Dubai, United Arab Emirates - Dubai (DXB), dxb, Dubai, United Arab Emirates - Dubai (DXB), 8-Sep-2022, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;img src=&quot;/QLMetaB2C/Assets/Image/common/icon_calender.png&quot; alt=&quot;Popup&quot; width=&quot;25&quot; height=&quot;25&quot;&gt; is not clickable at point (374, 323). Other element would receive the click: &lt;div id=&quot;divFLDepart&quot; class=&quot;DynaDiv &quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=105.0.5195.126)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;SHUBHAM&apos;, ip: &apos;192.168.111.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88396411d6be77b98680a6a2a6bcd995, clickElement {id=94657ef9-a11b-423c-8e72-5e9e4549c7cc}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.126, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61364/devtoo..., se:cdpVersion: 105.0.5195.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (88396411d6be77b98680a6a2a6bcd995)] -&gt; xpath: (//img[@alt=&apos;Popup&apos;])[1]]
+Session ID: 88396411d6be77b98680a6a2a6bcd995
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:51)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1507181879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1507181879'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;img src=&quot;/QLMetaB2C/Assets/Image/common/icon_calender.png&quot; alt=&quot;Popup&quot; width=&quot;25&quot; height=&quot;25&quot;&gt; is not clickable at point (374, 323). Other element would receive the click: &lt;div id=&quot;divFLDepart&quot; class=&quot;DynaDiv &quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=105.0.5195.126)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;SHUBHAM&apos;, ip: &apos;192.168.111.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88396411d6be77b98680a6a2a6bcd995, clickElement {id=94657ef9-a11b-423c-8e72-5e9e4549c7cc}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.126, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61364/devtoo..., se:cdpVersion: 105.0.5195.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (88396411d6be77b98680a6a2a6bcd995)] -&gt; xpath: (//img[@alt=&apos;Popup&apos;])[1]]
+Session ID: 88396411d6be77b98680a6a2a6bcd995
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:51)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 18, Negative, Verify child DOB passing date within 2 years, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 21-Oct-2022, 25-Oct-2022, 2, 1, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2009,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2009,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid Child Date Selection : 25-Apr-2009
+	at v12Staging.B2cCheckoutPage.GuestChildCheckoutForFlight(B2cCheckoutPage.java:309)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1155167327", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1155167327'><pre>v12Staging.B2cExceptionClass: Invalid Child Date Selection : 25-Apr-2009
+	at v12Staging.B2cCheckoutPage.GuestChildCheckoutForFlight(B2cCheckoutPage.java:309)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>225</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 16, Negative, Verify provide past date in Return RoundTrip, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, RoundTrip, Domestic, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 25-Aug-2022, 3-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Aug-2022
+	at v12Staging.B2cTripType.selectDateInCalendarRoundTrip(B2cTripType.java:672)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:124)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1024666550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1024666550'><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Aug-2022
+	at v12Staging.B2cTripType.selectDateInCalendarRoundTrip(B2cTripType.java:672)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:124)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 20, Negative, Verify infant DOB passing date before 2 years, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 21-Oct-2022, 25-Oct-2022, 2, 1, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2009,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2015,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2019,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid Infant Date Selection : 25-Apr-2019
+	at v12Staging.B2cCheckoutPage.GuestInfantCheckoutForFlight(B2cCheckoutPage.java:411)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:86)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1247570736", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1247570736'><pre>v12Staging.B2cExceptionClass: Invalid Infant Date Selection : 25-Apr-2019
+	at v12Staging.B2cCheckoutPage.GuestInfantCheckoutForFlight(B2cCheckoutPage.java:411)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>243</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 13, Negative, Verify Departure & Arrival city name same, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), del, Delhi, India - Indira Gandhi International Airport (DEL), 8-Sep-2022, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 8-Sep-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1485438020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1485438020'><pre>v12Staging.B2cExceptionClass: Invalid date provided 8-Sep-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 12, Negative, Verify provide past date in OneWay, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@124, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 25-Dec-2021, 25-Oct-2023, 2, 2, 1, No, INR, Economy, 4, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 26-Apr-2021,13-May-2021, Adult1,Adult3, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2041, 124, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Dec-2021
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace540399195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace540399195'><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Dec-2021
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 8, Negative, Verify Adult 3 & Infant 6, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 21-Oct-2022, 25-Oct-2022, 3, 0, 6, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Infants must be less than or equal to Adults.}
+  (Session info: chrome=105.0.5195.126): Infants must be less than or equal to Adults.
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;SHUBHAM&apos;, ip: &apos;192.168.111.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [90b6d7b5dc895acef497c1f0dda21ceb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.126, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61092}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61092/devtoo..., se:cdpVersion: 105.0.5195.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 90b6d7b5dc895acef497c1f0dda21ceb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at utilities.QaRobot.ScreenshotMethod(QaRobot.java:74)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:187)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1573719263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1573719263'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Infants must be less than or equal to Adults.}
+  (Session info: chrome=105.0.5195.126): Infants must be less than or equal to Adults.
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;SHUBHAM&apos;, ip: &apos;192.168.111.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [90b6d7b5dc895acef497c1f0dda21ceb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.126, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61092}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61092/devtoo..., se:cdpVersion: 105.0.5195.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 90b6d7b5dc895acef497c1f0dda21ceb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at utilities.QaRobot.ScreenshotMethod(QaRobot.java:74)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:187)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>21</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 19, Negative, Verify child DOB passing date before 12 years, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 21-Oct-2022, 25-Oct-2022, 2, 1, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2009,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2021,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2019,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid Child Date Selection : 25-Apr-2021
+	at v12Staging.B2cCheckoutPage.GuestChildCheckoutForFlight(B2cCheckoutPage.java:309)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1933669524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1933669524'><pre>v12Staging.B2cExceptionClass: Invalid Child Date Selection : 25-Apr-2021
+	at v12Staging.B2cCheckoutPage.GuestChildCheckoutForFlight(B2cCheckoutPage.java:309)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>225</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 10, Negative, Verify provide date 34 in day, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 34-Oct-2022, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 34-Oct-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:515)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916677384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916677384'><pre>v12Staging.B2cExceptionClass: Invalid date provided 34-Oct-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:515)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>14</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 17, Negative, Verify adult DOB passing date within 12 years, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 21-Oct-2022, 25-Oct-2022, 2, 1, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid Adult Date Selection : 25-Nov-2010
+	at v12Staging.B2cCheckoutPage.GuestAdultCheckoutForFlight(B2cCheckoutPage.java:112)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1341785997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1341785997'><pre>v12Staging.B2cExceptionClass: Invalid Adult Date Selection : 25-Nov-2010
+	at v12Staging.B2cCheckoutPage.GuestAdultCheckoutForFlight(B2cCheckoutPage.java:112)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>125</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 9, Negative, Verify 32 February, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 32-Feb-2023, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 32-Feb-2023
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:515)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace144486215", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace144486215'><pre>v12Staging.B2cExceptionClass: Invalid date provided 32-Feb-2023
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:515)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
+<tr>
+<td title='v12Staging.V12StagingForFlight.v12Stagingforflight()'><b>v12Stagingforflight</b><br>Test class: v12Staging.V12StagingForFlight<br>Parameters: Test Flight 11, Negative, Verify provide past date in OneWay, Guest, b2c, //v12staging/qlmetab2c/, shubham.natkar@quadlabs.com, Admin@123, OneWay, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), 25-Aug-2022, 25-Oct-2022, 2, 2, 1, No, INR, Economy, 3, air india,gulf air,Oman air, No, No, No, Yes, RoundTrip, International, del, Delhi, India - Indira Gandhi International Airport (DEL), dxb, Dubai, United Arab Emirates - Dubai (DXB), Yes, 26-Oct-2022, 29-Oct-2022, Yes, 1, 1, 1, Yes, Premium Economy, Yes, Yes, INR, 2, air india,gulf air, No, All, Vistara, Mr,Mrs, Sonu Bansal,Sonia Yadav, 25-Nov-2010,23-May-1986, shubham.natkar@quadlabs.com, 9487689453,7825645669, 78AJI0321K,897NKJ233G, India,Indonesia, 23-Mar-2030,30-Jun-2028, Indian,Indian, Miss,Mstr, Devi Shukla,Abhisha Kanal, 78AJ00321K,897LKJ233G, India,Indonesia, 23-Feb-2026,17-Mar-2028, Indian,Indian, 25-Apr-2017,13-May-2014, Miss,Mstr, Dev Jain,Abhi Sharma, 25-Apr-2021,13-May-2021, Adult1,Adult2, 78A0I0321K,897N0J233G, India,Indonesia, 23-Feb-2030,17-Mar-2031, Indian,Indian, MasterCard, 5123456789012340, Shubham Natkar, 11,2040, 123, Gurgaon, Delhi, del,Delhi</td>
+<td><div><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Aug-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2005492533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2005492533'><pre>v12Staging.B2cExceptionClass: Invalid date provided 25-Aug-2022
+	at v12Staging.B2cTripType.selectDateInCalendarOneWay(B2cTripType.java:533)
+	at v12Staging.B2cTripType.flightTriptype(B2cTripType.java:54)
+	at v12Staging.V12StagingForFlight.v12Stagingforflight(V12StagingForFlight.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>v12Staging.V12StagingForFlight@37654521</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,0 +1,4963 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>V12Staging</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">V12StagingB2C</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 6, 2022 03:23:57 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:24:06 pm</span> / <span>00:04:49:434</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:24:06 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:28:56 pm</span>
+<span class='badge badge-default'>00:04:49:434</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:07 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:07 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:10 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Chennai, India - Chennai (MAA)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:14 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:14 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:17 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:24:39 pm</td>
+        <td>
+          <b><i>Screenshot for Flight+Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:21 pm</td>
+        <td>
+          <b><i>Clicked on Final Search</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:41 pm</td>
+        <td>
+          <b><i>Session id is </i></b>0cd38937-52ff-45bb-b8ed-0ee1095f5dc0&FlightMode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:41 pm</td>
+        <td>
+          <b><i>Screenshot for Apply filter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:42 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-41 Apply filter.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-41 Apply filter.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:42 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-47 Flight Fare Rule.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-47 Flight Fare Rule.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:47 pm</td>
+        <td>
+          <b><i>Screenshot for Flight Fare Rule</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:47 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:49 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:54 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-54 Baggege Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-25-54 Baggege Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:55 pm</td>
+        <td>
+          <b><i>Screenshot for Baggege Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:55 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:25:57 pm</td>
+        <td>
+          <b><i>Clicked on Select Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:05 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:10 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-26-10 Room Cancellation Policy.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-26-10 Room Cancellation Policy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:10 pm</td>
+        <td>
+          <b><i>Screenshot for Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:11 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:31 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:46 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:51 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-26-51 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-26-51 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:51 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:52 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:26:55 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-00 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-00 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:00 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:04 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:07 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:12 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-12 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-12 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:12 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:12 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:15 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:20 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-20 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-20 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:21 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:23 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:27 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-32 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-32 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:32 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:32 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:35 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:36 pm</td>
+        <td>
+          <b><i>Write PhoneNumber</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Write Email</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Screenshot for Adult Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-37 Adult Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-37 Adult Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:37 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          <b><i>Screenshot for Child Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:38 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-38 Child Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-38 Child Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Select Title For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Write Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Write Last Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Select Day For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Select Month For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Select Year of Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Select Room For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          <b><i>Screenshot for Infant Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:39 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-39 Infant Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-27-39 Infant Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:40 pm</td>
+        <td>
+          <b><i>Select Card Type</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Write Card Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Write Card Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Selecte Card Month</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Select Card Year</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Write CVV Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Screenshot for Card Payment</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:42 pm</td>
+        <td>
+          <b><i>Select Billing User Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:45 pm</td>
+        <td>
+          <b><i>Write Billing User First Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:45 pm</td>
+        <td>
+          <b><i>Write Billing User Last Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:45 pm</td>
+        <td>
+          <b><i>Write Billing User Address</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:45 pm</td>
+        <td>
+          <b><i>Select Country</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:48 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:27:48 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:35 pm</td>
+        <td>
+          <b><i>Clicked on Confirm</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Screenshot for Billing Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-55 Billing Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-55 Billing Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>500187
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Flight Booking Status is </i></b>confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Flight Confirming Status PNR Number is </i></b>2BPP5R
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Hotel Booking Status is </i></b>confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          <b><i>Hotel Confirming Status Number is </i></b>7077253555151
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:55 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-55 Confirm Page.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-55 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:28:56 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:28:56 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:28:56 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-56 Successful Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-28-56 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:29:02 pm</span> / <span>00:03:34:403</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:29:02 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:32:37 pm</span>
+<span class='badge badge-default'>00:03:34:403</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:03 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:06 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:08 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Dubai, United Arab Emirates - Dubai (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:12 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:12 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:15 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:29:37 pm</td>
+        <td>
+          <b><i>Screenshot for Flight+Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:26 pm</td>
+        <td>
+          <b><i>Clicked on Final Search</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:46 pm</td>
+        <td>
+          <b><i>Session id is </i></b>6cc20dea-2393-4a51-bac3-e922d735f003&FlightMode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:46 pm</td>
+        <td>
+          <b><i>Screenshot for Apply filter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:46 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-46 Apply filter.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-46 Apply filter.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:46 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:52 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-51 Flight Fare Rule.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-51 Flight Fare Rule.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:52 pm</td>
+        <td>
+          <b><i>Screenshot for Flight Fare Rule</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:52 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:54 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:59 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-59 Baggege Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-30-59 Baggege Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:59 pm</td>
+        <td>
+          <b><i>Screenshot for Baggege Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:30:59 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:01 pm</td>
+        <td>
+          <b><i>Clicked on Select Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:13 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:19 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-31-18 Room Cancellation Policy.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-31-18 Room Cancellation Policy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:19 pm</td>
+        <td>
+          <b><i>Screenshot for Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:19 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:38 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:54 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-31-59 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-31-59 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:02 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:07 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-07 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-07 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:08 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:08 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:11 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:16 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-16 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-16 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:16 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:16 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:19 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:24 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-24 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-24 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:24 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:24 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:28 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:33 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-33 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-33 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:33 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:33 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Invalid Adult Date Selection</i></b> - 15-May-2017
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <textarea readonly class="code-block">v12Staging.B2cExceptionClass: Invalid Adult Date Selection : 15-May-2017
+	at v12Staging.B2cCheckoutPage.GuestAdultCheckoutForFlight_Hotel(B2cCheckoutPage.java:826)
+	at v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel(V12StagingForFlight_Hotel.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:36 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-36 Fail Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-32-36 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:32:43 pm</span> / <span>00:03:55:428</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:32:43 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:36:38 pm</span>
+<span class='badge badge-default'>00:03:55:428</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:46 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:48 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Dubai, United Arab Emirates - Dubai (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:52 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:52 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:55 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:17 pm</td>
+        <td>
+          <b><i>Screenshot for Flight+Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:13 pm</td>
+        <td>
+          <b><i>Clicked on Final Search</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:33 pm</td>
+        <td>
+          <b><i>Session id is </i></b>153ea0ea-7c9c-4ab4-bca5-b09accda33c6&FlightMode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:33 pm</td>
+        <td>
+          <b><i>Screenshot for Apply filter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:33 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-33 Apply filter.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-33 Apply filter.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:33 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:38 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-38 Flight Fare Rule.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-38 Flight Fare Rule.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:39 pm</td>
+        <td>
+          <b><i>Screenshot for Flight Fare Rule</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:39 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:41 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:46 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-46 Baggege Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-46 Baggege Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:46 pm</td>
+        <td>
+          <b><i>Screenshot for Baggege Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:46 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:48 pm</td>
+        <td>
+          <b><i>Clicked on Select Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:54 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:59 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-59 Room Cancellation Policy.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-34-59 Room Cancellation Policy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:59 pm</td>
+        <td>
+          <b><i>Screenshot for Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:59 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:18 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:34 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:39 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-39 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-39 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:39 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:39 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:42 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-47 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-47 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:47 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:47 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:51 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:56 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-56 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-35-56 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:56 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:56 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:59 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:04 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-04 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-04 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:04 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:04 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:07 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:13 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-12 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-12 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:13 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:13 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:16 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:19 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:21 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:21 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:21 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:21 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:23 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:24 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:26 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:28 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:28 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:28 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:28 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:30 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:30 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:30 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:30 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:30 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:31 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:31 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:31 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:33 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:35 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:35 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:35 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:35 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:37 pm</td>
+        <td>
+          <b><i>Write PhoneNumber</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:37 pm</td>
+        <td>
+          <b><i>Write Email</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:37 pm</td>
+        <td>
+          <b><i>Screenshot for Adult Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-37 Adult Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-37 Adult Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Invalid Adult Date Selection</i></b> - 25-Apr-2021
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <textarea readonly class="code-block">v12Staging.B2cExceptionClass: Invalid Adult Date Selection : 25-Apr-2021
+	at v12Staging.B2cCheckoutPage.GuestChildCheckoutFlight_Hotel(B2cCheckoutPage.java:1027)
+	at v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel(V12StagingForFlight_Hotel.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:38 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-38 Fail Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-36-38 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:36:44 pm</span> / <span>00:00:55:852</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:36:44 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:37:40 pm</span>
+<span class='badge badge-default'>00:00:55:852</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:45 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:47 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:49 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Dubai, United Arab Emirates - Dubai (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:53 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:53 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:36:56 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:37:39 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 18
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:190)
+	at v12Staging.B2cTripType.flight_HotelTrip(B2cTripType.java:365)
+	at v12Staging.V12StagingForFlight_Hotel.v12stagingforhotel(V12StagingForFlight_Hotel.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:37:39 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:37:39 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:37:40 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-37-39 Fail Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-37-39 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:37:45 pm</span> / <span>00:07:16:088</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:37:45 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:45:01 pm</span>
+<span class='badge badge-default'>00:07:16:088</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:45 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:46 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:48 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Dubai, United Arab Emirates - Dubai (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:52 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:52 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:37:55 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:38:16 pm</td>
+        <td>
+          <b><i>Screenshot for Flight+Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:38:59 pm</td>
+        <td>
+          <b><i>Clicked on Final Search</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:19 pm</td>
+        <td>
+          <b><i>Session id is </i></b>a9d17874-8e7a-4d61-bbd7-532f8f6edda5&FlightMode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:20 pm</td>
+        <td>
+          <b><i>Screenshot for Apply filter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:20 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-20 Apply filter.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-20 Apply filter.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:20 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:25 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-25 Flight Fare Rule.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-25 Flight Fare Rule.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:25 pm</td>
+        <td>
+          <b><i>Screenshot for Flight Fare Rule</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:25 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:27 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-32 Baggege Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-32 Baggege Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:33 pm</td>
+        <td>
+          <b><i>Screenshot for Baggege Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:33 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:35 pm</td>
+        <td>
+          <b><i>Clicked on Select Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:42 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-47 Room Cancellation Policy.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-39-47 Room Cancellation Policy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:47 pm</td>
+        <td>
+          <b><i>Screenshot for Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:39:47 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:06 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:21 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:26 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-26 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-26 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:26 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:26 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:30 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:35 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-35 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-35 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:35 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:35 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:38 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:43 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-43 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-43 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:43 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:43 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:46 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:52 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-51 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-40-51 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:52 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:53 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:40:56 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:01 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-01 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-01 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:02 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:02 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:05 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:07 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:09 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:10 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:10 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:10 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:12 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:14 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:17 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:17 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:17 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:17 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:19 pm</td>
+        <td>
+          <b><i>Entered Passport Number For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:22 pm</td>
+        <td>
+          <b><i>Selected Passport Country For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:24 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:24 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:24 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:24 pm</td>
+        <td>
+          <b><i>Selected Nationality For adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:26 pm</td>
+        <td>
+          <b><i>Write PhoneNumber</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:26 pm</td>
+        <td>
+          <b><i>Write Email</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:26 pm</td>
+        <td>
+          <b><i>Screenshot for Adult Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:26 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-26 Adult Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-26 Adult Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:26 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:27 pm</td>
+        <td>
+          <b><i>Entered Passport Number For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:29 pm</td>
+        <td>
+          <b><i>Selected Passport Country For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:31 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:31 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:31 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:31 pm</td>
+        <td>
+          <b><i>Selected Nationality For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:34 pm</td>
+        <td>
+          <b><i>Entered Passport Number For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:36 pm</td>
+        <td>
+          <b><i>Selected Passport Country For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:38 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:38 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:39 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:39 pm</td>
+        <td>
+          <b><i>Selected Nationality For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:41 pm</td>
+        <td>
+          <b><i>Entered Passport Number For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:43 pm</td>
+        <td>
+          <b><i>Selected Passport Country For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:45 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:46 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:46 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:46 pm</td>
+        <td>
+          <b><i>Selected Nationality For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Screenshot for Child Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-48 Child Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-48 Child Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Select Title For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Write Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Write Last Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Select Day For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Select Month For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Select Year of Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:48 pm</td>
+        <td>
+          <b><i>Select Room For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:49 pm</td>
+        <td>
+          <b><i>Entered Passport Number For Infant</i></b>1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:51 pm</td>
+        <td>
+          <b><i>Selected Passport Country For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:53 pm</td>
+        <td>
+          <b><i>Select Day For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:53 pm</td>
+        <td>
+          <b><i>Select Month For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:53 pm</td>
+        <td>
+          <b><i>Select Year of Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:53 pm</td>
+        <td>
+          <b><i>Selected Nationality For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:55 pm</td>
+        <td>
+          <b><i>Screenshot for Infant Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:55 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-55 Infant Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-41-55 Infant Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:56 pm</td>
+        <td>
+          <b><i>Select Card Type</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Write Card Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Write Card Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Selecte Card Month</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Select Card Year</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Write CVV Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:58 pm</td>
+        <td>
+          <b><i>Screenshot for Card Payment</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:41:59 pm</td>
+        <td>
+          <b><i>Select Billing User Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:01 pm</td>
+        <td>
+          <b><i>Write Billing User First Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:01 pm</td>
+        <td>
+          <b><i>Write Billing User Last Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:01 pm</td>
+        <td>
+          <b><i>Write Billing User Address</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:01 pm</td>
+        <td>
+          <b><i>Select Country</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:04 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:04 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:44:40 pm</td>
+        <td>
+          <b><i>Clicked on Confirm</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:00 pm</td>
+        <td>
+          <b><i>Screenshot for Billing Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-00 Billing Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-00 Billing Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>500188
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Flight Booking Status is </i></b>unconfirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Flight Booking Fail </i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Hotel Booking Status is </i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Hotel Confirming Status Number is </i></b>--
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-01 Confirm Page.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-01 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:45:01 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-01 Successful Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-45-01 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test on Booking For Flight + Hotel</p>
+            <p class="text-sm">
+              <span>3:45:09 pm</span> / <span>00:04:38:394</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test on Booking For Flight + Hotel</h5>
+<span class='badge badge-success'>09.06.2022 3:45:09 pm</span>
+<span class='badge badge-danger'>09.06.2022 3:49:48 pm</span>
+<span class='badge badge-default'>00:04:38:394</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:10 pm</td>
+        <td>
+          <b><i>Clicked on Flight+Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:12 pm</td>
+        <td>
+          <b><i>Departure city : </i></b>Delhi, India - Indira Gandhi International Airport (DEL)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:14 pm</td>
+        <td>
+          <b><i>Arrival city : </i></b>Chennai, India - Chennai (MAA)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:19 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>10-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:19 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>15-Nov-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:21 pm</td>
+        <td>
+          <b><i>Clicked on Add Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:45:43 pm</td>
+        <td>
+          <b><i>Screenshot for Flight+Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:18 pm</td>
+        <td>
+          <b><i>Clicked on Final Search</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:38 pm</td>
+        <td>
+          <b><i>Session id is </i></b>3921a095-b237-4bc9-9710-3b4473e7ebc0&FlightMode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:38 pm</td>
+        <td>
+          <b><i>Screenshot for Apply filter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:38 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-38 Apply filter.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-38 Apply filter.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:38 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:43 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-43 Flight Fare Rule.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-43 Flight Fare Rule.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:44 pm</td>
+        <td>
+          <b><i>Screenshot for Flight Fare Rule</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:44 pm</td>
+        <td>
+          <b><i>Clicked on Fare Rules Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:46 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:51 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-51 Baggege Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-46-51 Baggege Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:51 pm</td>
+        <td>
+          <b><i>Screenshot for Baggege Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:51 pm</td>
+        <td>
+          <b><i>Clicked on Baggege Information Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:53 pm</td>
+        <td>
+          <b><i>Clicked on Select Room</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:46:59 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:04 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-04 Room Cancellation Policy.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-04 Room Cancellation Policy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:05 pm</td>
+        <td>
+          <b><i>Screenshot for Room Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:05 pm</td>
+        <td>
+          <b><i>Clicked on Room Cancellation Policy Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:24 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:39 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:45 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-44 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-44 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:45 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:45 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:48 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:53 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-53 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-47-53 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:53 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:56 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:47:59 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:04 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-04 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-04 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:04 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:04 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:08 pm</td>
+        <td>
+          <b><i>Click on Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:13 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-13 Rule Baggage.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-13 Rule Baggage.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:13 pm</td>
+        <td>
+          <b><i>Screenshot for Rule Baggage</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:17 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:20 pm</td>
+        <td>
+          <b><i>Click on More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:25 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-25 More Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-25 More Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:25 pm</td>
+        <td>
+          <b><i>Screenshot for More Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:25 pm</td>
+        <td>
+          <b><i>Click on OMoreDetailsClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:28 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:28 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:28 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:28 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:28 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Title For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Write Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Write Last Name For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Day For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Month For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:29 pm</td>
+        <td>
+          <b><i>Select Year of Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Room For Adult</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Write PhoneNumber</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Write Email</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Screenshot for Adult Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-30 Adult Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-30 Adult Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:30 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Title For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Write Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Write Last Name For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Day For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Month For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Year of Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Select Room For Child</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:31 pm</td>
+        <td>
+          <b><i>Screenshot for Child Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-31 Child Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-31 Child Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Select Title For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Write Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Write Last Name For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Select Day For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Select Month For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Select Year of Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Select Room For Infant</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          <b><i>Screenshot for Infant Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-32 Infant Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-48-32 Infant Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:33 pm</td>
+        <td>
+          <b><i>Select Card Type</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:35 pm</td>
+        <td>
+          <b><i>Write Card Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Write Card Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Selecte Card Month</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Select Card Year</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Write CVV Number</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Screenshot for Card Payment</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:36 pm</td>
+        <td>
+          <b><i>Select Billing User Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:38 pm</td>
+        <td>
+          <b><i>Write Billing User First Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:38 pm</td>
+        <td>
+          <b><i>Write Billing User Last Name</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:38 pm</td>
+        <td>
+          <b><i>Write Billing User Address</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:38 pm</td>
+        <td>
+          <b><i>Select Country</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:43 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:48:43 pm</td>
+        <td>
+          <b><i>Clicked on chkExpediaTerms</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:27 pm</td>
+        <td>
+          <b><i>Clicked on Confirm</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Screenshot for Billing Details</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-47 Billing Details.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-47 Billing Details.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>500189
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Flight Booking Status is </i></b>confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Flight Confirming Status PNR Number is </i></b>2BPP95
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Hotel Booking Status is </i></b>confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          <b><i>Hotel Confirming Status Number is </i></b>7125068082745
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-47 Confirm Page.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-47 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:49:48 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:49:48 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:49:48 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-48 Successful Test.jpg' src="D:\Automation\V12StagingB2C\Screenshot\06-09-22 & 15-49-48 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">v12Staging.B2cExceptionClass</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>v12Staging.B2cExceptionClass</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:29:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Test on Booking For Flight + Hotel</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Test on Booking For Flight + Hotel</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:36:44 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Test on Booking For Flight + Hotel</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 6, 2022 03:23:57 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 6, 2022 03:49:48 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'>
+<b>3</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='50%'><b>3</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='1%'><b>6</b> events passed</small></div>
+<div>
+<small data-tooltip='2%'><b>14</b> events failed,
+<b data-tooltip='%'>565</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Test on Booking For Flight + Hotel":289.434,"Test on Booking For Flight + Hotel":214.403,"Test on Booking For Flight + Hotel":235.428,"Test on Booking For Flight + Hotel":55.852,"Test on Booking For Flight + Hotel":436.088,"Test on Booking For Flight + Hotel":278.394
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 6,
+failEvents: 14,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 565
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
