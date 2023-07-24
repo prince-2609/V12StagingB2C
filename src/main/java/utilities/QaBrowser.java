@@ -6,13 +6,15 @@ import org.apache.poi.ss.formula.eval.NotImplementedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QaBrowser extends QaRobot {
 
 	public static WebDriver driver;
-	public String browser = QaEnvironment.getProperty("browser","chrome");
+	public String browser = QaEnvironment.getProperty("browser", "chrome");
 	public String url = QaEnvironment.getProperty("sut.url");
 
 	public WebDriver launchBrowser() throws Exception {
@@ -27,6 +29,7 @@ public class QaBrowser extends QaRobot {
 			launchChrome();
 		}
 		driver.navigate().to(this.url);
+		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		return driver;
 	}
@@ -46,15 +49,23 @@ public class QaBrowser extends QaRobot {
 		}
 	}
 
+//	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+//	private void launchChrome() throws MalformedURLException {
+//		WebDriverManager.chromedriver().setup();
+//		tlDriver.set(new ChromeDriver());
+//	}
+
 //	@SuppressWarnings("deprecation")
-	private void launchChrome() throws MalformedURLException 
-	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriverUpdate.exe");
-		driver = (WebDriver) new ChromeDriver();
+	private void launchChrome() throws MalformedURLException {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromeUpdate.exe");
+		//DesiredCapabilities dc = DesiredCapabilities.chrome();
+		//dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*"); 
+		driver = (WebDriver) new ChromeDriver(co);
 	}
-	
-	private WebDriver luanchFirefox() 
-	{
+
+	private WebDriver luanchFirefox() {
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\lib\\geckodriver1.exe");
 		driver = (WebDriver) new FirefoxDriver();
 		return driver;
@@ -66,6 +77,5 @@ public class QaBrowser extends QaRobot {
 		// driver = new RemoteWebDriver(new URL(this.nodeUrl), dc);
 		// return driver;
 	}
-	
-	
+
 }

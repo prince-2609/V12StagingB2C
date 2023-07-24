@@ -57,7 +57,6 @@ public class QaExtentReport
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yy & HH-mm-ss");
 		String NewDate = d.format(date);
-		
 		TakesScreenshot ts = (TakesScreenshot)QaBrowser.driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
 		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+" "+text+".jpg");

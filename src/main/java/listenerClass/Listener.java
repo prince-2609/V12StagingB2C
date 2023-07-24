@@ -34,8 +34,8 @@ public class Listener extends TestBase implements ITestListener
 
 			if (result.getStatus() == ITestResult.SUCCESS)
 			{
-				QaRobot.ScreenshotMethod("Successful Test","<b><i>Screenshot for Successful Test</i></b>");
-				QaExtentReport.test.log(Status.PASS, "<b><i>Successful Test</i></b>");
+//				QaRobot.ScreenshotMethod("Successful Test","<b><i>Screenshot for Successful Test</i></b>");
+//				QaExtentReport.test.log(Status.PASS, "<b><i>Successful Test</i></b>");
 				test.pass(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("Successful Test")).build());
 			}
 		} 

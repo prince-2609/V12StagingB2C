@@ -8,16 +8,20 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.Status;
@@ -62,6 +66,11 @@ public class QaRobot extends QaExtentReport
 			return QaBrowser.driver.findElement(By.name(locatorValue));
 		else
 			throw new Exception("Unknown Locator Type" + locatorType);
+	}
+	
+	public static void scrollPage(String value) {
+		JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
+        mo.executeScript("window.scrollBy(0,"+value+")");
 	}
 	
 	public static void ScreenshotMethod(String text,String text1) throws IOException 
@@ -225,14 +234,81 @@ public class QaRobot extends QaExtentReport
 		s.selectByVisibleText(value);
 		QaExtentReport.test.log(Status.INFO, text);
 	}
+	
+	public static void selectTextByLocator1(String locator1, String value) throws Exception {
+		WebElement element = QaBrowser.driver.findElement(By.xpath(locator1));
+		Select s = new Select(element);
+		s.selectByVisibleText(value);
+	}
+	
+	public static void selectTextByLocator(String xpath, String value) throws Exception {
+		WebElement element = QaBrowser.driver.findElement(By.xpath(xpath));
+		Select s = new Select(element);
+		s.selectByVisibleText(value);
+	}
+	
+	public static void switchToWindow(){
+		String ParentWindow = QaBrowser.driver.getWindowHandle();
+		Set<String> handles = QaBrowser.driver.getWindowHandles();
+		for (String childWindow : handles) {
+			if (!childWindow.equals(ParentWindow))
+				QaBrowser.driver.switchTo().window(childWindow);
+		}
+	}
+	
+	public static void selectDateInCalendar(String Day, String Month, String Year) throws Exception {
 
-	/**
-	 *  select value from drop down by text
-	 * @param locator1
-	 * @param value
-	 * @param text
-	 * @throws Exception
-	 */
+		Assert.assertFalse(Integer.parseInt(Day) > 31, "Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day) > 28,
+				"Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Thread.sleep(3000);
+		QaRobot.selectTextByLocator("/html/body/div[2]/div/div[2]/div/div/select[2]", Year);
+		QaRobot.selectTextByLocator("/html/body/div[2]/div/div[2]/div/div/select[1]", Month);
+
+		List<WebElement> allDates = QaBrowser.driver
+				.findElements(By.xpath("/html/body/div[2]/div/div[2]/div[1]/table/tbody/tr/td"));
+		for (WebElement ele : allDates) {
+			String dt = ele.getText();
+
+			if (dt.equalsIgnoreCase(Day)) {
+				ele.click();
+				break;
+			}
+		}
+	}
+	
+	public static void acceptAlert(String status) throws IOException {
+		Alert alt = QaBrowser.driver.switchTo().alert();
+		String text = alt.getText();
+		QaExtentReport.test.log(Status.INFO, "<b><i>" + status + "</b></i>" + " - " + "<b><i>" + text + "</b></i>");
+		alt.accept();
+	}
+	
+	public static void scrollPage(int value) {
+		JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
+        mo.executeScript("window.scrollBy(0,"+value+")");
+	}
+	
+	public static void transferData(String Qty,String Parameters,String link) {
+		int pAS = Integer.parseInt(Qty);
+		for (int k = 1; k <= pAS; k++) {
+			String[] tN = Parameters.split(",");
+			String b = tN[k - 1];
+			List<WebElement> listOfRights = QaBrowser.driver
+					.findElements(By.xpath(link));
+			for (WebElement autoRights : listOfRights) {
+				if (autoRights.getText().equalsIgnoreCase(b)) {
+					autoRights.click();
+					break;
+				}
+			}
+		}
+	}
+	
+	public static void switchframe(String a) {
+		QaBrowser.driver.switchTo().frame(QaBrowser.driver.findElement(By.xpath(a)));
+	}
+	
 	public static void selectTextFromDropdown(String locator1, String value, String text) throws Exception {
 	
 		WebElement element = getWebElement(locator1);

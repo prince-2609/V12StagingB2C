@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="v12Staging.V12StagingForHotel"/>
+      <class name="v12Staging_B2C.V12StagingForHotel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
