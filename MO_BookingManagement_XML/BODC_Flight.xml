@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="MO_BookingManagement.ProductSearch_Flight"/>
+      <class name="MO_BODC_BookingManagement.ProductSearch_Flight"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

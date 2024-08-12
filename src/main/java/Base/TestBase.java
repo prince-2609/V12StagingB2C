@@ -100,8 +100,10 @@ public class TestBase extends QaExtentReport {
 	public static List<WebElement> listofautosuggestion(By suggestiontxt, String txt, String city_name, By d)
 			throws InterruptedException {
 		QaBrowser.driver.findElement(d).sendKeys(txt);
+		Thread.sleep(5000);
 		ArrayList<WebElement> autosuggestions = (ArrayList<WebElement>) QaBrowser.driver.findElements(suggestiontxt);
-//		 System.out.println(autosuggestions.toString());
+		Thread.sleep(5000);
+//		System.out.println(autosuggestions.toString());
 		for (WebElement autosuggestion : autosuggestions) {
 //			System.out.println(autosuggestion.getText());
 			if (autosuggestion.getText().equalsIgnoreCase(city_name)) {
@@ -110,7 +112,6 @@ public class TestBase extends QaExtentReport {
 				break;
 			}
 		}
-
 		return autosuggestions;
 	}
 

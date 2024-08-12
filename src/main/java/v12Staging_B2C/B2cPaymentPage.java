@@ -26,8 +26,8 @@ public class B2cPaymentPage {
 		}
 	}
 
-	public static void cardPaymentHotel(String Cardtype, String CardNumber, String CardName,
-			String CardDate, String CVV) throws Exception {
+	public static void cardPaymentHotel(String Cardtype, String CardNumber, String CardName, String CardDate,
+			String CVV) throws Exception {
 		if (Cardtype.equalsIgnoreCase("Master Card")) {
 			Thread.sleep(3000);
 			QaRobot.ClickOnElement("MasterCardH");

@@ -192,8 +192,6 @@ public class B2cResultPage {
 				if (autoAirline.getText().equalsIgnoreCase(AirLine)) {
 					autoAirline.click();
 					break;
-				} else {
-
 				}
 			}
 			QaRobot.ScreenshotMethod("Applyfilter", "<b><i>Screenshot for Apply filter</i></b>");
@@ -262,7 +260,7 @@ public class B2cResultPage {
 					if (!childWindow.equals(ParentWindow))
 						QaBrowser.driver.switchTo().window(childWindow);
 				}
-				QaRobot.ClickOnElement("RDFareBreakupClose");
+				QaRobot.ClickOnElement("RDFareBreakupClose"); 
 				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FlightItinerary</i></b>");
 				Thread.sleep(2000);
 				QaBrowser.driver.switchTo().window(ParentWindow);

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-18T17:56:27 IST" name="Suite" finished-at="2023-05-18T17:59:38 IST" duration-ms="190968">
+  <suite started-at="2024-08-12T11:15:17 IST" name="Suite" finished-at="2024-08-12T11:43:40 IST" duration-ms="1703388">
     <groups>
     </groups>
-    <test started-at="2023-05-18T17:56:27 IST" name="Test" finished-at="2023-05-18T17:59:38 IST" duration-ms="190968">
-      <class name="MO_BookingManagement.ProductSearch_Hotel">
-        <test-method signature="BODCHotelSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:MO_BookingManagement.ProductSearch_Hotel@e15b7e8]" started-at="2023-05-18T17:56:28 IST" name="BODCHotelSearch" data-provider="getexceldata" finished-at="2023-05-18T17:59:37 IST" duration-ms="189771" status="PASS">
+    <test started-at="2024-08-12T11:15:17 IST" name="Test" finished-at="2024-08-12T11:43:40 IST" duration-ms="1703388">
+      <class name="ManualBooking.HotelBooking">
+        <test-method signature="corporateProfiling(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:15:18 IST" name="corporateProfiling" data-provider="getexceldata" finished-at="2024-08-12T11:20:35 IST" duration-ms="317016" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,288 +16,873 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Positive]]>
+                <![CDATA[Verify manual booking for hotel with 1 adult]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Verify Direct Customer for Flight Booking]]>
+                <![CDATA[mo]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[mo]]>
+                <![CDATA[//v12staging/backoffice/]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[//v12staging/backoffice/]]>
+                <![CDATA[qlabs12345]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[qlabs12345]]>
+                <![CDATA[k.gaurav]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[Piyush]]>
+                <![CDATA[Gaurav@130]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[Quad@720]]>
+                <![CDATA[ankit@quadlabs.com]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[DirectCustomer]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[Delhi]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[Delhi, DL ,India (DEL)]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[23-Oct-2023]]>
+                <![CDATA[Shubham Shah,Sumit Shah]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[25-Oct-2023]]>
+                <![CDATA[Sachin Shah,Sunita Shah]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[Sanjay Shah,Satish Shah]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[2,1]]>
+                <![CDATA[5-Aug-2016,5-Jan-2016]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[1,2]]>
+                <![CDATA[5-Aug-2023,5-Feb-2023]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[2,2,2]]>
+                <![CDATA[Hayatt]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[No]]>
+                <![CDATA[BSP Supplier]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[BOM]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[Amadeus,uapi test]]>
+                <![CDATA[BOM -Mumbai(IN)]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[15-Aug-2024]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[INR]]>
+                <![CDATA[17-Aug-2024]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[HK]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[No]]>
+                <![CDATA[9999999006]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[Delux Room]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[mumbai]]>
+                <![CDATA[1 Breackfast]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[Mumbai, MH ,India (BOM )]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[26-Sep-2023]]>
+                <![CDATA[Yes]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[29-Sep-2023]]>
+                <![CDATA[3]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[Baggage Charges,Markup,Meal Charges]]>
               </value>
             </param>
             <param index="31">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[10,20,30]]>
               </value>
             </param>
             <param index="32">
               <value>
-                <![CDATA[2,1]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[1,2]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[2,2,2]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[INR]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[2 Star and above]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[shubham.natkar@quadlabs.com]]>
-              </value>
-            </param>
-            <param index="40">
-              <value>
-                <![CDATA[Ms,Ms,Mr]]>
-              </value>
-            </param>
-            <param index="41">
-              <value>
-                <![CDATA[Laxmi Khanal,Sakshi Singh,Shubham Natkar]]>
-              </value>
-            </param>
-            <param index="42">
-              <value>
-                <![CDATA[8447422233]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[Mstr,Mstr,Mstr]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[Abhish Jha,Bontu Chaudhary,Sagar Lal]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
-                <![CDATA[15-May-2021,20-Jun-2021,25-Jul-2021]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[Master Card]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[5123456789012346]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[Shubham Natkar]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[Apr,2025]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[Mr]]>
-              </value>
-            </param>
-            <param index="52">
-              <value>
-                <![CDATA[Shubham Natkar]]>
-              </value>
-            </param>
-            <param index="53">
-              <value>
-                <![CDATA[Gurgaon]]>
-              </value>
-            </param>
-            <param index="54">
-              <value>
-                <![CDATA[India (IN)]]>
-              </value>
-            </param>
-            <param index="55">
-              <value>
-                <![CDATA[delhi,Delhi]]>
+                <![CDATA[Cash]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BODCHotelSearch -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:MO_BookingManagement.ProductSearch_Hotel@e15b7e8]" started-at="2023-05-18T17:59:37 IST" name="afterMethod" finished-at="2023-05-18T17:59:38 IST" duration-ms="243" status="PASS">
+        </test-method> <!-- corporateProfiling -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:20:35 IST" name="afterMethod" finished-at="2024-08-12T11:20:35 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- MO_BookingManagement.ProductSearch_Hotel -->
+        <test-method signature="corporateProfiling(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:20:35 IST" name="corporateProfiling" data-provider="getexceldata" finished-at="2024-08-12T11:26:14 IST" duration-ms="339349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test MO 2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify manual booking for hotel with 1 adult and 1 child]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[//v12staging/backoffice/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[qlabs12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[k.gaurav]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gaurav@130]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ankit@quadlabs.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Shubham Shah,Sumit Shah]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sachin Shah,Sunita Shah]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sanjay Shah,Satish Shah]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5-Aug-2016,5-Jan-2016]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[5-Aug-2023,5-Feb-2023]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Hayatt]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[BSP Supplier]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[BOM]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[BOM -Mumbai(IN)]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[15-Aug-2024]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[17-Aug-2024]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[HK]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[9999999007]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Delux Room]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[1 Breackfast]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Baggage Charges,Markup,Meal Charges]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[10,20,30]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- corporateProfiling -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:26:14 IST" name="afterMethod" finished-at="2024-08-12T11:26:14 IST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="corporateProfiling(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:26:14 IST" name="corporateProfiling" data-provider="getexceldata" finished-at="2024-08-12T11:31:58 IST" duration-ms="343804" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test MO 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify manual booking for hotel with 1 adult , 1 child and 1 infant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[//v12staging/backoffice/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[qlabs12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[k.gaurav]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gaurav@130]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ankit@quadlabs.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Shubham Shah,Sumit Shah]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sachin Shah,Sunita Shah]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sanjay Shah,Satish Shah]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5-Aug-2016,5-Jan-2016]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[5-Aug-2023,5-Feb-2023]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Hayatt]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[BSP Supplier]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[BOM]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[BOM -Mumbai(IN)]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[15-Aug-2024]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[17-Aug-2024]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[HK]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[9999999008]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Delux Room]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[1 Breackfast]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Baggage Charges,Markup,Meal Charges]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[10,20,30]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- corporateProfiling -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:31:58 IST" name="afterMethod" finished-at="2024-08-12T11:31:58 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="corporateProfiling(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:31:58 IST" name="corporateProfiling" data-provider="getexceldata" finished-at="2024-08-12T11:37:40 IST" duration-ms="341809" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test MO 4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify manual booking for hotel with 2 adult , 1 child and 1 infant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[//v12staging/backoffice/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[qlabs12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[k.gaurav]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gaurav@130]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ankit@quadlabs.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Shubham Shah,Sumit Shah]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sachin Shah,Sunita Shah]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sanjay Shah,Satish Shah]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5-Aug-2016,5-Jan-2016]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[5-Aug-2023,5-Feb-2023]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Hayatt]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[BSP Supplier]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[BOM]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[BOM -Mumbai(IN)]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[15-Aug-2024]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[17-Aug-2024]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[HK]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[9999999009]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Delux Room]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[1 Breackfast]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Baggage Charges,Markup,Meal Charges]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[10,20,30]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- corporateProfiling -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:37:40 IST" name="afterMethod" finished-at="2024-08-12T11:37:40 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="corporateProfiling(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:37:40 IST" name="corporateProfiling" data-provider="getexceldata" finished-at="2024-08-12T11:43:40 IST" duration-ms="360127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test MO 5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify manual booking for hotel with 2 adult , 2 child and 1 infant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[//v12staging/backoffice/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[qlabs12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[k.gaurav]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gaurav@130]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ankit@quadlabs.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Shubham Shah,Sumit Shah]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sachin Shah,Sunita Shah]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sanjay Shah,Satish Shah]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5-Aug-2016,5-Jan-2016]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[5-Aug-2023,5-Feb-2023]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Hayatt]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[BSP Supplier]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[BOM]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[BOM -Mumbai(IN)]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[15-Aug-2024]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[17-Aug-2024]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[HK]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[9999999010]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Delux Room]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[1 Breackfast]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Baggage Charges,Markup,Meal Charges]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[10,20,30]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Cash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- corporateProfiling -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ManualBooking.HotelBooking@4f2b503c]" started-at="2024-08-12T11:43:40 IST" name="afterMethod" finished-at="2024-08-12T11:43:40 IST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- ManualBooking.HotelBooking -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
