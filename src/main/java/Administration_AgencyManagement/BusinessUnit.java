@@ -51,7 +51,7 @@ public class BusinessUnit {
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divCity']/p"), BUCC, BUCity,
 				By.xpath("//input[@id='txtCity']"));
 //		QaRobot.ClickOnElement("BUSave");
-		QaRobot.acceptAlert("Business unit status");
+//		QaRobot.acceptAlert("Business unit status");
 	}
 
 	@AfterMethod

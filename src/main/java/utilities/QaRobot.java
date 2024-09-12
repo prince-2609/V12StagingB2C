@@ -144,6 +144,29 @@ public class QaRobot extends QaExtentReport
 
 	}
 
+	// Choose Expiry date from date Dropdown
+	public static void selectDateInCalendar1(String Day, String Month, String Year) throws Exception {
+		Assert.assertFalse(Integer.parseInt(Day) > 31, "Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day) > 28,
+				"Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Thread.sleep(3000);
+		// Choose year from dropdown
+		QaRobot.selectTextByLocator("/html/body/div[2]/div/div[2]/div/div/select[2]", Year);
+		// Choose year from dropdown
+		QaRobot.selectTextByLocator("/html/body/div[2]/div/div[2]/div/div/select[1]", Month);
+		// Choose date from calendar
+		List<WebElement> allDates = QaBrowser.driver
+				.findElements(By.xpath("/html/body/div[2]/div/div[2]/div[1]/table/tbody/tr/td"));
+		for (WebElement ele : allDates) {
+			String dt = ele.getText();
+
+			if (dt.equalsIgnoreCase(Day)) {
+				ele.click();
+				break;
+			}
+		}
+	}
+
 //	int i1;
 
 	public static List<WebElement> listOfClients(By suggestiontxt, String city_name) throws InterruptedException {
@@ -153,7 +176,8 @@ public class QaRobot extends QaExtentReport
 		for (WebElement autosuggestion : autosuggestions) {
 			i++;
 			if (i < 10) {
-				int i1 = 0 + i;
+//				int i1 = 0 + i;
+				String i1 = "0" + i;
 				System.out.println(i1);
 //				System.out.println(autosuggestion.getText());
 				if (autosuggestion.getText().equalsIgnoreCase(city_name)) {
@@ -342,6 +366,13 @@ public class QaRobot extends QaExtentReport
 		alt.accept();
 	}
 
+	public static void dismissAlert() throws IOException {
+		Alert alt = QaBrowser.driver.switchTo().alert();
+//		String text = alt.getText();
+//		QaExtentReport.test.log(Status.INFO, "<b><i>" + status + "</b></i>" + " - " + "<b><i>" + text + "</b></i>");
+		alt.dismiss();
+	}
+
 	public static void scrollPage(int value) {
 		JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
 		mo.executeScript("window.scrollBy(0," + value + ")");
@@ -440,6 +471,16 @@ public class QaRobot extends QaExtentReport
 				QaExtentReport.test.log(Status.INFO, text);
 			}
 		}
+
+	}
+
+	public static void alertAccept() {
+		QaBrowser.driver.switchTo().alert().accept();
+
+	}
+
+	public static void alertDismiss() {
+		QaBrowser.driver.switchTo().alert().dismiss();
 
 	}
 

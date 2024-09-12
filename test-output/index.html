@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Automation\V12StagingB2C\HotelManualBooking.xml</span>
+                    <span>D:\Automation\V12StagingB2C\HotelManualBookingBOCA.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBookingBOCA" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,27 +118,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBooking" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)">corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBookingBOCA" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)">corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBooking" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBookingBOCA" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBooking" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k...)">corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBookingBOCA" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBooking" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBooking" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)">corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ManualBooking.HotelBookingBOCA" class="method navigator-link" hash-for-method="corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, a...)">corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, a...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -139,10 +148,53 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ManualBooking.HotelBookingBOCA</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)">
+                  </a> <!-- corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...) -->
+                  <span class="method-name">corporateProfiling</span>
+                  <span class="parameters">(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, ankur_QL, Ankur@12345, piyush.chauhan@quadlabs.com, 2, 2, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Sep-2024, 17-Sep-2024, HK, 9999999105, Delux Room, 1 Breackfast, 1, 10, Yes, 2, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//Button[@id=&apos;btnMakeProvisional&apos;]&quot;}
+  (Session info: chrome=128.0.6613.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;SHUBHAM&apos;, ip: &apos;192.168.111.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0065d7ae475007ba3950eb4dc0a75d2, findElement {using=xpath, value=//Button[@id=&apos;btnMakeProvisional&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50253}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50253/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0065d7ae475007ba3950eb4dc0a75d2
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at utilities.QaRobot.getLocator(QaRobot.java:55)
+	at utilities.QaRobot.getWebElement(QaRobot.java:90)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:114)
+	at ManualBooking.HotelBookingBOCA.corporateProfiling(HotelBookingBOCA.java:200)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">ManualBooking.HotelBooking</span>
+              <span class="class-name">ManualBooking.HotelBookingBOCA</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -150,23 +202,7 @@
                   <a name="corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)">
                   </a> <!-- corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...) -->
                   <span class="method-name">corporateProfiling</span>
-                  <span class="parameters">(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, qlabs12345, k.gaurav, Gaurav@130, ankit@quadlabs.com, 1, 1, 0, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Aug-2024, 17-Aug-2024, HK, 9999999007, Delux Room, 1 Breackfast, 1, 10, Yes, 2, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)">
-                  </a> <!-- corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...) -->
-                  <span class="method-name">corporateProfiling</span>
-                  <span class="parameters">(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, k.gaurav, Gaurav@130, ankit@quadlabs.com, 2, 1, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Aug-2024, 17-Aug-2024, HK, 9999999009, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k...)">
-                  </a> <!-- corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k...) -->
-                  <span class="method-name">corporateProfiling</span>
-                  <span class="parameters">(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k.gaurav, Gaurav@130, ankit@quadlabs.com, 1, 0, 0, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Aug-2024, 17-Aug-2024, HK, 9999999006, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
+                  <span class="parameters">(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, qlabs12345, ankur_QL, Ankur@12345, piyush.chauhan@quadlabs.com, 1, 1, 0, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Sep-2024, 17-Sep-2024, HK, 9999999102, Delux Room, 1 Breackfast, 1, 10, Yes, 2, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -174,15 +210,23 @@
                   <a name="corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)">
                   </a> <!-- corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...) -->
                   <span class="method-name">corporateProfiling</span>
-                  <span class="parameters">(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, k.gaurav, Gaurav@130, ankit@quadlabs.com, 1, 1, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Aug-2024, 17-Aug-2024, HK, 9999999008, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
+                  <span class="parameters">(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, ankur_QL, Ankur@12345, piyush.chauhan@quadlabs.com, 1, 1, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Sep-2024, 17-Sep-2024, HK, 9999999103, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)">
-                  </a> <!-- corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...) -->
+                  <a name="corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)">
+                  </a> <!-- corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...) -->
                   <span class="method-name">corporateProfiling</span>
-                  <span class="parameters">(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, k.gaurav, Gaurav@130, ankit@quadlabs.com, 2, 2, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Aug-2024, 17-Aug-2024, HK, 9999999010, Delux Room, 1 Breackfast, 1, 10, Yes, 2, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
+                  <span class="parameters">(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/backoffice/, qlabs12345, ankur_QL, Ankur@12345, piyush.chauhan@quadlabs.com, 2, 1, 1, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Sep-2024, 17-Sep-2024, HK, 9999999104, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, a...)">
+                  </a> <!-- corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, a...) -->
+                  <span class="method-name">corporateProfiling</span>
+                  <span class="parameters">(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, ankur_QL, Ankur@12345, piyush.chauhan@quadlabs.com, 1, 0, 0, Shubham Shah,Sumit Shah, Sachin Shah,Sunita Shah, Sanjay Shah,Satish Shah, 5-Aug-2016,5-Jan-2016, 5-Aug-2023,5-Feb-2023, Hayatt, BSP Supplier, BOM, BOM -Mumbai(IN), 15-Sep-2024, 17-Sep-2024, HK, 9999999101, Delux Room, 1 Breackfast, 1, 10, Yes, 3, Baggage Charges,Markup,Meal Charges, 10,20,30, Cash)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,7 +234,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Automation\V12StagingB2C\HotelManualBooking.xml</span>
+            <span class="header-content">D:\Automation\V12StagingB2C\HotelManualBookingBOCA.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,7 +243,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;ManualBooking.HotelBooking&quot;/&gt;
+      &lt;class name=&quot;ManualBooking.HotelBookingBOCA&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -242,29 +286,29 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'corporateProfiling')
-data.setCell(0, 2, 'ManualBooking.HotelBooking')
-data.setCell(0, 3, 360127);
+data.setCell(0, 2, 'ManualBooking.HotelBookingBOCA')
+data.setCell(0, 3, 262435);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'corporateProfiling')
-data.setCell(1, 2, 'ManualBooking.HotelBooking')
-data.setCell(1, 3, 343804);
+data.setCell(1, 2, 'ManualBooking.HotelBookingBOCA')
+data.setCell(1, 3, 262289);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'corporateProfiling')
-data.setCell(2, 2, 'ManualBooking.HotelBooking')
-data.setCell(2, 3, 341809);
+data.setCell(2, 2, 'ManualBooking.HotelBookingBOCA')
+data.setCell(2, 3, 254784);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'corporateProfiling')
-data.setCell(3, 2, 'ManualBooking.HotelBooking')
-data.setCell(3, 3, 339349);
+data.setCell(3, 2, 'ManualBooking.HotelBookingBOCA')
+data.setCell(3, 3, 236731);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'corporateProfiling')
-data.setCell(4, 2, 'ManualBooking.HotelBooking')
-data.setCell(4, 3, 317016);
+data.setCell(4, 2, 'ManualBooking.HotelBookingBOCA')
+data.setCell(4, 3, 217004);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 minutes</span>
+              <span class="suite-total-time">Total running time: 20 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -290,46 +334,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">ManualBooking.HotelBooking</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ManualBooking.HotelBookingBOCA</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, k...)</span>
+                <span class="method-name">corporateProfiling(Test MO 1, Verify manual booking for hotel with 1 adult, mo, //v12staging/backoffice/, qlabs12345, a...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">317018 ms</span>
+                <span class="method-start">217204 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">corporateProfiling(Test MO 2, Verify manual booking for hotel with 1 adult and 1 child, mo, //v12staging/backoffice/, q...)</span>
-                <span class="method-start">317253 ms</span>
+                <span class="method-start">217455 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">656605 ms</span>
+                <span class="method-start">454338 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">corporateProfiling(Test MO 3, Verify manual booking for hotel with 1 adult , 1 child and 1 infant, mo, //v12staging/bac...)</span>
-                <span class="method-start">656658 ms</span>
+                <span class="method-start">454357 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">1000463 ms</span>
+                <span class="method-start">709335 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">corporateProfiling(Test MO 4, Verify manual booking for hotel with 2 adult , 1 child and 1 infant, mo, //v12staging/bac...)</span>
-                <span class="method-start">1000486 ms</span>
+                <span class="method-start">709353 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">1342298 ms</span>
+                <span class="method-start">971977 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">corporateProfiling(Test MO 5, Verify manual booking for hotel with 2 adult , 2 child and 1 infant, mo, //v12staging/bac...)</span>
-                <span class="method-start">1342353 ms</span>
+                <span class="method-start">971996 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">1702483 ms</span>
+                <span class="method-start">1234601 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

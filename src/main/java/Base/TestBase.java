@@ -105,7 +105,7 @@ public class TestBase extends QaExtentReport {
 		Thread.sleep(5000);
 //		System.out.println(autosuggestions.toString());
 		for (WebElement autosuggestion : autosuggestions) {
-//			System.out.println(autosuggestion.getText());
+			System.out.println(autosuggestion.getText());
 			if (autosuggestion.getText().equalsIgnoreCase(city_name)) {
 //				System.out.println("equal");
 				autosuggestion.click();
