@@ -1,0 +1,1647 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>V12Staging</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Extent Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 23, 2024 11:27:30 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 1 - Positive - Verify the discount coupon rule for media for Multi-use users</p>
+            <p class="text-sm">
+              <span>11:27:33 am</span> / <span>00:01:25:097</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 1 - Positive - Verify the discount coupon rule for media for Multi-use users</h5>
+<span class='badge badge-success'>09.23.2024 11:27:33 am</span>
+<span class='badge badge-danger'>09.23.2024 11:28:58 am</span>
+<span class='badge badge-default'>00:01:25:097</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:27:33 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-27-33 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-27-33 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:28:25 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-25 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-25 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:28:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-47 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-47 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:28:58 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-58 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-58 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:28:58 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-58 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-28-58 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 2 - Positive - Verify the discount coupon rule for media for Single-use users</p>
+            <p class="text-sm">
+              <span>11:29:00 am</span> / <span>00:01:36:493</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 2 - Positive - Verify the discount coupon rule for media for Single-use users</h5>
+<span class='badge badge-success'>09.23.2024 11:29:00 am</span>
+<span class='badge badge-danger'>09.23.2024 11:30:36 am</span>
+<span class='badge badge-default'>00:01:36:493</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:29:00 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-29-00 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-29-00 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:29:48 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-29-48 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-29-48 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:30:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-26 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-26 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:30:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-36 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-36 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:30:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-36 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-36 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 3 - Positive - Verify the discount coupon rule for media with the Media type name Magazine</p>
+            <p class="text-sm">
+              <span>11:30:38 am</span> / <span>00:01:55:759</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 3 - Positive - Verify the discount coupon rule for media with the Media type name Magazine</h5>
+<span class='badge badge-success'>09.23.2024 11:30:38 am</span>
+<span class='badge badge-danger'>09.23.2024 11:32:34 am</span>
+<span class='badge badge-default'>00:01:55:759</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:30:38 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-38 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-30-38 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:31:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-31-34 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-31-34 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:32:23 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-23 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-23 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:32:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-33 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-33 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:32:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-34 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-34 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 4 - Positive - Verify the discount coupon rule for media by providing a coupon number with Special characters</p>
+            <p class="text-sm">
+              <span>11:32:35 am</span> / <span>00:01:51:761</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 4 - Positive - Verify the discount coupon rule for media by providing a coupon number with Special characters</h5>
+<span class='badge badge-success'>09.23.2024 11:32:35 am</span>
+<span class='badge badge-danger'>09.23.2024 11:34:27 am</span>
+<span class='badge badge-default'>00:01:51:761</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:32:36 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-36 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-32-36 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:33:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-33-34 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-33-34 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:34:17 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-16 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-16 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:34:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-27 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-27 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:34:27 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-27 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-27 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 5 - Positive - Verify the discount coupon rule for media with a Validity period</p>
+            <p class="text-sm">
+              <span>11:34:29 am</span> / <span>00:02:01:661</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 5 - Positive - Verify the discount coupon rule for media with a Validity period</h5>
+<span class='badge badge-success'>09.23.2024 11:34:29 am</span>
+<span class='badge badge-danger'>09.23.2024 11:36:30 am</span>
+<span class='badge badge-default'>00:02:01:661</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:34:29 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-29 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-34-29 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:35:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-35-30 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-35-30 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:36:20 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-20 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-20 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:36:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-30 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-30 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:36:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-30 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-30 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 6 - Positive - Verify the discount coupon rule for media with multiple product selections along with a Single selection criteria</p>
+            <p class="text-sm">
+              <span>11:36:32 am</span> / <span>00:01:51:513</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 6 - Positive - Verify the discount coupon rule for media with multiple product selections along with a Single selection criteria</h5>
+<span class='badge badge-success'>09.23.2024 11:36:32 am</span>
+<span class='badge badge-danger'>09.23.2024 11:38:24 am</span>
+<span class='badge badge-default'>00:01:51:513</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:36:33 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-32 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-36-32 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:37 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-37-37 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-37-37 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:13 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-13 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-13 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:23 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-23 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-23 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:24 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-23 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-23 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 7 - Positive - Verify the discount coupon rule for media with Multiple selection criteria</p>
+            <p class="text-sm">
+              <span>11:38:25 am</span> / <span>00:02:00:813</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 7 - Positive - Verify the discount coupon rule for media with Multiple selection criteria</h5>
+<span class='badge badge-success'>09.23.2024 11:38:25 am</span>
+<span class='badge badge-danger'>09.23.2024 11:40:26 am</span>
+<span class='badge badge-default'>00:02:00:813</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-25 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-38-25 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:17 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-39-17 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-39-17 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:40:15 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-15 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-15 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:40:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-26 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-26 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:40:26 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-26 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-26 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 8 - Positive - Verify the discount coupon rule for stock with a Coupon Start and end date range</p>
+            <p class="text-sm">
+              <span>11:40:28 am</span> / <span>00:01:38:225</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 8 - Positive - Verify the discount coupon rule for stock with a Coupon Start and end date range</h5>
+<span class='badge badge-success'>09.23.2024 11:40:28 am</span>
+<span class='badge badge-danger'>09.23.2024 11:42:06 am</span>
+<span class='badge badge-default'>00:01:38:225</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:40:28 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-28 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-40-28 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:13 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-41-13 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-41-13 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:55 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-41-55 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-41-55 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:06 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-05 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-05 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:42:06 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-06 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-06 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 9 - Positive - Verify the discount coupon rule for stock with Multiple product selections and Multiple selection criteria</p>
+            <p class="text-sm">
+              <span>11:42:07 am</span> / <span>00:02:11:214</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC Discount Coupon Rule 9 - Positive - Verify the discount coupon rule for stock with Multiple product selections and Multiple selection criteria</h5>
+<span class='badge badge-success'>09.23.2024 11:42:07 am</span>
+<span class='badge badge-danger'>09.23.2024 11:44:19 am</span>
+<span class='badge badge-default'>00:02:11:214</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:08 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-08 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-42-08 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:03 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-43-03 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-43-03 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:08 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-07 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-07 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:18 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-18 Discount Coupon Rules page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-18 Discount Coupon Rules page.jpg">
+    <div class="title">Discount Coupon Rules page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:44:19 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-18 Successful Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-18 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 10 - Negative - Verify the discount coupon rule for media with the Existing rule</p>
+            <p class="text-sm">
+              <span>11:44:20 am</span> / <span>00:01:20:889</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC Discount Coupon Rule 10 - Negative - Verify the discount coupon rule for media with the Existing rule</h5>
+<span class='badge badge-success'>09.23.2024 11:44:20 am</span>
+<span class='badge badge-danger'>09.23.2024 11:45:41 am</span>
+<span class='badge badge-default'>00:01:20:889</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:21 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-20 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-44-20 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:12 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-12 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-12 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:35 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-35 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-35 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:45:41 am</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : This Coupon number already exists!!}
+  (Session info: chrome=128.0.6613.139): This Coupon number already exists!!
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'KUMAR-GAURAV', ip: '192.168.111.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [678a9cb979c739c402cb278d9ce03393, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.139, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\KUMAR~1.GAU\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50803}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50803/devtoo..., se:cdpVersion: 128.0.6613.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 678a9cb979c739c402cb278d9ce03393
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at utilities.QaExtentReport.captureScreenshot(QaExtentReport.java:56)
+	at utilities.QaExtentReport.extentScreenshot(QaExtentReport.java:48)
+	at Administration_RevenueManagement.DiscountCouponRule.discountCouponRule(DiscountCouponRule.java:617)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:45:41 am</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:45:41 am</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:45:41 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-41 Fail Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-41 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 11 - Negative - Verify the discount coupon rule for media with Backdated selection validity</p>
+            <p class="text-sm">
+              <span>11:45:43 am</span> / <span>00:01:49:264</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC Discount Coupon Rule 11 - Negative - Verify the discount coupon rule for media with Backdated selection validity</h5>
+<span class='badge badge-success'>09.23.2024 11:45:43 am</span>
+<span class='badge badge-danger'>09.23.2024 11:47:32 am</span>
+<span class='badge badge-default'>00:01:49:264</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:43 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-43 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-45-43 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:45 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-46-44 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-46-44 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:47:28 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-27 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-27 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:32 am</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : From date can not be less than current date.}
+  (Session info: chrome=128.0.6613.139): From date can not be less than current date.
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'KUMAR-GAURAV', ip: '192.168.111.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e4f203e760a7f3a72d164d3d7264de04, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.139, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\KUMAR~1.GAU\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50835}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50835/devtoo..., se:cdpVersion: 128.0.6613.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4f203e760a7f3a72d164d3d7264de04
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at utilities.QaExtentReport.captureScreenshot(QaExtentReport.java:56)
+	at utilities.QaExtentReport.extentScreenshot(QaExtentReport.java:48)
+	at Administration_RevenueManagement.DiscountCouponRule.discountCouponRule(DiscountCouponRule.java:617)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:32 am</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:32 am</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:32 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-32 Fail Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-32 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 12 - Negative - Verify the discount coupon rule for stock with Backdated Trip date selection</p>
+            <p class="text-sm">
+              <span>11:47:34 am</span> / <span>00:01:20:922</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC Discount Coupon Rule 12 - Negative - Verify the discount coupon rule for stock with Backdated Trip date selection</h5>
+<span class='badge badge-success'>09.23.2024 11:47:34 am</span>
+<span class='badge badge-danger'>09.23.2024 11:48:55 am</span>
+<span class='badge badge-default'>00:01:20:922</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:47:34 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-34 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-47-34 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:48:22 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-22 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-22 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:48:54 am</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : From date can not be less than current date.}
+  (Session info: chrome=128.0.6613.139): From date can not be less than current date.
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'KUMAR-GAURAV', ip: '192.168.111.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d6d23f7c8cde639994fff14227480d91, executeScript {script=window.scrollBy(0,1000), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.139, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\KUMAR~1.GAU\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50877}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50877/devtoo..., se:cdpVersion: 128.0.6613.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d6d23f7c8cde639994fff14227480d91
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:501)
+	at utilities.QaRobot.scrollPage(QaRobot.java:379)
+	at Administration_RevenueManagement.DiscountCouponRule.discountCouponRule(DiscountCouponRule.java:606)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:48:54 am</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:48:54 am</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:48:55 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-54 Fail Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-54 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC Discount Coupon Rule 13 - Negative - Verify the discount coupon rule for stock with Duplicate entry.</p>
+            <p class="text-sm">
+              <span>11:48:56 am</span> / <span>00:01:33:517</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC Discount Coupon Rule 13 - Negative - Verify the discount coupon rule for stock with Duplicate entry.</h5>
+<span class='badge badge-success'>09.23.2024 11:48:56 am</span>
+<span class='badge badge-danger'>09.23.2024 11:50:30 am</span>
+<span class='badge badge-default'>00:01:33:517</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:48:57 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-56 Sigh In Page.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-48-56 Sigh In Page.jpg">
+    <div class="title">Sigh In Page</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:49:41 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-49-41 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-49-41 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:50:23 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-50-23 Discount Coupon Rule.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-50-23 Discount Coupon Rule.jpg">
+    <div class="title">Discount Coupon Rule</div>
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:50:29 am</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : This Coupon number already exists!!}
+  (Session info: chrome=128.0.6613.139): This Coupon number already exists!!
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'KUMAR-GAURAV', ip: '192.168.111.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7f9fa2825938ffc122181347e9c9d70, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.139, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\KUMAR~1.GAU\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50907}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50907/devtoo..., se:cdpVersion: 128.0.6613.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7f9fa2825938ffc122181347e9c9d70
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at utilities.QaExtentReport.captureScreenshot(QaExtentReport.java:56)
+	at utilities.QaExtentReport.extentScreenshot(QaExtentReport.java:48)
+	at Administration_RevenueManagement.DiscountCouponRule.discountCouponRule(DiscountCouponRule.java:617)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:50:30 am</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:50:30 am</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:50:30 am</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-50-30 Fail Test.jpg' src="C:\Users\Kumar.gaurav\git\V12StagingB2C\Screenshot\23-09-24 & 11-50-30 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">org.openqa.selenium.UnhandledAlertException</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.UnhandledAlertException</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:44:20 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>TC Discount Coupon Rule 10 - Negative - Verify the discount coupon rule for media with the Existing rule</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:45:43 am</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>TC Discount Coupon Rule 11 - Negative - Verify the discount coupon rule for media with Backdated selection validity</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:34 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>TC Discount Coupon Rule 12 - Negative - Verify the discount coupon rule for stock with Backdated Trip date selection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:48:56 am</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>TC Discount Coupon Rule 13 - Negative - Verify the discount coupon rule for stock with Duplicate entry.</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 23, 2024 11:27:30 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 23, 2024 11:50:30 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>9</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>4</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='69%'>
+<b>9</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='30%'><b>4</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='12%'><b>9</b> events passed</small></div>
+<div>
+<small data-tooltip='22%'><b>16</b> events failed,
+<b data-tooltip='%'>47</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC Discount Coupon Rule 1 - Positive - Verify the discount coupon rule for media for Multi-use users":85.097,"TC Discount Coupon Rule 2 - Positive - Verify the discount coupon rule for media for Single-use users":96.493,"TC Discount Coupon Rule 3 - Positive - Verify the discount coupon rule for media with the Media type name Magazine":115.759,"TC Discount Coupon Rule 4 - Positive - Verify the discount coupon rule for media by providing a coupon number with Special characters":111.761,"TC Discount Coupon Rule 5 - Positive - Verify the discount coupon rule for media with a Validity period":121.661,"TC Discount Coupon Rule 6 - Positive - Verify the discount coupon rule for media with multiple product selections along with a Single selection criteria":111.513,"TC Discount Coupon Rule 7 - Positive - Verify the discount coupon rule for media with Multiple selection criteria":120.813,"TC Discount Coupon Rule 8 - Positive - Verify the discount coupon rule for stock with a Coupon Start and end date range":98.225,"TC Discount Coupon Rule 9 - Positive - Verify the discount coupon rule for stock with Multiple product selections and Multiple selection criteria":131.214,"TC Discount Coupon Rule 10 - Negative - Verify the discount coupon rule for media with the Existing rule":80.889,"TC Discount Coupon Rule 11 - Negative - Verify the discount coupon rule for media with Backdated selection validity":109.264,"TC Discount Coupon Rule 12 - Negative - Verify the discount coupon rule for stock with Backdated Trip date selection":80.922,"TC Discount Coupon Rule 13 - Negative - Verify the discount coupon rule for stock with Duplicate entry.":93.517
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 9,
+failParent: 4,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 9,
+failEvents: 16,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 47
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

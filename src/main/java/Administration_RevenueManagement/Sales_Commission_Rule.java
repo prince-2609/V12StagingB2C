@@ -21,23 +21,23 @@ public class Sales_Commission_Rule {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("Administration_RevenueManagement_SalesCommissionRule", "Sheet6");
+		return QaDataProvider.getTestdata("Administration_RevenueManagement_SalesCommissionRule", "Sheet7");
 	}
 
 	@Test(dataProvider = "getexceldata")
-	public static void corporateProfiling(String TestCaseId, String TestScenario, String Source, String URL,
+	public static void corporateProfiling(String TestCaseId, String TCType, String TestScenario, String Source, String URL,
 			String CompanyCode, String UserName, String Password, String RuleTemplateTitle, String Product,
 			String Supplier, String SCQty, String SalesChannel, String CriteriaQty, String CriteriaName, String AirQty,
 			String Airlines, String CabinQty, String CabinClass, String OriginFor, String OZqty, String OZone,
-			String ORqty, String ORegion, String OCqty, String OCountry, String OCiQty, String OCity, String OAqty,
+			String ORqty, String ORegion, String OCqty, String OCountry, String OCi, String OCity, String OAir,
 			String OAirport, String DestinationFor, String Zqty, String Zone, String Rqty, String Region, String Cqty,
-			String Country, String CiQty, String City, String Aqty, String Airport, String BookingCQty,
+			String Country, String Ci, String City, String Air, String Airport, String BookingCQty,
 			String BookingClass, String PaxQty, String PaxType, String BaseFareF, String BaseFareT, String BookDateFrom,
 			String BookDateTo, String FareTQty, String FareType, String DefineSalesCommission, String Give,
 			String Commission, String ApplyOn, String Pass, String TransactionFeeAsDis, String Add, String CommissionN,
 			String ApplyOnN) throws Exception {
 		TestBase.Companycode(Source, URL);
-		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId + "-" + TestScenario);
+		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId + " - " + TCType + " - " + TestScenario);
 		QaRobot.PassValue("CompanyCode", CompanyCode);
 		QaRobot.PassValue("UserName", UserName);
 		QaRobot.PassValue("PasswordFD", Password);
@@ -51,18 +51,21 @@ public class Sales_Commission_Rule {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("V12RManagement");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
-		QaRobot.ClickOnElement("RMSalesCommissionRule1");
+		Thread.sleep(2000);
+		QaRobot.ClickOnElement("RMSalesCommissionRule");
 		Thread.sleep(2000);
 		QaRobot.ClickOnElement("SCRAddNewRule");
+		Thread.sleep(6000);
 		QaRobot.PassValue("SCRRuleTemplateTitle", RuleTemplateTitle);
 
 		// Select product from the list
 		QaRobot.selectTextFromDropdown("SCRProduct", Product);
 		Thread.sleep(5000);
-//		QaRobot.selectTextFromDropdown("SCRSupplier", Supplier);
+		// QaRobot.selectTextFromDropdown("SCRSupplier", Supplier);
 		QaRobot.ClickOnElement("SCRSupplierSel");
 
 		// Click Sales Channel Checkbox from list
@@ -100,11 +103,14 @@ public class Sales_Commission_Rule {
 						for (WebElement autoRights1 : listOfRights1) {
 							if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
+								QaRobot.ClickOnElement("SCRAddAirline");
 							}
 						}
 					}
+//					Thread.sleep(2000);
+//					QaRobot.ClickOnElement("SCRAddAirline");
 					Thread.sleep(2000);
-					QaRobot.ClickOnElement("RMCAirlineSelectClose");
+					QaRobot.ClickOnElement("SCRBookDateSelectClose");
 					Thread.sleep(3000);
 
 					// Select Cabin Class from child window
@@ -135,15 +141,27 @@ public class Sales_Commission_Rule {
 						QaRobot.ClickOnElement("IMCountry");
 						QaRobot.transferDataWithPassValue(OCqty, OCountry, "//input[@id='txtSearch']",
 								"//div[@id='divSearch']/p");
-					} else if (OriginFor.equalsIgnoreCase("City")) {
-						QaRobot.ClickOnElement("IMCity");
-						QaRobot.transferDataWithPassValue(OCiQty, OCity, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
-					} else if (OriginFor.equalsIgnoreCase("Airport")) {
-						QaRobot.ClickOnElement("IMAirport");
-						QaRobot.transferDataWithPassValue(OAqty, OAirport, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
 					}
+					else if (OriginFor.equalsIgnoreCase("City")) {
+						QaRobot.ClickOnElement("IMCity");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), OCi, OCity,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+					else if (OriginFor.equalsIgnoreCase("Airport")) {
+						QaRobot.ClickOnElement("IMAirport");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), OAir, OAirport,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+//					else if (OriginFor.equalsIgnoreCase("City")) {
+//						QaRobot.ClickOnElement("IMCity");
+//						QaRobot.transferDataWithPassValue(OCiQty, OCity, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
+//					else if (OriginFor.equalsIgnoreCase("Airport")) {
+//						QaRobot.ClickOnElement("IMAirport");
+//						QaRobot.transferDataWithPassValue(OAqty, OAirport, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
 					QaRobot.ClickOnElement("IMDestinationSaveClose");
 					Thread.sleep(3000);
 
@@ -157,15 +175,27 @@ public class Sales_Commission_Rule {
 						QaRobot.ClickOnElement("IMCountry");
 						QaRobot.transferDataWithPassValue(Cqty, Country, "//input[@id='txtSearch']",
 								"//div[@id='divSearch']/p");
-					} else if (DestinationFor.equalsIgnoreCase("City")) {
-						QaRobot.ClickOnElement("IMCity");
-						QaRobot.transferDataWithPassValue(CiQty, City, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
-					} else if (DestinationFor.equalsIgnoreCase("Airport")) {
-						QaRobot.ClickOnElement("IMAirport");
-						QaRobot.transferDataWithPassValue(Aqty, Airport, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
 					}
+					else if (OriginFor.equalsIgnoreCase("City")) {
+						QaRobot.ClickOnElement("IMCity");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), Ci, City,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+					else if (OriginFor.equalsIgnoreCase("Airport")) {
+						QaRobot.ClickOnElement("IMAirport");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), Air, Airport,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+//					else if (DestinationFor.equalsIgnoreCase("City")) {
+//						QaRobot.ClickOnElement("IMCity");
+//						QaRobot.transferDataWithPassValue(Ci, City, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					} 
+//					else if (DestinationFor.equalsIgnoreCase("Airport")) {
+//						QaRobot.ClickOnElement("IMAirport");
+//						QaRobot.transferDataWithPassValue(Aqty, Airport, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
 					QaRobot.ClickOnElement("IMDestinationSaveClose");
 					Thread.sleep(3000);
 
@@ -267,15 +297,18 @@ public class Sales_Commission_Rule {
 					for (int k = 1; k <= pAS1; k++) {
 						String[] tN1 = Airlines.split(",");
 						String b1 = tN1[k - 1];
+						QaRobot.ClickOnElement("SCRAirlineShowAll");
 						List<WebElement> listOfRights1 = QaBrowser.driver
-								.findElements(By.xpath("//select[@id='ListBoxAirline']/option"));
+								.findElements(By.xpath("//select[@id='ListBoxAirlineFiller']/option"));
 						for (WebElement autoRights1 : listOfRights1) {
 							if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
+								QaRobot.ClickOnElement("SCRAddAirline");
 							}
 						}
 					}
-					QaRobot.ClickOnElement("RMCAirlineSelectClose");
+					Thread.sleep(2000);
+					QaRobot.ClickOnElement("SCRBookDateSelectClose");
 					Thread.sleep(3000);
 
 				} else if (b.equalsIgnoreCase("Cabin Class")) {
@@ -304,15 +337,27 @@ public class Sales_Commission_Rule {
 						QaRobot.ClickOnElement("IMCountry");
 						QaRobot.transferDataWithPassValue(OCqty, OCountry, "//input[@id='txtSearch']",
 								"//div[@id='divSearch']/p");
-					} else if (OriginFor.equalsIgnoreCase("City")) {
-						QaRobot.ClickOnElement("IMCity");
-						QaRobot.transferDataWithPassValue(OCiQty, OCity, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
-					} else if (OriginFor.equalsIgnoreCase("Airport")) {
-						QaRobot.ClickOnElement("IMAirport");
-						QaRobot.transferDataWithPassValue(OAqty, OAirport, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
 					}
+					else if (OriginFor.equalsIgnoreCase("City")) {
+						QaRobot.ClickOnElement("IMCity");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), OCi, OCity,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+					else if (OriginFor.equalsIgnoreCase("Airport")) {
+						QaRobot.ClickOnElement("IMAirport");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), OAir, OAirport,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+//					else if (OriginFor.equalsIgnoreCase("City")) {
+//						QaRobot.ClickOnElement("IMCity");
+//						QaRobot.transferDataWithPassValue(OCiQty, OCity, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
+//					else if (OriginFor.equalsIgnoreCase("Airport")) {
+//						QaRobot.ClickOnElement("IMAirport");
+//						QaRobot.transferDataWithPassValue(OAqty, OAirport, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
 					QaRobot.ClickOnElement("IMDestinationSaveClose");
 					Thread.sleep(3000);
 
@@ -325,15 +370,28 @@ public class Sales_Commission_Rule {
 						QaRobot.ClickOnElement("IMCountry");
 						QaRobot.transferDataWithPassValue(Cqty, Country, "//input[@id='txtSearch']",
 								"//div[@id='divSearch']/p");
-					} else if (DestinationFor.equalsIgnoreCase("City")) {
-						QaRobot.ClickOnElement("IMCity");
-						QaRobot.transferDataWithPassValue(CiQty, City, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
-					} else if (DestinationFor.equalsIgnoreCase("Airport")) {
-						QaRobot.ClickOnElement("IMAirport");
-						QaRobot.transferDataWithPassValue(Aqty, Airport, "//input[@id='txtSearch']",
-								"//div[@id='divSearch']/p");
 					}
+					else if (OriginFor.equalsIgnoreCase("City")) {
+						QaRobot.ClickOnElement("IMCity");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), Ci, City,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+					else if (OriginFor.equalsIgnoreCase("Airport")) {
+						QaRobot.ClickOnElement("IMAirport");
+						TestBase.listofautosuggestion(By.xpath("//div[@id='divSearch']/p"), Air, Airport,
+								By.xpath("//input[@id='txtSearch']"));
+					}
+//					else if (DestinationFor.equalsIgnoreCase("City")) {
+//						QaRobot.ClickOnElement("IMCity");
+//						QaRobot.transferDataWithPassValue(Ci, City, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
+	
+//					else if (DestinationFor.equalsIgnoreCase("Airport")) {
+//						QaRobot.ClickOnElement("IMAirport");
+//						QaRobot.transferDataWithPassValue(Aqty, Airport, "//input[@id='txtSearch']",
+//								"//div[@id='divSearch']/p");
+//					}
 					QaRobot.ClickOnElement("IMDestinationSaveClose");
 					Thread.sleep(3000);
 
@@ -446,14 +504,14 @@ public class Sales_Commission_Rule {
 		QaRobot.scrollPage(-1000);
 		QaExtentReport.extentScreenshot("Sales commission Rule");
 		QaRobot.ClickOnElement("SCRSave");
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		QaExtentReport.extentScreenshot("Sales commission Rule Page");
 
 	}
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		 QaExtentReport.test.getExtent().flush();
 	}
 
 //											//  Date Dropdown Month & Year

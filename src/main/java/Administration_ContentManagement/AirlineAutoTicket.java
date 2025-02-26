@@ -20,7 +20,7 @@ public class AirlineAutoTicket {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("ContentManagement_AirlineAutoTicket", "Sheet1");
+		return QaDataProvider.getTestdata("ContentManagement_AirlineAutoTicket", "Sheet2");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -43,10 +43,13 @@ public class AirlineAutoTicket {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("V12RManagement");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("CMAirlineAutoChargesSettingClick");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("AirlineAutoTicketAddNew");
 		Thread.sleep(3000);
 
@@ -121,7 +124,7 @@ public class AirlineAutoTicket {
 
 		// Choose XHost Branch Check box
 		int pA2 = Integer.parseInt(XHostBranchQty);
-		for (int k = 1; k <= pA; k++) {
+		for (int k = 1; k <= pA2; k++) {
 			String[] tN1 = XHostBranch.split(",");
 			String b1 = tN1[k - 1];
 			List<WebElement> listOfRights1 = QaBrowser.driver.findElements(
@@ -137,12 +140,14 @@ public class AirlineAutoTicket {
 		QaRobot.PassValue("AATRemark", Remark);
 		Thread.sleep(2000);
 		QaExtentReport.extentScreenshot("Airline Auto Ticket Details filled");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("AATSubmit");
+		Thread.sleep(2000);
 		QaExtentReport.extentScreenshot("Record Saved Successfully");
 	}
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		// QaExtentReport.test.getExtent().flush();
 	}
 }

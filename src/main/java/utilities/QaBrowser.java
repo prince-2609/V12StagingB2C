@@ -23,7 +23,7 @@ public class QaBrowser extends QaRobot {
 		}
 		quitBrowser();
 		if (this.browser.equalsIgnoreCase("gecko")) {
-			luanchFirefox();
+			launchFirefox();
 
 		} else if (this.browser.equalsIgnoreCase("chrome")) {
 			launchChrome();
@@ -57,7 +57,7 @@ public class QaBrowser extends QaRobot {
 
 //	@SuppressWarnings("deprecation")
 	private void launchChrome() throws MalformedURLException {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriverJul24.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriverFeb2025.exe");
 		//DesiredCapabilities dc = DesiredCapabilities.chrome();
 		//dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		ChromeOptions co = new ChromeOptions();
@@ -65,7 +65,7 @@ public class QaBrowser extends QaRobot {
 		driver = (WebDriver) new ChromeDriver(co);
 	}
 
-	private WebDriver luanchFirefox() {
+	private WebDriver launchFirefox() {
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\lib\\geckodriver1.exe");
 		driver = (WebDriver) new FirefoxDriver();
 		return driver;

@@ -29,7 +29,7 @@ public class QaExtentReport {
 
 		report = new ExtentReports();
 
-		File file = new File("D:\\Automation\\V12StagingB2C\\Reports\\" + NewDate + " report" + ".html");
+		File file = new File("C:\\Users\\Kumar.gaurav\\git\\V12StagingB2C\\Reports\\" + NewDate + " report" + ".html");
 		ExtentSparkReporter sparkreporter = new ExtentSparkReporter(file);
 		ExtentSparkReporterConfig config = sparkreporter.config();
 		config.setTheme(Theme.STANDARD);
@@ -47,14 +47,15 @@ public class QaExtentReport {
 	public static void extentScreenshot(String txt) throws IOException {
 		test.info(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(txt), txt).build());
 	}
-	
+
 	public static String captureScreenshot(String text) throws IOException {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yy & HH-mm-ss");
 		String NewDate = d.format(date);
 		TakesScreenshot ts = (TakesScreenshot) QaBrowser.driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
-		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\" + NewDate + " " + text + ".jpg");
+		File Dest = new File(
+				"C:\\Users\\Kumar.gaurav\\git\\V12StagingB2C\\Screenshot\\" + NewDate + " " + text + ".jpg");
 		FileUtils.copyFile(Source, Dest);
 		return Dest.getAbsolutePath();
 	}

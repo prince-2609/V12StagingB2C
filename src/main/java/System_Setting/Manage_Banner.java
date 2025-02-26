@@ -21,7 +21,7 @@ public class Manage_Banner {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("SystemSetting_ManageBanner", "Sheet2");
+		return QaDataProvider.getTestdata("SystemSetting_ManageBanner", "Sheet4");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -35,6 +35,7 @@ public class Manage_Banner {
 		QaRobot.PassValue("PasswordFD", Password);
 		QaExtentReport.extentScreenshot("Sigh In Page");
 		QaRobot.ClickOnElement("LogIn");
+		Thread.sleep(2000);
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='leftbar']");
 		QaRobot.ClickOnElement("V12Administration");
@@ -43,10 +44,15 @@ public class Manage_Banner {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("V12RManagementMaster");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(3000);
+		// QaRobot.ClickOnElement("ClickMaster");
+		// QaBrowser.driver.findElement(By.xpath("//*[@id=\"tblMain\"]/tbody/tr[3]/td"));
 		QaRobot.ClickOnElement("SSManageBanner");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("BMAddNew");
 		Thread.sleep(2000);
 
@@ -98,9 +104,10 @@ public class Manage_Banner {
 		}
 		QaExtentReport.extentScreenshot("Manage Banner");
 		QaRobot.ClickOnElement("MBSave");
-		Thread.sleep(1000);
+		Thread.sleep(8000);
 		QaRobot.alertDismiss();
-		// QaExtentReport.extentScreenshot("Manage Banners");
+		Thread.sleep(2000);
+		// QaExtentReport.extentScreenshot("Manage Banners list");
 //		Thread.sleep(2000);
 //		QaRobot.ClickOnElement("ManageBannerClose");	
 
@@ -108,6 +115,6 @@ public class Manage_Banner {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		// QaExtentReport.test.getExtent().flush();
 	}
 }

@@ -41,15 +41,18 @@ public class RegisterSubAgent {
 		QaRobot.ClickOnElement("LogIn");
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='leftbar']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12Clientmanagement");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("v12CAMReseller");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12CAMResellerClick");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12RegisterReseller");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("v12CAMSubmitS");
@@ -176,7 +179,10 @@ public class RegisterSubAgent {
 		Thread.sleep(1000);
 		QaRobot.scrollPage(1000);
 		Thread.sleep(5000);
+		QaExtentReport.extentScreenshot("Product access page");
+		Thread.sleep(1000);
 		QaRobot.ClickOnElement("ResellerSave");
+		Thread.sleep(3000);
 		QaExtentReport.extentScreenshot("SubAgent registered Successfully");
 
 	}

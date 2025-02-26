@@ -17,7 +17,7 @@ public class RegisterClient {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("Register_Client", "Sheet1");
+		return QaDataProvider.getTestdata("Register_Client", "Sheet4");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -44,9 +44,11 @@ public class RegisterClient {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12CAMDirectCustomerClick");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12CAMRegisterClient");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("v12CAMSubmitS");
@@ -80,8 +82,10 @@ public class RegisterClient {
 		QaRobot.scrollPage(1200);
 //		QaRobot.selectTextFromDropdown("ClientState", State);
 //		Thread.sleep(2000);
-		TestBase.listofautosuggestion(By.xpath("//p[@id='dynaSpan1']"), Ci, City, By.xpath("//input[@id='txtcity']"));
-		QaBrowser.driver.findElement(By.xpath("//p[@id='dynaSpan1']")).click();
+		TestBase.listofautosuggestion(By.xpath("//p[@id='dynaSpan0']"), Ci, City, By.xpath("//input[@id='txtcity']"));
+		//Thread.sleep(4000);
+		QaBrowser.driver.findElement(By.xpath("//p[@id='dynaSpan0']")).click();
+	//	QaBrowser.driver.findElement(By.xpath("//p[@id='dynaSpan1']")).click();
 		QaExtentReport.extentScreenshot("Traveller Details Page");
 		Thread.sleep(2000);
 		QaRobot.PassValue("CPincode", Pincode);
@@ -107,87 +111,88 @@ public class RegisterClient {
 		QaRobot.ClickOnElement("CAcknowledgement1");
 		Thread.sleep(1000);
 		QaRobot.ClickOnElement("CAcknowledgement2");
+		Thread.sleep(3000);
 		// QaRobot.ClickOnElement("CAcknowledgement2");
 		QaExtentReport.extentScreenshot("Traveller Details Page");
 		QaRobot.ClickOnElement("CSave");
-		Thread.sleep(2000);
-		QaRobot.scrollPage(-3000);
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("ClickOnClientname");
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("v12CAMSubmitS");
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("CPassportDetails");
-		Thread.sleep(4000);
-		QaRobot.ClickOnElement("CAddPassport");
-		Thread.sleep(4000);
-		QaRobot.PassValue("CPassportNo", PassportNo);
-		Thread.sleep(2000);
-
-		// Place of Issue Auto Suggestion
-		TestBase.listofautosuggestion(By.xpath("//p[@id='dynaSpan0']"), PlaceIssue, PlaceOfIssue,
-				By.xpath("//input[@id='txtSearchCity']"));
-		QaBrowser.driver.findElement(By.xpath("//p[@id='dynaSpan0']")).click();
-		// QaRobot.PassValue("CPlaceOfIssue", PlaceOfIssue);
-		Thread.sleep(4000);
-
-		// Choose Expiry date from date Dropdown
-		QaRobot.ClickOnElement("CPassportExpiry");
-		String DateSelection1[] = Expiry.split("-");
-		String year1 = DateSelection1[2];
-		String month1 = DateSelection1[1];
-		String expDate1 = DateSelection1[0];
-		QaRobot.selectDateInCalendar1(expDate1, month1, year1);
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("CPrimary");
-		Thread.sleep(1000);
-		QaRobot.ClickOnElement("CAddPassport");
-		QaExtentReport.extentScreenshot("Sigh In Page");
-		Thread.sleep(3000);
-		QaRobot.ClickOnElement("CClickVisa");
-		Thread.sleep(3000);
-		QaRobot.ClickOnElement("CClickVisaAddNew");
-		Thread.sleep(4000);
-
-		QaRobot.PassValue("CVisaNumber", VisaNo);
-		// Choose Country from the list
-		QaRobot.selectTextFromDropdown("CCountryOfVisa", CountryOfVisa);
-		Thread.sleep(2000);
-		// QaRobot.selectTextFromDropdown("CPlaceOfIssue", PlaceOfIssue);
-
-		// Choose DateOfIssue from date Dropdown
-		QaRobot.ClickOnElement("CDateOfIssue");
-		String DateSelection11[] = DateOfIssue.split("-");
-		String year11 = DateSelection11[2];
-		String month11 = DateSelection11[1];
-		String expDate11 = DateSelection11[0];
-		QaRobot.selectDateInCalendar1(expDate11, month11, year11);
-		Thread.sleep(3000);
-
-		// Choose DateOfExpiry from date Dropdown
-		QaRobot.ClickOnElement("CDateOfExpiry");
-		String DateSelection111[] = DateOfExpiry.split("-");
-		String year111 = DateSelection111[2];
-		String month111 = DateSelection111[1];
-		String expDate111 = DateSelection111[0];
-		QaRobot.selectDateInCalendar1(expDate111, month111, year111);
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("CClickVisaAddNew");
-		Thread.sleep(2000);
-		QaExtentReport.extentScreenshot("Client Visa Details");
-		QaRobot.ClickOnElement("CClickOnClose");
-		Thread.sleep(4000);
-		QaRobot.ClickOnElement("v12CAMSubmitS");
-		Thread.sleep(3000);
-		QaRobot.scrollPage(4000);
-		Thread.sleep(2000);
-		QaRobot.ClickOnElement("CSave");
-		Thread.sleep(2000);
-		QaExtentReport.extentScreenshot("Registered Clients List");
+//		Thread.sleep(2000);
+//		QaRobot.scrollPage(-3000);
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("ClickOnClientname");
+//		Thread.sleep(2000);
+//		QaRobot.ClickOnElement("v12CAMSubmitS");
+//		Thread.sleep(2000);
+//		QaRobot.ClickOnElement("CPassportDetails");
+//		Thread.sleep(4000);
+//		QaRobot.ClickOnElement("CAddPassport");
+//		Thread.sleep(4000);
+//		QaRobot.PassValue("CPassportNo", PassportNo);
+//		Thread.sleep(2000);
+//
+//		// Place of Issue Auto Suggestion
+//		TestBase.listofautosuggestion(By.xpath("//p[@id='dynaSpan0']"), PlaceIssue, PlaceOfIssue,
+//				By.xpath("//input[@id='txtSearchCity']"));
+//		QaBrowser.driver.findElement(By.xpath("//p[@id='dynaSpan0']")).click();
+//		// QaRobot.PassValue("CPlaceOfIssue", PlaceOfIssue);
+//		Thread.sleep(4000);
+//
+//		// Choose Expiry date from date Dropdown
+//		QaRobot.ClickOnElement("CPassportExpiry");
+//		String DateSelection1[] = Expiry.split("-");
+//		String year1 = DateSelection1[2];
+//		String month1 = DateSelection1[1];
+//		String expDate1 = DateSelection1[0];
+//		QaRobot.selectDateInCalendar1(expDate1, month1, year1);
+//		Thread.sleep(2000);
+//		QaRobot.ClickOnElement("CPrimary");
+//		Thread.sleep(1000);
+//		QaRobot.ClickOnElement("CAddPassport");
+//		QaExtentReport.extentScreenshot("Sigh In Page");
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("CClickVisa");
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("CClickVisaAddNew");
+//		Thread.sleep(4000);
+//
+//		QaRobot.PassValue("CVisaNumber", VisaNo);
+//		// Choose Country from the list
+//		QaRobot.selectTextFromDropdown("CCountryOfVisa", CountryOfVisa);
+//		Thread.sleep(2000);
+//		// QaRobot.selectTextFromDropdown("CPlaceOfIssue", PlaceOfIssue);
+//
+//		// Choose DateOfIssue from date Dropdown
+//		QaRobot.ClickOnElement("CDateOfIssue");
+//		String DateSelection11[] = DateOfIssue.split("-");
+//		String year11 = DateSelection11[2];
+//		String month11 = DateSelection11[1];
+//		String expDate11 = DateSelection11[0];
+//		QaRobot.selectDateInCalendar1(expDate11, month11, year11);
+//		Thread.sleep(3000);
+//
+//		// Choose DateOfExpiry from date Dropdown
+//		QaRobot.ClickOnElement("CDateOfExpiry");
+//		String DateSelection111[] = DateOfExpiry.split("-");
+//		String year111 = DateSelection111[2];
+//		String month111 = DateSelection111[1];
+//		String expDate111 = DateSelection111[0];
+//		QaRobot.selectDateInCalendar1(expDate111, month111, year111);
+//		Thread.sleep(2000);
+//		QaRobot.ClickOnElement("CClickVisaAddNew");
+//		Thread.sleep(2000);
+//		QaExtentReport.extentScreenshot("Client Visa Details");
+//		QaRobot.ClickOnElement("CClickOnClose");
+//		Thread.sleep(4000);
+//		QaRobot.ClickOnElement("v12CAMSubmitS");
+//		Thread.sleep(3000);
+//		QaRobot.scrollPage(4000);
+//		Thread.sleep(2000);
+//		QaRobot.ClickOnElement("CSave");
+//		Thread.sleep(2000);
+//		QaExtentReport.extentScreenshot("Registered Clients List");
 	}
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		//QaExtentReport.test.getExtent().flush();
 	}
 }

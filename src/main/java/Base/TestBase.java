@@ -24,6 +24,7 @@ import utilities.QaRobot;
 
 public class TestBase extends QaExtentReport {
 
+	private static final int ArrayList = 0;
 	public static Properties obj, object;
 	public static File file;
 	public static FileInputStream fin;
@@ -140,6 +141,7 @@ public class TestBase extends QaExtentReport {
 		Thread.sleep(3000);
 
 //		QaBrowser.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		ArrayList<WebElement> autoss = (ArrayList<WebElement>) QaBrowser.driver.findElements(stxt);
 //		System.out.println(autoss);
 		// System.out.println(autosuggestions.toString());

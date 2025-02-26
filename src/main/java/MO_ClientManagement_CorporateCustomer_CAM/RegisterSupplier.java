@@ -20,7 +20,7 @@ public class RegisterSupplier {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("Register_Supplier", "Sheet1");
+		return QaDataProvider.getTestdata("Register_Supplier", "Sheet2");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -39,15 +39,18 @@ public class RegisterSupplier {
 		QaRobot.ClickOnElement("LogIn");
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='leftbar']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12Clientmanagement");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("v12CAMSupplier");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12CAMSupplierClick");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("v12CAMRegisterSupplier");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("v12CAMSubmitS");
@@ -186,6 +189,7 @@ public class RegisterSupplier {
 		QaRobot.scrollPage(2000);
 		Thread.sleep(2000);
 		QaRobot.ClickOnElement("SupplierSave");
+		Thread.sleep(7000);
 
 	}
 //	int pAS = Integer.parseInt(TotalRights);
@@ -227,6 +231,6 @@ public class RegisterSupplier {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		//QaExtentReport.test.getExtent().flush();
 	}
 }

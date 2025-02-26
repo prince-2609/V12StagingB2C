@@ -43,11 +43,15 @@ public class AutoCharges {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("V12RManagement");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("RMAutoCharges");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("RMACAddNew");
+		Thread.sleep(3000);
 		QaRobot.PassValue("RMACTitle", ACTitle);
 
 		// Select product from Dropdown
@@ -87,7 +91,7 @@ public class AutoCharges {
 
 //				QaRobot.ClickOnElement("RMCAirlineSelectClose");
 //				Thread.sleep(3000);
-//		QaRobot.selectTextFromDropdown("RMSelectAirline", SelectAirline);	
+//				QaRobot.selectTextFromDropdown("RMSelectAirline", SelectAirline);	
 			QaRobot.ClickOnElement("RMAddAirline");
 		}
 
@@ -120,6 +124,6 @@ public class AutoCharges {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		// QaExtentReport.test.getExtent().flush();
 	}
 }

@@ -15,7 +15,28 @@ public class sample
 	
 	public static void main(String[] args) 
 	{
-		data(30,40);
+		String s1="welcome";
+		String s2=" quadlabs family ";
+		System.out.println(s1.charAt(3));;
+		System.out.println(s1.concat(s2));;
+		System.out.println(s1.contains("wel"));
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s1.indexOf("l"));
+		System.out.println(s1.lastIndexOf(s1));
+		System.out.println(s1.length());
+		System.out.println(s1.replace('e', 'c'));
+		System.out.println(s1.startsWith(s2, 'w'));
+		System.out.println(s1.substring(0, 3));
+		System.out.println(s1.toLowerCase());
+		System.out.println(s1.toUpperCase());
+		System.out.println(s2.toString());
+		System.out.println(s2.trim());
+		System.out.println(s2.split(""));
+		
+		
+		
+	//	data(30,40);
 	}
 }
 

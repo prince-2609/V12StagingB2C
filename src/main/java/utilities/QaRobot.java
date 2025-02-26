@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -136,10 +137,10 @@ public class QaRobot extends QaExtentReport
 	/**
 	 * wait till alert is present
 	 * 
-	 * @param time
+	 * @param i
 	 */
-	public static void explicitwaitalert(int time) {
-		TestBase.wait = new WebDriverWait(QaBrowser.driver, time);
+	public static void explicitwaitalert(Duration i) {
+		TestBase.wait = new WebDriverWait(QaBrowser.driver, i);
 		TestBase.wait.until(ExpectedConditions.alertIsPresent());
 
 	}
@@ -157,6 +158,28 @@ public class QaRobot extends QaExtentReport
 		// Choose date from calendar
 		List<WebElement> allDates = QaBrowser.driver
 				.findElements(By.xpath("/html/body/div[2]/div/div[2]/div[1]/table/tbody/tr/td"));
+		for (WebElement ele : allDates) {
+			String dt = ele.getText();
+
+			if (dt.equalsIgnoreCase(Day)) {
+				ele.click();
+				break;
+			}
+		}
+	}
+
+	public static void selectDateInCalendar2(String Day, String Month, String Year) throws Exception {
+		Assert.assertFalse(Integer.parseInt(Day) > 31, "Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day) > 28,
+				"Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Thread.sleep(3000);
+		// Choose year from dropdown
+		QaRobot.selectTextByLocator("/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[2]", Year);
+		// Choose year from dropdown
+		QaRobot.selectTextByLocator("/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[1]", Month);
+		// Choose date from calendar
+		List<WebElement> allDates = QaBrowser.driver
+				.findElements(By.xpath("/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td/center/div/div[2]/center/table/tbody/tr/td/table/tbody/tr/td/input"));
 		for (WebElement ele : allDates) {
 			String dt = ele.getText();
 
@@ -217,7 +240,7 @@ public class QaRobot extends QaExtentReport
 	 * @param time
 	 * @param e
 	 */
-	public static void explicitwaitclickable(int time, By e) {
+	public static void explicitwaitclickable(Duration time, By e) {
 		TestBase.wait = new WebDriverWait(QaBrowser.driver, time);
 		TestBase.wait.until(ExpectedConditions.elementToBeClickable(e));
 	}
@@ -228,7 +251,7 @@ public class QaRobot extends QaExtentReport
 	 * @param time
 	 * @param e
 	 */
-	public static void explicitwaitinvisible(int time, By e) {
+	public static void explicitwaitinvisible(Duration time, By e) {
 		TestBase.wait = new WebDriverWait(QaBrowser.driver, time);
 		TestBase.wait.until(ExpectedConditions.invisibilityOfElementLocated(e));
 	}
@@ -239,14 +262,24 @@ public class QaRobot extends QaExtentReport
 	 * @param time
 	 * @param e
 	 */
-	public static void explicitwaitvisible(int time, By e) {
+	public static void explicitwaitvisible(Duration time, By e) {
 		TestBase.wait = new WebDriverWait(QaBrowser.driver, time);
 		TestBase.wait.until(ExpectedConditions.visibilityOfElementLocated(e));
 	}
 
-	public static void explicitwait(int time, By e) {
+	public static void explicitwait(Duration time, By e) {
 		WebDriverWait wait1 = new WebDriverWait(QaBrowser.driver, time);
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(e));
+	}
+	
+	/**
+	 * 
+	 * @param time
+	 * @param e
+	 */
+	public static void explicitwait1(Duration time, By e) {
+		WebDriverWait wait1 = new WebDriverWait(QaBrowser.driver, time);
+		wait1.until(ExpectedConditions.elementToBeClickable(e));
 	}
 
 	/**
@@ -339,6 +372,20 @@ public class QaRobot extends QaExtentReport
 		QaBrowser.driver.findElement(By.xpath("//input[@value='" + Day + " ']")).click();
 	}
 
+	public static void selectDateInCalendarIM1(String Day, String Month, String Year) throws Exception {
+
+		Assert.assertFalse(Integer.parseInt(Day) > 31, "Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day) > 28,
+				"Invalid date provided " + Day + "-" + Month + "-" + Year);
+		Thread.sleep(3000);
+		QaRobot.selectTextByLocator("/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[2]",
+				Year);
+		QaRobot.selectTextByLocator("/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[1]",
+				Month);
+
+		QaBrowser.driver.findElement(By.xpath("//input[@value='" + Day + " ']")).click();
+	}
+	
 	public static void selectDateInCalendar(String Day, String Month, String Year) throws Exception {
 		Assert.assertFalse(Integer.parseInt(Day) > 31, "Invalid date provided " + Day + "-" + Month + "-" + Year);
 		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day) > 28,
@@ -482,6 +529,11 @@ public class QaRobot extends QaExtentReport
 	public static void alertDismiss() {
 		QaBrowser.driver.switchTo().alert().dismiss();
 
+	}
+
+	public static void explicitwaitalert(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -20,7 +20,7 @@ public class PreferredAirlines {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("SalesChannelSetting_PreferredAirline", "Sheet4");
+		return QaDataProvider.getTestdata("SalesChannelSetting_PreferredAirline", "Sheet3");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -44,10 +44,12 @@ public class PreferredAirlines {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("V12RManagement");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
-		QaRobot.ClickOnElement("SCSPreferredAirline1");
+		QaRobot.ClickOnElement("SCSPreferredAirline");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("PAAddNew");
 		Thread.sleep(2000);
 
@@ -56,7 +58,7 @@ public class PreferredAirlines {
 		QaRobot.ClickOnElement("AirlineSelect");
 		TestBase.listofautosuggestion(By.xpath("(//p[@id='dynaSpan0'])[1]"), Air, PAAirline,
 				By.xpath("//input[@id='TxtAirline']"));
-
+		Thread.sleep(3000);
 //		int pAS2 = Integer.parseInt(PAirQty);
 //		for (int k = 1; k <= pAS2; k++) {
 //			String[] tN1 = PAAirline.split(",");
@@ -119,11 +121,36 @@ public class PreferredAirlines {
 		QaExtentReport.extentScreenshot("Preferred Airline Rule");
 		Thread.sleep(2000);
 		QaRobot.ClickOnElement("PASave");
+		Thread.sleep(1000);
 		QaRobot.alertDismiss();
-		QaExtentReport.extentScreenshot("Alert Popup message");
+		//QaExtentReport.extentScreenshot("Alert Popup message");
 
 	}
-
+	
+	@AfterMethod
+	public static void afterMethod() {
+		 //QaExtentReport.test.getExtent().flush();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Trip Start Date Next Button Calendar
 	public static void selectDate(String Day) throws Exception {
 		List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath(
@@ -185,8 +212,4 @@ public class PreferredAirlines {
 //		return autosuggs;
 //	}
 
-	@AfterMethod
-	public static void afterMethod() {
-		// QaExtentReport.test.getExtent().flush();
-	}
 }

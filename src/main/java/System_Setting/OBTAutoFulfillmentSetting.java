@@ -26,7 +26,7 @@ public class OBTAutoFulfillmentSetting {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("SystemSetting_OBTAutoFulfillmentSetting", "Sheet1");
+		return QaDataProvider.getTestdata("SystemSetting_OBTAutoFulfillmentSetting", "Sheet3");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -53,12 +53,14 @@ public class OBTAutoFulfillmentSetting {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("OBTConfigurationClick");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(5000);	
+		QaExtentReport.extentScreenshot("OBT setting click");
 		QaRobot.ClickOnElement("OBTSettingClick");
 		Thread.sleep(2000);
-
 		QaRobot.selectTextFromDropdown("SupplierSelect", SupplierOBT);
 		Thread.sleep(3000);
 		QaRobot.selectTextFromDropdown("OfficeHourBranch", OfficeHourBranch);
@@ -113,8 +115,25 @@ public class OBTAutoFulfillmentSetting {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+	//	QaExtentReport.test.getExtent().flush();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// Effective Date Calendar Next Button
 	public static void selectDate(String Day) throws Exception {

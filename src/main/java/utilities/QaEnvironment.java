@@ -65,5 +65,20 @@ public class QaEnvironment {
 	public static int getInteger(String propKey, int defaultValue) {
 		return Integer.parseInt(getProperty(propKey, String.valueOf(defaultValue)));
 	}
+	
+	/**
+     * Get double property
+     * 
+     * @param propKey
+     * @param defaultValue
+     * @return
+     */
+    public static double getDouble(String propKey, double defaultValue) {
+        try {
+            return Double.parseDouble(getProperty(propKey, String.valueOf(defaultValue)));
+        } catch (NumberFormatException e) {
+            return defaultValue; // Return default value if parsing fails
+        }
+    }
 
 }

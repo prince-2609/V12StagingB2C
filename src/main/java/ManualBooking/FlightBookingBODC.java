@@ -314,7 +314,7 @@ public class FlightBookingBODC {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		//QaExtentReport.test.getExtent().flush();
 	}
 
 	public static void AddAdult(String Adult, String AdultName) throws Exception {
