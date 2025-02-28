@@ -24,7 +24,7 @@ public class FlightBookingBOCA {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("FlightManualBooking", "BOCA");
+		return QaDataProvider.getTestdata("FlightManualBooking", "Sheet3");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -61,11 +61,11 @@ public class FlightBookingBOCA {
 		QaRobot.ClickOnElement("MBDCManualBooking");
 		Thread.sleep(3000);
 		QaRobot.PassValue("SearchCorporateTraveller", SelectClient);
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		QaRobot.ClickOnElement("MBCATraveller");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		QaRobot.ClickOnElement("MBCATravellerType");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		QaExtentReport.extentScreenshot("Select Manual Booking");
 		QaRobot.ClickOnElement("MBDCContinue");
 //		QaRobot.ClickOnElement("MBDCAddClientDetails");
@@ -123,7 +123,7 @@ public class FlightBookingBOCA {
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlightContinue");
 		String ParentWindow3 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles3 = QaBrowser.driver.getWindowHandles();
-		for (String childWindow3 : handles3) {
+		for (String childWindow3 : handles3) {		
 			if (!childWindow3.equals(ParentWindow3))
 				QaBrowser.driver.switchTo().window(childWindow3);
 		}
@@ -241,6 +241,7 @@ public class FlightBookingBOCA {
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
 		QaExtentReport.extentScreenshot("Product and Services");
+		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBDCProvisional");
 		String ParentWindow4 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles4 = QaBrowser.driver.getWindowHandles();
@@ -254,7 +255,8 @@ public class FlightBookingBOCA {
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
-		QaRobot.ClickOnElement("MBDCAuthorize");
+		Thread.sleep(5000);
+		QaRobot.ClickOnElement("MBCAAuthorize");
 		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
 		for (String childWindow5 : handles5) {
@@ -353,6 +355,7 @@ public class FlightBookingBOCA {
 		}
 		Thread.sleep(15000);
 		QaRobot.ClickOnElement("MBDCPaymentSubmit");
+		Thread.sleep(4000);
 		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
 		QaRobot.selectIndexFromDropdown("MBDCInvoice", 1);
 		QaExtentReport.extentScreenshot("Payment");
