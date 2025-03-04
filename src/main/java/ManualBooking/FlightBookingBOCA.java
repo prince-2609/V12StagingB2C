@@ -174,6 +174,7 @@ public class FlightBookingBOCA {
 			String Month2 = DateS2[1];
 			String Year2 = DateS2[2];
 			selectDate(Date2, Month2, Year2);
+			Thread.sleep(3000);
 			QaRobot.ClickOnElement("MBDCDTimeR");
 			WebElement MBDCDTime1 = QaBrowser.driver.findElement(By.xpath("//input[@id='depthour0']"));
 			MBDCDTime1.sendKeys(Keys.BACK_SPACE);
@@ -389,8 +390,13 @@ public class FlightBookingBOCA {
 			String FN = TN[0];
 			String LN = TN[1];
 //			if (i >= 2) {
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
 			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
+	//		}
 //			}
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {

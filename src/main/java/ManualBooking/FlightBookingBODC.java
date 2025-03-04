@@ -81,6 +81,7 @@ public class FlightBookingBODC {
 		QaExtentReport.extentScreenshot("Select Client");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCTraveller");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCAddTraveller");
 		String ParentWindow2 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles2 = QaBrowser.driver.getWindowHandles();
@@ -88,6 +89,7 @@ public class FlightBookingBODC {
 			if (!childWindow2.equals(ParentWindow2))
 				QaBrowser.driver.switchTo().window(childWindow2);
 		}
+		
 		AddAdult(Adult, AdultName);
 		AddChild(Adult, Child, ChildName, ChildDOB);
 		AddInfant(Adult, Child, Infant, InfantName, InfantDOB);
@@ -103,6 +105,7 @@ public class FlightBookingBODC {
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
 		QaExtentReport.extentScreenshot("Traveller Tab");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCProductsAndServices");
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlight");
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlightContinue");
@@ -159,6 +162,7 @@ public class FlightBookingBODC {
 			String Month2 = DateS2[1];
 			String Year2 = DateS2[2];
 			selectDate(Date2, Month2, Year2);
+			Thread.sleep(3000);
 			QaRobot.ClickOnElement("MBDCDTimeR");
 			WebElement MBDCDTime1 = QaBrowser.driver.findElement(By.xpath("//input[@id='depthour0']"));
 			MBDCDTime1.sendKeys(Keys.BACK_SPACE);
@@ -240,7 +244,7 @@ public class FlightBookingBODC {
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
-		Thread.sleep(4000);
+		Thread.sleep(12000);
 		QaRobot.ClickOnElement("MBDCAuthorize");
 		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
@@ -248,7 +252,7 @@ public class FlightBookingBODC {
 			if (!childWindow5.equals(ParentWindow5))
 				QaBrowser.driver.switchTo().window(childWindow5);
 		}
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		QaRobot.ClickOnElement("MBDCAuthorizeSubmit");
 		QaRobot.ClickOnElement("MBDCAuthorizeViewBooking");
 		Thread.sleep(7000);
@@ -299,7 +303,7 @@ public class FlightBookingBODC {
 			if (!childWindow7.equals(ParentWindow7))
 				QaBrowser.driver.switchTo().window(childWindow7);
 		}
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		QaRobot.ClickOnElement("MBDCPaymentSubmit");
 		Thread.sleep(4000);
 		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
@@ -336,9 +340,15 @@ public class FlightBookingBODC {
 			String TN[] = AN1.split(" ");
 			String FN = TN[0];
 			String LN = TN[1];
+			
 	//		if (i >= 2) {
-				QaRobot.PassValue("MBDCTravellerFirstName", FN);
-				QaRobot.PassValue("MBDCTravellerLastName", LN);
+//			Thread.sleep(3000);
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
+			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
+			QaRobot.PassValue("MBDCTravellerLastName", LN);
 	//		}
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {
@@ -432,7 +442,7 @@ public class FlightBookingBODC {
 				break;
 			}
 		}
-	}
+	}                  
 
 	public static void costingForAdult(String BaseFareA, String SelectBreakupA, String BreakupsA, String TaxQtyA,
 			String TaxesA, String TaxAmountA) throws Exception {

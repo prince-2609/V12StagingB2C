@@ -23,7 +23,7 @@ import utilities.QaRobot;
 public class HotelBookingBOCA {
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("HotelManualBooking", "BOCA");
+		return QaDataProvider.getTestdata("HotelManualBooking", "Sheet4");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -59,7 +59,7 @@ public class HotelBookingBOCA {
 		QaRobot.ClickOnElement("MBCATraveller");
 		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBCATravellerType");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		QaExtentReport.extentScreenshot("Select Manual Booking");
 		QaRobot.ClickOnElement("MBDCContinue");
 //		QaRobot.ClickOnElement("MBDCAddClientDetails");
@@ -79,7 +79,7 @@ public class HotelBookingBOCA {
 //		QaRobot.switchframe("//frame[@name='main']");
 //		QaRobot.switchframe("//frame[@id='frm2']");
 		QaExtentReport.extentScreenshot("Select Client");
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		int TotalTraveller = Integer.parseInt(Adult) + Integer.parseInt(Child) + Integer.parseInt(Infant);
 		System.out.println(TotalTraveller);
 		if (TotalTraveller > 1) {
@@ -112,8 +112,11 @@ public class HotelBookingBOCA {
 			QaRobot.switchframe("//frame[@id='frm2']");
 		}
 		QaExtentReport.extentScreenshot("Traveller Tab");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCProductsAndServices");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCProductsAndServicesHotel");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlightContinue");
 		Thread.sleep(5000);
 		String ParentWindow3 = QaBrowser.driver.getWindowHandle();
@@ -124,6 +127,7 @@ public class HotelBookingBOCA {
 		}
 		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBDCHotelSubmit");
+		Thread.sleep(3000);
 		QaRobot.PassValue("MBDCHotelName", HotelName);
 		QaRobot.selectTextFromDropdown("MBDCSelectSupplierH", ChooseSupplier);
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divCity']/p"), CCode, CityCode,
@@ -134,18 +138,24 @@ public class HotelBookingBOCA {
 		String Date = DateS[0];
 		String Month = DateS[1];
 		String Year = DateS[2];
-		FlightBookingBODC.selectDate(Date, Month, Year);
+		Thread.sleep(3000);
+		selectDate(Date, Month, Year);
+		Thread.sleep(3000);
 		QaBrowser.driver.findElement(By.xpath("//img[@id='Img2']")).click();
 		Thread.sleep(5000);
 		String DateS1[] = CODate.split("-");
 		String Date1 = DateS1[0];
 		String Month1 = DateS1[1];
 		String Year1 = DateS1[2];
-		FlightBookingBODC.selectDate(Date1, Month1, Year1);
+		Thread.sleep(3000);
+		selectDate(Date1, Month1, Year1);
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCSelectAllPassenger");
+		Thread.sleep(3000);
 		QaRobot.selectTextFromDropdown("MBDCSelectStatusH", Hstatus);
 		QaRobot.PassValue("MBDCConfirmationH", ConfirmationN);
 		QaRobot.ClickOnElement("MBDCSelectManual");
+		Thread.sleep(3000);
 		QaRobot.PassValue("MBDCRoomTypeH", RoomType);
 		QaRobot.PassValue("MBDCMealH", Meal);
 		QaRobot.PassValue("MBDCCNH", ConfirmationN);
@@ -164,6 +174,7 @@ public class HotelBookingBOCA {
 		if (chd > 0) {
 			QaRobot.PassValue("MBDCChildH", Child);
 		}
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCBaseFareH");
 		QaRobot.PassValue("MBDCBaseFareH", BaseFare);
 		if (AddCharges.equalsIgnoreCase("Yes")) {
@@ -197,6 +208,7 @@ public class HotelBookingBOCA {
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
 		QaExtentReport.extentScreenshot("Product and Services");
+		Thread.sleep(4000);
 		QaRobot.ClickOnElement("MBDCProvisional");
 		String ParentWindow4 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles4 = QaBrowser.driver.getWindowHandles();
@@ -204,13 +216,15 @@ public class HotelBookingBOCA {
 			if (!childWindow4.equals(ParentWindow4))
 				QaBrowser.driver.switchTo().window(childWindow4);
 		}
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCViewBooking");
 		QaBrowser.driver.switchTo().window(ParentWindow4);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
-		QaRobot.ClickOnElement("MBDCAuthorize");
+		Thread.sleep(4000);
+		QaRobot.ClickOnElement("MBCAAuthorize");
 		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
 		for (String childWindow5 : handles5) {
@@ -219,6 +233,7 @@ public class HotelBookingBOCA {
 		}
 		Thread.sleep(7000);
 		QaRobot.ClickOnElement("MBDCAuthorizeSubmit");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBCAAuthorizeProceedBooking");
 		Thread.sleep(2000);
 		QaRobot.ClickOnElement("MBDCAuthorizeViewBooking");
@@ -233,7 +248,7 @@ public class HotelBookingBOCA {
 		QaRobot.switchframe("//frame[@id='frm2']");
 		QaRobot.ClickOnElement("MBDCDocuments");
 		QaExtentReport.extentScreenshot("Documents");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBDCCreateVoucher");
 		String ParentWindow6 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles6 = QaBrowser.driver.getWindowHandles();
@@ -251,6 +266,7 @@ public class HotelBookingBOCA {
 		QaExtentReport.extentScreenshot("Voucher No.");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCCuctomerPayment");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCReceivePayment");
 		String ParentWindow7 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles7 = QaBrowser.driver.getWindowHandles();
@@ -260,6 +276,7 @@ public class HotelBookingBOCA {
 		}
 		Thread.sleep(10000);
 		QaRobot.ClickOnElement("MBDCPaymentSubmit");
+		Thread.sleep(3000);
 		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
 		QaRobot.selectIndexFromDropdown("MBDCInvoice", 1);
 		QaExtentReport.extentScreenshot("Payment");
@@ -282,6 +299,7 @@ public class HotelBookingBOCA {
 		QaExtentReport.test.getExtent().flush();
 	}
 
+	
 	public static void AddAdult(String Adult, String AdultName) throws Exception {
 		int adt = Integer.parseInt(Adult);
 		for (int i = 1; i <= adt; i++) {
@@ -293,8 +311,13 @@ public class HotelBookingBOCA {
 			String FN = TN[0];
 			String LN = TN[1];
 //			if (i >= 2) {
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
 			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
+	//		}
 //			}
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {

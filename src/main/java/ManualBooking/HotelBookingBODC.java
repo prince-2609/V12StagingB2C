@@ -1,5 +1,6 @@
 package ManualBooking;
 
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -81,9 +82,9 @@ public class HotelBookingBODC {
 			if (!childWindow2.equals(ParentWindow2))
 				QaBrowser.driver.switchTo().window(childWindow2);
 		}
-		FlightBookingBODC.AddAdult(Adult, AdultName);
-		FlightBookingBODC.AddChild(Adult, Child, ChildName, ChildDOB);
-		FlightBookingBODC.AddInfant(Adult, Child, Infant, InfantName, InfantDOB);
+		AddAdult(Adult, AdultName);
+		AddChild(Adult, Child, ChildName, ChildDOB);
+		AddInfant(Adult, Child, Infant, InfantName, InfantDOB);
 //		QaRobot.selectTextFromDropdown("MBDCAddTravellerTitle", "Mr");
 //		QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 		WebElement MBDCAddTravellerSave = QaBrowser.driver.findElement(By.xpath("//input[@id='btnSaveClose']"));
@@ -121,7 +122,7 @@ public class HotelBookingBODC {
 		String Date = DateS[0];
 		String Month = DateS[1];
 		String Year = DateS[2];
-		FlightBookingBODC.selectDate(Date, Month, Year);
+		selectDate(Date, Month, Year);
 		Thread.sleep(3000);
 		QaBrowser.driver.findElement(By.xpath("//img[@id='Img2']")).click();
 		Thread.sleep(5000);
@@ -129,7 +130,7 @@ public class HotelBookingBODC {
 		String Date1 = DateS1[0];
 		String Month1 = DateS1[1];
 		String Year1 = DateS1[2];
-		FlightBookingBODC.selectDate(Date1, Month1, Year1);
+		selectDate(Date1, Month1, Year1);
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCSelectAllPassenger");
 		Thread.sleep(3000);
@@ -197,7 +198,7 @@ public class HotelBookingBODC {
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		QaRobot.ClickOnElement("MBDCAuthorize");
 		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
@@ -218,7 +219,7 @@ public class HotelBookingBODC {
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCDocuments");
 		QaExtentReport.extentScreenshot("Documents");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBDCCreateVoucher");
 		String ParentWindow6 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles6 = QaBrowser.driver.getWindowHandles();
@@ -270,4 +271,119 @@ public class HotelBookingBODC {
 		QaExtentReport.test.getExtent().flush();
 	}
 
+	
+	
+	public static void selectDate(String Day, String Month, String Year) throws Exception {
+		String text1 = "/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[2]";
+		QaRobot.selectTextByLocator1(text1, Year, "<b><i>Select year for adult</i></b>" + " - " + Year);
+		Thread.sleep(2000);
+
+		String text = "/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[1]";
+		QaRobot.selectTextByLocator1(text, Month, "<b><i>Select month for adult</i></b>" + " - " + Month);
+		Thread.sleep(2000);
+
+		List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath(
+				"/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td/center/div/div[2]/center/table/tbody/tr/td/table/tbody/tr/td//input"));
+		for (WebElement ele : allDates) {
+			String dt = ele.getAttribute("value").trim();
+			System.out.println(dt);
+			if (dt.equalsIgnoreCase(Day)) {
+				ele.click();
+				Thread.sleep(2000);
+				break;
+			}
+		}
+	}
+	
+	public static void AddAdult(String Adult, String AdultName) throws Exception {
+		int adt = Integer.parseInt(Adult);
+		for (int i = 1; i <= adt; i++) {
+			QaRobot.selectTextFromDropdown("MBDCSelectType", "Adult(ADT)");
+			QaRobot.selectTextFromDropdown("MBDCAddTravellerTitle", "Mr");
+			String AN[] = AdultName.split(",");
+			String AN1 = AN[i - 1];
+			String TN[] = AN1.split(" ");
+			String FN = TN[0];
+			String LN = TN[1];
+	//		if (i >= 2) {
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
+			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
+			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
+			QaRobot.PassValue("MBDCTravellerLastName", LN);
+	//		}
+	//		}
+			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
+			if (adt > 1 && i != adt) {
+				QaRobot.ClickOnElement("MBDCSaveAddNew");
+			}
+		}
+	}
+	
+	public static void AddChild(String Adult, String Child, String ChildName, String ChildDOB) throws Exception {
+		int chd = Integer.parseInt(Child);
+		for (int i = 1; i <= chd; i++) {
+			QaRobot.ClickOnElement("MBDCSaveAddNew");
+			Thread.sleep(4000);
+			int adt = Integer.parseInt(Adult);
+			if (adt > 1 && i < 2) {
+				QaBrowser.driver.switchTo().alert().dismiss();
+			}
+			Thread.sleep(4000);
+			QaRobot.selectTextFromDropdown("MBDCSelectType", "Child(CHD)");
+			QaRobot.selectTextFromDropdown("MBDCAddTravellerTitle", "Mstr");
+			String CN[] = ChildName.split(",");
+			String CN1 = CN[i - 1];
+			String TN[] = CN1.split(" ");
+			String FN = TN[0];
+			String LN = TN[1];
+			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaRobot.PassValue("MBDCTravellerLastName", LN);
+			QaRobot.ClickOnElement("MBDCTravelerCalender");
+			String CB[] = ChildDOB.split(",");
+			String CB1 = CB[i - 1];
+			String DateS3[] = CB1.split("-");
+			String Date3 = DateS3[0];
+			String Month3 = DateS3[1];
+			String Year3 = DateS3[2];
+			selectDate(Date3, Month3, Year3);
+			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
+		}
+	}
+	
+	public static void AddInfant(String Adult, String Child, String Infant, String InfantName, String InfantDOB)
+			throws Exception {
+		int ift = Integer.parseInt(Infant);
+		for (int i = 1; i <= ift; i++) {
+			QaRobot.ClickOnElement("MBDCSaveAddNew");
+			Thread.sleep(4000);
+			int adt = Integer.parseInt(Adult);
+			int chd = Integer.parseInt(Child);
+			if (adt > 1 && chd < 1 && i < 2) {
+				QaBrowser.driver.switchTo().alert().dismiss();
+			}
+			Thread.sleep(4000);
+			QaRobot.selectTextFromDropdown("MBDCSelectType", "Infant(INF)");
+			QaRobot.selectIndexFromDropdown("MBDCInfantAssociate", 1);
+			QaRobot.selectTextFromDropdown("MBDCAddTravellerTitle", "Mstr");
+			String IN[] = InfantName.split(",");
+			String IN1 = IN[i - 1];
+			String TN[] = IN1.split(" ");
+			String FN = TN[0];
+			String LN = TN[1];
+			QaRobot.PassValue("MBDCTravellerFirstName", FN);
+			QaRobot.PassValue("MBDCTravellerLastName", LN);
+			QaRobot.ClickOnElement("MBDCTravelerCalender");
+			String IB[] = InfantDOB.split(",");
+			String IB1 = IB[i - 1];
+			String DateS3[] = IB1.split("-");
+			String Date3 = DateS3[0];
+			String Month3 = DateS3[1];
+			String Year3 = DateS3[2];
+			selectDate(Date3, Month3, Year3);
+			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
+		}
+	}
+	
 }
