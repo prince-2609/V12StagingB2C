@@ -1,6 +1,7 @@
 package utilities;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 import org.apache.poi.ss.formula.eval.NotImplementedException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,6 +32,7 @@ public class QaBrowser extends QaRobot {
 		driver.navigate().to(this.url);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 	}
 

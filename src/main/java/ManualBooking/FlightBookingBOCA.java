@@ -123,7 +123,7 @@ public class FlightBookingBOCA {
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlightContinue");
 		String ParentWindow3 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles3 = QaBrowser.driver.getWindowHandles();
-		for (String childWindow3 : handles3) {		
+		for (String childWindow3 : handles3) {
 			if (!childWindow3.equals(ParentWindow3))
 				QaBrowser.driver.switchTo().window(childWindow3);
 		}
@@ -396,7 +396,7 @@ public class FlightBookingBOCA {
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
-	//		}
+			// }
 //			}
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {

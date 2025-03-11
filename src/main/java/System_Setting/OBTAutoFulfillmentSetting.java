@@ -131,9 +131,6 @@ public class OBTAutoFulfillmentSetting {
 	
 	
 	
-	
-	
-	
 
 	// Effective Date Calendar Next Button
 	public static void selectDate(String Day) throws Exception {

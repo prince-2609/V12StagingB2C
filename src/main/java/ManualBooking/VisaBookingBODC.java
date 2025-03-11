@@ -35,9 +35,10 @@ public class VisaBookingBODC {
 			String VisaC, String CRT, String CityT, String Gender, String PAddT, String EmbassyF, String AddCharges,
 			String OCN, String OtherCharges, String OGrossCharges, String PassportN, String ExpiryD, String PCR,
 			String PCity, String Nationality, String ModeOfPayment) throws Exception {
-		TestBase.Companycode(Source, URL);	
+		TestBase.Companycode(Source, URL);
 		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId + "-" + TestScenario);
 		QaRobot.PassValue("CompanyCode", CompanyCode);
+		QaRobot.implicitwait(15);
 		QaRobot.PassValue("UserName", UserName);
 		QaRobot.PassValue("PasswordFD", Password);
 		QaExtentReport.extentScreenshot("Sigh In Page");
@@ -219,7 +220,7 @@ public class VisaBookingBODC {
 
 	@AfterMethod
 	public static void afterMethod() {
-		//QaExtentReport.test.getExtent().flush();
+		 QaExtentReport.test.getExtent().flush();
 	}
 
 	public static void Process(String CT, String Country, String DC, String City, String SDate, String EDate,
@@ -568,7 +569,7 @@ public class VisaBookingBODC {
 //			int adt = Integer.parseInt(Adult);
 //			if (adt < 0 && chd > 0) {
 			WebElement MBDCSelectPax = QaBrowser.driver
-					.findElement(By.xpath("//input[@id='gvDependant_ctl02_ChkAssociatePax']"));
+					.findElement(By.xpath("//input[@id='gvDependant_ctl03_ChkAssociatePax']"));
 			MBDCSelectPax.click();
 //			} else if (adt > 0 && chd > 0) {
 //				WebElement MBDCSelectPax = QaBrowser.driver
@@ -734,7 +735,7 @@ public class VisaBookingBODC {
 //			int chd = Integer.parseInt(Child);
 //			if (adt > 0 && chd < 0 && ift > 0) {
 			WebElement MBDCSelectPax = QaBrowser.driver
-					.findElement(By.xpath("//input[@id='gvDependant_ctl02_ChkAssociatePax']"));
+					.findElement(By.xpath("//input[@id='gvDependant_ctl04_ChkAssociatePax']"));
 			MBDCSelectPax.click();
 //			} else if (adt > 0 && chd > 0 && ift > 0) {
 //				WebElement MBDCSelectPax = QaBrowser.driver

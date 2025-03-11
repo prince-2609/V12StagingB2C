@@ -45,6 +45,8 @@ public class ManageCostCenter {
 		QaRobot.ClickOnElement("V12ManageCostCenter");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		QaExtentReport.extentScreenshot("Add Company cost centre");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("BUAddNew");
 		QaRobot.PassValue("CSCode", CSCode);
 		QaRobot.PassValue("CSName", CSName);
@@ -62,9 +64,14 @@ public class ManageCostCenter {
 				}
 			}
 		}
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("CSlider");
+		QaExtentReport.extentScreenshot("Branch Unit details");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("BUAddNew");
+		Thread.sleep(3000);
 		QaRobot.acceptAlert("Cost center status");
+		Thread.sleep(3000);
 	}
 
 	@AfterMethod

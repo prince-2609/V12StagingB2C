@@ -42,16 +42,24 @@ public class ManageBranch {
 		QaRobot.ClickOnElement("V12ManageBranch");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		QaExtentReport.extentScreenshot("Add Agency Branch");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("BUAddNew");
 		QaRobot.PassValue("BRName", BRName);
 		QaRobot.PassValue("BRCode", BRCode);
+		Thread.sleep(3000);
 		QaRobot.PassValue("BUAddress", BRAddress);
 		QaRobot.selectTextFromDropdown("BUContry", BRContry);
 		QaRobot.selectTextFromDropdown("BUState", BRState);
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divCity']/p"), BRCC, BRCity,
 				By.xpath("//input[@id='txtCity']"));
-//		QaRobot.ClickOnElement("BUSave");
+		QaExtentReport.extentScreenshot("Branch Unit details");
+		Thread.sleep(2000);
+		QaRobot.scrollPage(3000);
+		QaRobot.ClickOnElement("BUSave");
+		Thread.sleep(3000);
 		QaRobot.acceptAlert("Branch status");
+		Thread.sleep(3000);
 	}
 
 	@AfterMethod

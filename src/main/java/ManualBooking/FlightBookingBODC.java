@@ -72,7 +72,7 @@ public class FlightBookingBODC {
 		QaRobot.ClickOnElement("MBDCSearchClient");
 		QaRobot.listOfClients(By.xpath("/html/body/form/div[3]/div/div[3]/div/div/table/tbody/tr/td[3]/span"),
 				SelectClient);
-		//QaRobot.ClickOnElement("SelectClient");
+		// QaRobot.ClickOnElement("SelectClient");
 		QaBrowser.driver.switchTo().window(ParentWindow1);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
@@ -89,7 +89,7 @@ public class FlightBookingBODC {
 			if (!childWindow2.equals(ParentWindow2))
 				QaBrowser.driver.switchTo().window(childWindow2);
 		}
-		
+
 		AddAdult(Adult, AdultName);
 		AddChild(Adult, Child, ChildName, ChildDOB);
 		AddInfant(Adult, Child, Infant, InfantName, InfantDOB);
@@ -340,8 +340,8 @@ public class FlightBookingBODC {
 			String TN[] = AN1.split(" ");
 			String FN = TN[0];
 			String LN = TN[1];
-			
-	//		if (i >= 2) {
+
+			// if (i >= 2) {
 //			Thread.sleep(3000);
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
@@ -349,7 +349,7 @@ public class FlightBookingBODC {
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
-	//		}
+			// }
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {
 				QaRobot.ClickOnElement("MBDCSaveAddNew");
@@ -442,7 +442,7 @@ public class FlightBookingBODC {
 				break;
 			}
 		}
-	}                  
+	}
 
 	public static void costingForAdult(String BaseFareA, String SelectBreakupA, String BreakupsA, String TaxQtyA,
 			String TaxesA, String TaxAmountA) throws Exception {

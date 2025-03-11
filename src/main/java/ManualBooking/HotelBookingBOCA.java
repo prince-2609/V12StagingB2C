@@ -299,7 +299,6 @@ public class HotelBookingBOCA {
 		QaExtentReport.test.getExtent().flush();
 	}
 
-	
 	public static void AddAdult(String Adult, String AdultName) throws Exception {
 		int adt = Integer.parseInt(Adult);
 		for (int i = 1; i <= adt; i++) {
@@ -317,7 +316,7 @@ public class HotelBookingBOCA {
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
-	//		}
+			// }
 //			}
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {

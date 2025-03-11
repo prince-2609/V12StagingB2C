@@ -41,7 +41,11 @@ public class ManualCharges {
 		QaRobot.ClickOnElement("V12RManagement");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("RMManualCharges");
+		Thread.sleep(4000);
+		QaExtentReport.extentScreenshot("Chargeable Head");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("RMAddNew");
 		QaRobot.PassValue("MCChargeCode", ChargeCode);
 		QaRobot.PassValue("MCChargeDescription", ChargeDescription);
@@ -49,12 +53,14 @@ public class ManualCharges {
 		QaRobot.PassValue("MCGrossAmount", GrossAmount);
 		QaRobot.clearValue("MCNetAmount");
 		QaRobot.PassValue("MCNetAmount", NetAmount);
-//		QaRobot.ClickOnElement("MCSave");
+		QaExtentReport.extentScreenshot("Add Manual Charges");
+		QaRobot.ClickOnElement("MCSave");
+		Thread.sleep(4000);
 //		QaRobot.acceptAlert("Manual charges status");
 	}
 
 	@AfterMethod
 	public static void afterMethod() {
-//		QaExtentReport.test.getExtent().flush();
+		QaExtentReport.test.getExtent().flush();
 	}
 }

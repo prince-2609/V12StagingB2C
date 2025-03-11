@@ -19,6 +19,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -226,7 +227,7 @@ public class QaRobot extends QaExtentReport
 	 * 
 	 * @param time
 	 */
-	public static void impliwait(int time) {
+	public static void impliwait1(int time) {
 		QaBrowser.driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
 	}
 
@@ -531,9 +532,14 @@ public class QaRobot extends QaExtentReport
 
 	}
 
-	public static void explicitwaitalert(int i) {
+	public static void implicitwaitalert(int i) {
 		// TODO Auto-generated method stub
-		
+		WebDriver driver = null;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(i));
+	}
+	
+	public static void implicitwait(int time) {
+		QaBrowser.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
 }

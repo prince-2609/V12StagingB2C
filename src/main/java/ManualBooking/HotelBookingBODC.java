@@ -1,12 +1,15 @@
 package ManualBooking;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -23,7 +26,7 @@ public class HotelBookingBODC {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("HotelManualBooking", "Sheet3");
+		return QaDataProvider.getTestdata("HotelManualBooking", "Sheet5");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -74,7 +77,9 @@ public class HotelBookingBODC {
 		QaExtentReport.extentScreenshot("Select Client");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCTraveller");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
+	    @SuppressWarnings("unused")
+		WebDriverWait wait = new WebDriverWait(QaBrowser.driver, Duration.ofSeconds(10));
 		QaRobot.ClickOnElement("MBDCAddTraveller");
 		String ParentWindow2 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles2 = QaBrowser.driver.getWindowHandles();
@@ -206,7 +211,7 @@ public class HotelBookingBODC {
 			if (!childWindow5.equals(ParentWindow5))
 				QaBrowser.driver.switchTo().window(childWindow5);
 		}
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		QaRobot.ClickOnElement("MBDCAuthorizeSubmit");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCAuthorizeViewBooking");
@@ -228,7 +233,7 @@ public class HotelBookingBODC {
 				QaBrowser.driver.switchTo().window(childWindow6);
 		}
 		QaRobot.ClickOnElement("MBDCVoucherClose");
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		QaBrowser.driver.switchTo().window(ParentWindow6);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
@@ -246,7 +251,7 @@ public class HotelBookingBODC {
 			if (!childWindow7.equals(ParentWindow7))
 				QaBrowser.driver.switchTo().window(childWindow7);
 		}
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		QaRobot.ClickOnElement("MBDCPaymentSubmit");
 		Thread.sleep(3000);
 		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
@@ -271,8 +276,6 @@ public class HotelBookingBODC {
 		QaExtentReport.test.getExtent().flush();
 	}
 
-	
-	
 	public static void selectDate(String Day, String Month, String Year) throws Exception {
 		String text1 = "/html/body/form/div[3]/div/table/tbody/tr/td/table/tbody/tr[1]/td/span/select[2]";
 		QaRobot.selectTextByLocator1(text1, Year, "<b><i>Select year for adult</i></b>" + " - " + Year);
@@ -294,7 +297,7 @@ public class HotelBookingBODC {
 			}
 		}
 	}
-	
+
 	public static void AddAdult(String Adult, String AdultName) throws Exception {
 		int adt = Integer.parseInt(Adult);
 		for (int i = 1; i <= adt; i++) {
@@ -305,22 +308,22 @@ public class HotelBookingBODC {
 			String TN[] = AN1.split(" ");
 			String FN = TN[0];
 			String LN = TN[1];
-	//		if (i >= 2) {
+			// if (i >= 2) {
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtFirstName']")).clear();
 			QaRobot.PassValue("MBDCTravellerFirstName", FN);
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).click();
 			QaBrowser.driver.findElement(By.xpath("//input[@id='txtLastName']")).clear();
 			QaRobot.PassValue("MBDCTravellerLastName", LN);
-	//		}
-	//		}
+			// }
+			// }
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 			if (adt > 1 && i != adt) {
 				QaRobot.ClickOnElement("MBDCSaveAddNew");
 			}
 		}
 	}
-	
+
 	public static void AddChild(String Adult, String Child, String ChildName, String ChildDOB) throws Exception {
 		int chd = Integer.parseInt(Child);
 		for (int i = 1; i <= chd; i++) {
@@ -351,7 +354,7 @@ public class HotelBookingBODC {
 			QaRobot.PassValue("MBDCAddTravellerPhone", "9865326598");
 		}
 	}
-	
+
 	public static void AddInfant(String Adult, String Child, String Infant, String InfantName, String InfantDOB)
 			throws Exception {
 		int ift = Integer.parseInt(Infant);
@@ -386,4 +389,6 @@ public class HotelBookingBODC {
 		}
 	}
 	
+	 
+
 }

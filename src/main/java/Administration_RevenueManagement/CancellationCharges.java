@@ -1,3 +1,4 @@
+
 package Administration_RevenueManagement;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class CancellationCharges {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("Administration_AvenueManagement_CancellationCharges", "Sheet1");
+		return QaDataProvider.getTestdata("Administration_AvenueManagement_CancellationCharges", "Sheet2");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -49,13 +50,16 @@ public class CancellationCharges {
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='toolHeader']");
-		QaRobot.ClickOnElement("V12RManagement");
+		Thread.sleep(3000);
+		QaRobot.ClickOnElement("V12RManagement");	
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(3000);
 		QaRobot.ClickOnElement("RMCancellationCharges");
 		QaRobot.ClickOnElement("RMCCAddNew");
 		QaRobot.PassValue("RMCRuleTemplateTitle", RuleTemplateTitle);
 		QaRobot.selectTextFromDropdown("RMCProduct", Product);
+		Thread.sleep(4000);
 		int pA = Integer.parseInt(SCQty);
 		for (int k = 1; k <= pA; k++) {
 			String[] tN1 = SalesChannel.split(",");
@@ -84,12 +88,15 @@ public class CancellationCharges {
 						List<WebElement> listOfRights1 = QaBrowser.driver
 								.findElements(By.xpath("//select[@id='ListBoxAirline']/option"));
 						for (WebElement autoRights1 : listOfRights1) {
+							System.out.println(autoRights1.getText());
 							if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
+								break;
 							}
 						}
 					}
-					QaRobot.ClickOnElement("RMCAirlineSelectClose");
+					Thread.sleep(3000);
+					QaRobot.ClickOnElement("RMCAirlineSelectClose1");
 					Thread.sleep(3000);
 
 				} else if (b.equalsIgnoreCase("Cabin Class")) {
@@ -251,10 +258,11 @@ public class CancellationCharges {
 						for (WebElement autoRights1 : listOfRights1) {
 							if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
+								break;
 							}
 						}
 					}
-					QaRobot.ClickOnElement("RMCAirlineSelectClose");
+					QaRobot.ClickOnElement("RMCAirlineSelectClose1");
 					Thread.sleep(3000);
 
 				} else if (b.equalsIgnoreCase("Cabin Class")) {
@@ -393,12 +401,18 @@ public class CancellationCharges {
 				}
 			}
 		}
-//		QaRobot.ClickOnElement("RMCCancellationRuleSave");
+		Thread.sleep(3000);
+		QaExtentReport.extentScreenshot("Selected Criteria");
+		QaRobot.scrollPage(2000);
+		Thread.sleep(3000);
+		QaRobot.ClickOnElement("RMCCancellationRuleSave");
+		Thread.sleep(3000);
 	}
 
 	@AfterMethod
 	public static void afterMethod() {
-//		QaExtentReport.test.getExtent().flush();
+		QaExtentReport.test.getExtent().flush();
 	}
 
 }
+

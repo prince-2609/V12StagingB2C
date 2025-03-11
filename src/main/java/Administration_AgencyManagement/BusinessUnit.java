@@ -42,6 +42,8 @@ public class BusinessUnit {
 		QaRobot.ClickOnElement("V12BusinessUnit");
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@id='frm2']");
+		QaExtentReport.extentScreenshot("Add Business Unit");
+		Thread.sleep(2000);
 		QaRobot.ClickOnElement("BUAddNew");
 		QaRobot.PassValue("BUName", BUName);
 		QaRobot.PassValue("BUCode", BUCode);
@@ -50,8 +52,10 @@ public class BusinessUnit {
 		QaRobot.selectTextFromDropdown("BUState", BUState);
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divCity']/p"), BUCC, BUCity,
 				By.xpath("//input[@id='txtCity']"));
-//		QaRobot.ClickOnElement("BUSave");
-//		QaRobot.acceptAlert("Business unit status");
+		QaRobot.ClickOnElement("BUSave");
+		Thread.sleep(4000);
+		QaRobot.acceptAlert("Business unit status");
+		Thread.sleep(4000);
 	}
 
 	@AfterMethod
