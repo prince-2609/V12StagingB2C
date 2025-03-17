@@ -43,7 +43,6 @@ public class SearchStaff {
 		QaExtentReport.extentScreenshot("Search Staff");
 		QaRobot.ClickOnElement("V12SearchStaff");
 		QaExtentReport.extentScreenshot("Staff List");
-		
 	}
 	
 	@AfterMethod

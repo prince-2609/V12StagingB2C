@@ -78,6 +78,7 @@ public class CancellationCharges {
 			for (int i = 1; i <= pAS; i++) {
 				String[] tN = CriteriaName.split(",");
 				String b = tN[i - 1];
+				    //select key of search criteria
 				QaRobot.selectTextByLocator("//select[@id='key1']", b);
 				if (b.equalsIgnoreCase("Airline")) {
 					QaRobot.switchToWindow();
@@ -398,6 +399,7 @@ public class CancellationCharges {
 					}
 					QaRobot.ClickOnElement("RMCBookingCSelectClose");
 					Thread.sleep(3000);
+					QaExtentReport.extentScreenshot("Selected Criteria");
 				}
 			}
 		}
@@ -406,7 +408,7 @@ public class CancellationCharges {
 		QaRobot.scrollPage(2000);
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("RMCCancellationRuleSave");
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 	}
 
 	@AfterMethod
