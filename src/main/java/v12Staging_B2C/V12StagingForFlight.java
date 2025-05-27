@@ -39,7 +39,7 @@ public class V12StagingForFlight {
 			String CardHolderName, String CardExpiryDate, String CVV, String BillingAddress, String BillingState,
 			String CardCity) throws Exception {
 		TestBase.Companycode(Source, URL);
-		QaRobot.impliwait(30);
+		QaRobot.implicitwait(30);
 
 		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId);
 

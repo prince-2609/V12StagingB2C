@@ -231,9 +231,9 @@ public class DiscountCouponRule {
 						for (WebElement autoRights1 : listOfRights1) {
 							if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
-							}
-						}
-					}
+							}       //WebDriverWait wait = new WebDriverWait(QaBrowser.driver, Duration.ofSeconds(10));
+						} 			//wait.until(ExpectedConditions.elementToBeClickable(By.id("DCCabinAdd"))).click();
+					}				//wait.until(ExpectedConditions.elementToBeClickable(By.id("DCMarketSelectClose"))).click();
 					Thread.sleep(2000);
 					QaRobot.ClickOnElement("DCCabinAdd");
 					Thread.sleep(2000);
@@ -389,7 +389,7 @@ public class DiscountCouponRule {
 						List<WebElement> listOfRights1 = QaBrowser.driver
 								.findElements(By.xpath("//select[@id='ListBoxAirlineFiller']/option"));
 						for (WebElement autoRights1 : listOfRights1) {
-							if (autoRights1.getText().equalsIgnoreCase(b1)) {
+				 			if (autoRights1.getText().equalsIgnoreCase(b1)) {
 								autoRights1.click();
 								QaRobot.ClickOnElement("AirlineCriteriaAdd");
 							}

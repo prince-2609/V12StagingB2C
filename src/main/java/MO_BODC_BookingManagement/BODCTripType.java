@@ -51,10 +51,10 @@ public class BODCTripType {
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divDestinationCity']/p"), DestinationCityCode,
 				DestinationLocation, By.xpath("//input[@id='txtDestinationCity']"));
 		Thread.sleep(2000);
-		QaBrowser.driver.findElement(By.xpath("//div[@id='divDestinationCity']/p")).click();
+//		QaBrowser.driver.findElement(By.xpath("//div[@id='divDestinationCity']/p")).click();
 		QaExtentReport.test.log(Status.INFO,
 				"<b><i>Arrival city : </i></b>" + DestinationCityCode + " - " + DestinationLocation);
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		QaBrowser.driver.findElement(By.xpath("//div[@id='flight_way1']/div[2]/div[1]/label/span[2]/a/img")).click();
 		Thread.sleep(2000);
 		if (TripType.equalsIgnoreCase("OneWay")) {

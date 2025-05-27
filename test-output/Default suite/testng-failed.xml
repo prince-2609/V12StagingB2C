@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Administration_RevenueManagement.CancellationCharges">
+      <class name="ManualBooking.FlightBookingBODC">
         <methods>
+          <include name="corporateProfiling" invocation-numbers="6"/>
           <include name="afterMethod"/>
-          <include name="corporateProfiling" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Administration_RevenueManagement.CancellationCharges -->
+      </class> <!-- ManualBooking.FlightBookingBODC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

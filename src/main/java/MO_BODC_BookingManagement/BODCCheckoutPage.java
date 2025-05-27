@@ -779,7 +779,7 @@ public class BODCCheckoutPage {
 		String BLocation = BCity[1];
 		TestBase.listofautosuggestion4(By.xpath("//div[@id='divHTCity']/p"), BCode, BLocation,
 				By.xpath("//input[@id='ctl00_contentMain_payeeCity']"));
-		QaBrowser.driver.findElement(By.xpath("//div[@id='divHTCity']/p[1]")).click();
+//		QaBrowser.driver.findElement(By.xpath("//div[@id='divHTCity']/p[1]")).click();
 
 //		QaRobot.ClickOnElement("chkExpediaTerms");
 //		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on chkExpediaTerms</i></b>");

@@ -869,7 +869,7 @@ public class BODCResultPage {
 			QaRobot.ClickOnElement("DCModifiedSearchM");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Modified Search</i></b>");
 		}
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 
 		QaRobot.ClickOnElement("SelectRoom");
 		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");
@@ -956,7 +956,7 @@ public class BODCResultPage {
 
 			QaRobot.ClickOnElement("DCBook1");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
-			Thread.sleep(20000);
+			Thread.sleep(30000);
 		}
 		QaExtentReport.extentScreenshot("Result Page");
 //		QaRobot.ClickOnElement("CFareBreakup");

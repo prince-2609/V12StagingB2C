@@ -23,7 +23,7 @@ import utilities.QaRobot;
 public class VisaBookingBODC {
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("VisaManualBooking", "Sheet6");
+		return QaDataProvider.getTestdata("VisaManualBooking", "Sheet5");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -397,7 +397,9 @@ public class VisaBookingBODC {
 			QaRobot.selectTextFromDropdown("MBDCTypeOfVisa", TypeOfVisa);
 			QaRobot.selectTextFromDropdown("MBDCNoOfEntries", NoOfEntries);
 			QaRobot.PassValue("MBDCDestinationAddV", DestiAdd);
+			Thread.sleep(5000);
 			QaRobot.selectTextFromDropdown("MBDCVisaSupplier", Supplier);
+			Thread.sleep(3000);
 			QaRobot.selectTextFromDropdown("MBDCVisaStatus", Status);
 			QaRobot.PassValue("MBDCAppId", ApplicationId);
 			QaRobot.scrollPage(1000);
@@ -419,9 +421,10 @@ public class VisaBookingBODC {
 			QaRobot.ClickOnElement("MBDCSelectAssociateTraveler");
 			TestBase.listofautosuggestion(By.xpath("//div[@id='divCountryOfResidence']/p"), CRT, CityT,
 					By.xpath("//input[@id='txtCountryOfResidence']"));
-			QaRobot.selectTextFromDropdown("MBDCGenderT", Gender);
 			QaRobot.PassValue("MBDCPresentAddT", PAddT);
-			QaRobot.scrollPage(5000);
+//			QaRobot.selectTextFromDropdown("MBDCGenderT", Gender);
+//			QaRobot.PassValue("MBDCPresentAddT", PAddT);
+//			QaRobot.scrollPage(5000);
 			Thread.sleep(3000);
 			QaRobot.ClickOnElement("MBDCVisaNext2");
 			WebElement MBDCEmbassyFT = QaBrowser.driver.findElement(By.xpath("//input[@id='txtVisaEmbcyFare']"));
@@ -553,7 +556,9 @@ public class VisaBookingBODC {
 			QaRobot.selectTextFromDropdown("MBDCTypeOfVisa", TypeOfVisa);
 			QaRobot.selectTextFromDropdown("MBDCNoOfEntries", NoOfEntries);
 			QaRobot.PassValue("MBDCDestinationAddV", DestiAdd);
+			Thread.sleep(5000);
 			QaRobot.selectTextFromDropdown("MBDCVisaSupplier", Supplier);
+			Thread.sleep(3000);
 			QaRobot.selectTextFromDropdown("MBDCVisaStatus", Status);
 			QaRobot.PassValue("MBDCAppId", ApplicationId);
 			QaRobot.scrollPage(1000);
@@ -719,7 +724,9 @@ public class VisaBookingBODC {
 			QaRobot.selectTextFromDropdown("MBDCTypeOfVisa", TypeOfVisa);
 			QaRobot.selectTextFromDropdown("MBDCNoOfEntries", NoOfEntries);
 			QaRobot.PassValue("MBDCDestinationAddV", DestiAdd);
+			Thread.sleep(5000);
 			QaRobot.selectTextFromDropdown("MBDCVisaSupplier", Supplier);
+			Thread.sleep(3000);
 			QaRobot.selectTextFromDropdown("MBDCVisaStatus", Status);
 			QaRobot.PassValue("MBDCAppId", ApplicationId);
 			QaRobot.scrollPage(1000);

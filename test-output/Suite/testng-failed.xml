@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Administration_RevenueManagement.DiscountCouponRule">
+      <class name="MO_BODC_BookingManagement.ProductSearch_Hotel">
         <methods>
-          <include name="discountCouponRule" invocation-numbers="0"/>
+          <include name="BODCHotelSearch" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- Administration_RevenueManagement.DiscountCouponRule -->
+      </class> <!-- MO_BODC_BookingManagement.ProductSearch_Hotel -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

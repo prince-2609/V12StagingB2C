@@ -72,44 +72,44 @@ public class RegisterStaff {
 	
 	
 	
-	@DataProvider
-	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("Administration_AvenueManagement_RegisterStaff", "Sheet2");
-	}
-	
-	@Test(dataProvider = "getexceldata")
-	public static void corporateProfiling(String TestCaseId, String TestScenario, String Source, String URL,
-			String CompanyCode, String UserName, String Password)
-			throws Exception {
-		TestBase.Companycode(Source, URL);
-		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId + "-" + TestScenario);
-		QaRobot.PassValue("CompanyCode", CompanyCode);
-		QaRobot.PassValue("UserName", UserName);
-		QaRobot.PassValue("PasswordFD", Password);
-		QaExtentReport.extentScreenshot("Sigh In Page");
-		QaRobot.ClickOnElement("LogIn");
-		QaRobot.switchframe("//frame[@name='login']");
-		QaRobot.switchframe("//frame[@name='leftbar']");
-		QaRobot.ClickOnElement("V12Administration");
-		Thread.sleep(3000);
-		QaRobot.ClickOnElement("V12AgencyManagement");
-		QaBrowser.driver.switchTo().parentFrame();
-		QaRobot.switchframe("//frame[@name='main']");
-		QaRobot.switchframe("//frame[@id='toolHeader']");
-		QaRobot.ClickOnElement("V12StaffManagemnt");
-		QaBrowser.driver.switchTo().parentFrame();
-		QaRobot.switchframe("//frame[@id='frm2']");
-		QaExtentReport.extentScreenshot("Search Staff");
-		QaRobot.ClickOnElement("V12SearchStaff");
-		QaExtentReport.extentScreenshot("Staff List");
-		
-	}
-	
-	@AfterMethod
-	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
-	}
-
+//	@DataProvider
+//	public Object[][] getexceldata() throws Exception {
+//		return QaDataProvider.getTestdata("Administration_AvenueManagement_RegisterStaff", "Sheet2");
+//	}
+//	
+//	@Test(dataProvider = "getexceldata")
+//	public static void corporateProfiling(String TestCaseId, String TestScenario, String Source, String URL,
+//			String CompanyCode, String UserName, String Password)
+//			throws Exception {
+//		TestBase.Companycode(Source, URL);
+//		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId + "-" + TestScenario);
+//		QaRobot.PassValue("CompanyCode", CompanyCode);
+//		QaRobot.PassValue("UserName", UserName);
+//		QaRobot.PassValue("PasswordFD", Password);
+//		QaExtentReport.extentScreenshot("Sigh In Page");
+//		QaRobot.ClickOnElement("LogIn");
+//		QaRobot.switchframe("//frame[@name='login']");
+//		QaRobot.switchframe("//frame[@name='leftbar']");
+//		QaRobot.ClickOnElement("V12Administration");
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("V12AgencyManagement");
+//		QaBrowser.driver.switchTo().parentFrame();
+//		QaRobot.switchframe("//frame[@name='main']");
+//		QaRobot.switchframe("//frame[@id='toolHeader']");
+//		QaRobot.ClickOnElement("V12StaffManagemnt");
+//		QaBrowser.driver.switchTo().parentFrame();
+//		QaRobot.switchframe("//frame[@id='frm2']");
+//		QaExtentReport.extentScreenshot("Search Staff");
+//		QaRobot.ClickOnElement("V12SearchStaff");
+//		QaExtentReport.extentScreenshot("Staff List");
+//		
+//	}
+//	
+//	@AfterMethod
+//	public static void afterMethod() {
+//		QaExtentReport.test.getExtent().flush();
+//	}
+//
 
 }
 

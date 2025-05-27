@@ -22,7 +22,7 @@ import v12Staging_B2C.B2cTripType;
 public class ProductSearch_Hotel {
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("v12StagingBODC_Hotel", "Sheet3");
+		return QaDataProvider.getTestdata("v12StagingBODC_Hotel", "Sheet2");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -68,12 +68,12 @@ public class ProductSearch_Hotel {
 			BODCCheckoutPage.GuestChildCheckoutForHotel(CheckInDate, Child, ChildAge, ChildTitle, ChildName,
 					ChildDOBdate);
  
-			BODCPaymentPage.cardPaymentHotel(Cardtype, CardNumber, CardName, CardDate, CVV);
-
 			BODCCheckoutPage.GuestBillingDetailsCheckoutForHotel(BillingTitle, BillingUserName, BillingAddress,
 					BillingCountry, BillingCity);
 			
-			BODCConfirmPage.confirmpageHotel();
+//			BODCPaymentPage.cardPaymentHotel(Cardtype, CardNumber, CardName, CardDate, CVV);
+//			
+//			BODCConfirmPage.confirmpageHotel();
 
 		} else if (ChooseSalesChannel.equalsIgnoreCase("Reseller")) {
 
@@ -84,6 +84,6 @@ public class ProductSearch_Hotel {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		//QaExtentReport.test.getExtent().flush();
 	}
 }

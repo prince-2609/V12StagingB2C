@@ -24,6 +24,11 @@ public class B2cPaymentPage {
 			cardDetailsForFlight(CreditCardNumber, CardHolderName, CardExpiryDate, CVV, BillingAddress, BillingState,
 					CardCity);
 		}
+		if (CardType.equalsIgnoreCase("Skip Payment")) {
+			QaRobot.ClickOnElement("SkipPayment"); 
+			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Skip Payment</i></b>");
+
+		}
 	}
 
 	public static void cardPaymentHotel(String Cardtype, String CardNumber, String CardName, String CardDate,
@@ -38,6 +43,11 @@ public class B2cPaymentPage {
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on VisaCard</i></b>");
 			cardPaymentForHotel(Cardtype, CardNumber, CardName, CardDate, CVV);
 		}
+//		if (CardType.equalsIgnoreCase("Skip Payment")) {
+//			QaRobot.ClickOnElement("SkipPayment"); 
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Skip Payment</i></b>");
+//
+//		}
 	}
 
 	public static void cardDetailsForFlight(String CreditCardNumber, String CardHolderName, String CardExpiryDate,

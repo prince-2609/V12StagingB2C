@@ -26,7 +26,7 @@ public class HotelBookingBODC {
 
 	@DataProvider
 	public Object[][] getexceldata() throws Exception {
-		return QaDataProvider.getTestdata("HotelManualBooking", "Sheet5");
+		return QaDataProvider.getTestdata("HotelManualBooking", "Sheet3");
 	}
 
 	@Test(dataProvider = "getexceldata")
@@ -107,7 +107,7 @@ public class HotelBookingBODC {
 		QaRobot.ClickOnElement("MBDCProductsAndServicesHotel");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCProductsAndServicesFlightContinue");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		String ParentWindow3 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles3 = QaBrowser.driver.getWindowHandles();
 		for (String childWindow3 : handles3) {
@@ -122,28 +122,28 @@ public class HotelBookingBODC {
 		TestBase.listofautosuggestion(By.xpath("//div[@id='divCity']/p"), CCode, CityCode,
 				By.xpath("//input[@id='txtcitycode']"));
 		QaBrowser.driver.findElement(By.xpath("//img[@id='Img1']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		String DateS[] = CIDate.split("-");
 		String Date = DateS[0];
 		String Month = DateS[1];
 		String Year = DateS[2];
 		selectDate(Date, Month, Year);
-		Thread.sleep(3000);
-		QaBrowser.driver.findElement(By.xpath("//img[@id='Img2']")).click();
 		Thread.sleep(5000);
+		QaBrowser.driver.findElement(By.xpath("//img[@id='Img2']")).click();
+		Thread.sleep(8000);
 		String DateS1[] = CODate.split("-");
 		String Date1 = DateS1[0];
 		String Month1 = DateS1[1];
 		String Year1 = DateS1[2];
 		selectDate(Date1, Month1, Year1);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		QaRobot.ClickOnElement("MBDCSelectAllPassenger");
 		Thread.sleep(3000);
 		QaRobot.selectTextFromDropdown("MBDCSelectStatusH", Hstatus);
 		QaRobot.PassValue("MBDCConfirmationH", ConfirmationN);
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCSelectManual");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		QaRobot.PassValue("MBDCRoomTypeH", RoomType);
 		QaRobot.PassValue("MBDCMealH", Meal);
 		QaRobot.PassValue("MBDCCNH", ConfirmationN);
@@ -179,9 +179,9 @@ public class HotelBookingBODC {
 		}
 
 		QaRobot.ClickOnElement("MBDCApplyTax");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		QaRobot.ClickOnElement("MBDCSave");
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		QaBrowser.driver.switchTo().window(ParentWindow3);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
@@ -203,7 +203,7 @@ public class HotelBookingBODC {
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		QaRobot.ClickOnElement("MBDCAuthorize");
 		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
 		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
@@ -211,11 +211,11 @@ public class HotelBookingBODC {
 			if (!childWindow5.equals(ParentWindow5))
 				QaBrowser.driver.switchTo().window(childWindow5);
 		}
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		QaRobot.ClickOnElement("MBDCAuthorizeSubmit");
 		Thread.sleep(3000);
 		QaRobot.ClickOnElement("MBDCAuthorizeViewBooking");
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		QaBrowser.driver.switchTo().window(ParentWindow5);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
@@ -233,42 +233,43 @@ public class HotelBookingBODC {
 				QaBrowser.driver.switchTo().window(childWindow6);
 		}
 		QaRobot.ClickOnElement("MBDCVoucherClose");
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		QaBrowser.driver.switchTo().window(ParentWindow6);
 		QaBrowser.driver.switchTo().parentFrame();
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='main']");
 		QaRobot.switchframe("//frame[@id='frm2']");
+		Thread.sleep(5000);
 		QaExtentReport.extentScreenshot("Voucher No.");
-		Thread.sleep(3000);
-		Thread.sleep(3000);
-		QaRobot.ClickOnElement("MBDCCuctomerPayment");
-		Thread.sleep(3000);
-		QaRobot.ClickOnElement("MBDCReceivePayment");
-		String ParentWindow7 = QaBrowser.driver.getWindowHandle();
-		Set<String> handles7 = QaBrowser.driver.getWindowHandles();
-		for (String childWindow7 : handles7) {
-			if (!childWindow7.equals(ParentWindow7))
-				QaBrowser.driver.switchTo().window(childWindow7);
-		}
-		Thread.sleep(12000);
-		QaRobot.ClickOnElement("MBDCPaymentSubmit");
-		Thread.sleep(3000);
-		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
-		QaRobot.selectIndexFromDropdown("MBDCInvoice", 1);
-		QaExtentReport.extentScreenshot("Payment");
-		Thread.sleep(3000);
-		WebElement MBDCRecivePayment = QaBrowser.driver.findElement(By.xpath("//input[@id='btnReceived']"));
-		JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver;
-		js3.executeScript("arguments[0].click()", MBDCRecivePayment);
-		Thread.sleep(15000);
-		QaBrowser.driver.switchTo().window(ParentWindow7);
-		QaBrowser.driver.switchTo().parentFrame();
-		QaRobot.switchframe("//frame[@name='login']");
-		QaRobot.switchframe("//frame[@name='main']");
-		QaRobot.switchframe("//frame[@id='frm2']");
-		QaExtentReport.extentScreenshot("Cutomer Payment");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("MBDCCuctomerPayment");
+//		Thread.sleep(3000);
+//		QaRobot.ClickOnElement("MBDCReceivePayment");
+//		String ParentWindow7 = QaBrowser.driver.getWindowHandle();
+//		Set<String> handles7 = QaBrowser.driver.getWindowHandles();
+//		for (String childWindow7 : handles7) {
+//			if (!childWindow7.equals(ParentWindow7))
+//				QaBrowser.driver.switchTo().window(childWindow7);
+//		}
+//		Thread.sleep(15000);
+//		QaRobot.ClickOnElement("MBDCPaymentSubmit");
+//		Thread.sleep(3000);
+//		QaRobot.selectTextFromDropdown("MBDCModeOFPayment", ModeOfPayment);
+//		QaRobot.selectIndexFromDropdown("MBDCInvoice", 1);
+//		QaExtentReport.extentScreenshot("Payment");
+//		Thread.sleep(3000);
+//		WebElement MBDCRecivePayment = QaBrowser.driver.findElement(By.xpath("//input[@id='btnReceived']"));
+//		JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver;
+//		js3.executeScript("arguments[0].click()", MBDCRecivePayment);
+//		Thread.sleep(15000);
+//		QaBrowser.driver.switchTo().window(ParentWindow7);
+//		QaBrowser.driver.switchTo().parentFrame();
+//		QaRobot.switchframe("//frame[@name='login']");
+//		QaRobot.switchframe("//frame[@name='main']");
+//		QaRobot.switchframe("//frame[@id='frm2']");
+//		QaExtentReport.extentScreenshot("Cutomer Payment");
+//		Thread.sleep(3000);
 	}
 
 	@AfterMethod

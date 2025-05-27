@@ -313,7 +313,8 @@ public class FlightBookingBOCA {
 				QaExtentReport.extentScreenshot("Ticket No.");
 				Thread.sleep(3000);
 			}
-		} else if (adt1 > 1) {
+		}
+		 else if (adt1 > 1) {
 			int TotalTraveller1 = (adt1 + 1) + chd1 + inf1;
 			System.out.println(TotalTraveller1);
 			for (int i = 1; i <= TotalTraveller1; i++) {

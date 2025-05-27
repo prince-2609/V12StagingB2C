@@ -42,7 +42,7 @@ public class V12StagingForFlight_Hotel
 			String BillingCity) throws Exception 
 	{
 		TestBase.Companycode(Source,URL); 
-		QaRobot.impliwait(30);
+		QaRobot.implicitwait(30);
 		
 		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId);
 	

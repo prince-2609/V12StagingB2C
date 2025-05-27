@@ -67,6 +67,7 @@ public class ProductSearch_Flight {
 			QaRobot.ClickOnElement("DirectCustomer");
 			Thread.sleep(5000);
 			QaRobot.ClickOnElement("DCFlight");
+			Thread.sleep(5000);
 			BODCTripType.flightTriptype(TripType, OriginCityCode, OriginLocation, DestinationCityCode,
 					DestinationLocation, DepartureDate, ReturnDate, SelectTraveller, Adult, Youth, Child, Infant, Class,
 					PreAirline, PANumber, PreferredAirlineSelect, ShowDirectFlight, MyDatesAreFlexible, ChooseSupplier,
@@ -77,28 +78,28 @@ public class ProductSearch_Flight {
 					ShowDirectFlightM, MyDatesAreFlexibleM, AdvanceSearch, SelectCurrency, SelectNationality,
 					CountryOfResidence, ChangeAirline, PANumberM, PreferredAirlineSelectM, SupplierChange, SupNumberM,
 					SelectSupplierM, Applyfilter, FareType, Stops, AirLine, Resultpagestep, QuoteTitle, QuoteRemark);
-//			BODCCheckoutPage.GuestAdultCheckoutForFlight(Adult, AdultTitle, AdultName, AdultDate, AdultEmailAddress,
-//					PhoneNumber, AdultPassportNumber, AdultPassportcountry, AdultExpiryDate, AdultNationality);
-//
-//			BODCCheckoutPage.GuestYouthCheckoutForFlight(Youth, YouthTitle, YouthName, YouthtDate, YouthEmailAddress,
-//					YouthPhoneNumber, YouthPassportNumber, YouthPassportcountry, YouthtExpiryDate, YouthNationality);
-//
-//			BODCCheckoutPage.GuestChildCheckoutForFlight(Child, ChildTitle, ChildName, ChildPassportNumber,
-//					ChildPassportcountry, ChildPassportDate, ChildNationality, ChildDOBdate);
-//
-//			BODCCheckoutPage.GuestInfantCheckoutForFlight(Infant, InfantTitle, InfantName, InfantDOBdate,
-//					InfantTravellingwith, InfantPassportNumber, InfantPassportcountry, InfantPassportDate,
-//					InfantNationality);
-//
-//			QaRobot.ClickOnElement("confirmButton");
-////			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on confirm Button</i></b>");
-//			Thread.sleep(20000);
-//
-////			B2cPaymentPage.cardPayment(CardType, CreditCardNumber, CardHolderName, CardExpiryDate, CVV, BillingAddress,
-////					BillingState, CardCity);
-////			Thread.sleep(35000);
-////
-////			B2cConfirmPage.confirmpageFlight();
+			BODCCheckoutPage.GuestAdultCheckoutForFlight(Adult, AdultTitle, AdultName, AdultDate, AdultEmailAddress,
+					PhoneNumber, AdultPassportNumber, AdultPassportcountry, AdultExpiryDate, AdultNationality);
+
+			BODCCheckoutPage.GuestYouthCheckoutForFlight(Youth, YouthTitle, YouthName, YouthtDate, YouthEmailAddress,
+					YouthPhoneNumber, YouthPassportNumber, YouthPassportcountry, YouthtExpiryDate, YouthNationality);
+
+			BODCCheckoutPage.GuestChildCheckoutForFlight(Child, ChildTitle, ChildName, ChildPassportNumber,
+					ChildPassportcountry, ChildPassportDate, ChildNationality, ChildDOBdate);
+
+			BODCCheckoutPage.GuestInfantCheckoutForFlight(Infant, InfantTitle, InfantName, InfantDOBdate,
+					InfantTravellingwith, InfantPassportNumber, InfantPassportcountry, InfantPassportDate,
+					InfantNationality);
+
+			QaRobot.ClickOnElement("confirmButton");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on confirm Button</i></b>");
+			Thread.sleep(20000);
+
+			B2cPaymentPage.cardPayment(CardType, CreditCardNumber, CardHolderName, CardExpiryDate, CVV, BillingAddress,
+					BillingState, CardCity);
+			Thread.sleep(35000);
+
+			B2cConfirmPage.confirmpageFlight();
 
 		} else if (ChooseSalesChannel.equalsIgnoreCase("Reseller")) {
 
@@ -109,6 +110,6 @@ public class ProductSearch_Flight {
 
 	@AfterMethod
 	public static void afterMethod() {
-		QaExtentReport.test.getExtent().flush();
+		//QaExtentReport.test.getExtent().flush();
 	}
 }
